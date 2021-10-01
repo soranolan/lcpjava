@@ -12,12 +12,11 @@ public class Lcp_977 {
 	 * 		number <- number * number
 	 * end for
 	 * sort array
+	 * 
 	 * return array
 	 * */
 	public int[] sortedSquares_1(int[] nums) {
-		for (int i = 0; i < nums.length; i++) {
-			nums[i] = nums[i] * nums[i];
-		}
+		for (int i = 0; i < nums.length; i++) { nums[i] = nums[i] * nums[i]; }
 		Arrays.sort(nums);
 		return nums;
 	}
@@ -40,6 +39,8 @@ public class Lcp_977 {
 	 * 			left++
 	 * 		end if
 	 * end for
+	 * 
+	 * return newArray
 	 * */
 	public int[] sortedSquares_2(int[] nums) {
 		int length = nums.length;
@@ -59,6 +60,10 @@ public class Lcp_977 {
 		return newArray;
 	}
 	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * */
 	public int[] sortedSquares(int[] nums) {
 		int length = nums.length;
 		int left = 0;
@@ -81,13 +86,17 @@ public class Lcp_977 {
 	public static void main(String[] args) {
 		Lcp_977 lcp = new Lcp_977();
 		
+		// 0, 1, 9, 16, 100
 		int[] input = { -4, -1, 0, 3, 10 };
 		int[] output = lcp.sortedSquares(input);
-		for (int num : output) { System.out.println(num); }
+		for (int num : output) { System.out.print(num + " "); }
 		
+		System.out.println();
+		
+		// 4, 9, 9, 49, 121
 		input = new int[] { -7, -3, 2, 3, 11 };
 		output = lcp.sortedSquares(input);
-		for (int num : output) { System.out.println(num); }
+		for (int num : output) { System.out.print(num + " "); }
 	}
 	
 }

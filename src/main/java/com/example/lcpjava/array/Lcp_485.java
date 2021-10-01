@@ -8,6 +8,7 @@ public class Lcp_485 {
 	 * 
 	 * int temp <- 0
 	 * int max <- 0
+	 * 
 	 * for number in array
 	 * 		if number is one
 	 * 			temp++
@@ -21,6 +22,7 @@ public class Lcp_485 {
 	 * 			max <- temp
 	 * 		end if
 	 * end for
+	 * 
 	 * return max
 	 * */
 	public int findMaxConsecutiveOnes(int[] nums) {

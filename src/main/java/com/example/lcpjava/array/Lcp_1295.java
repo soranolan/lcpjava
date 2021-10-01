@@ -7,6 +7,7 @@ public class Lcp_1295 {
 	 * space : O(1)
 	 * 
 	 * int even <- 0
+	 * 
 	 * for number in array
 	 * 		if number is greater than 9 and lower than 100
 	 * 		or number is greater than 999 and lower than 10000
@@ -14,6 +15,7 @@ public class Lcp_1295 {
 	 * 			even++
 	 * 		end if
 	 * end for
+	 * 
 	 * return even
 	 * */
 	public int findNumbers(int[] nums) {
