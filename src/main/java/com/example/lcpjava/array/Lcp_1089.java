@@ -62,12 +62,15 @@ public class Lcp_1089 {
 	public static void main(String[] args) {
 		Lcp_1089 lcp = new Lcp_1089();
 		
+		// 1 0 0 2 3 0 0 4
 		int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };
 		lcp.duplicateZeros(input);
 		
+		// 1 2 3
 		input = new int[] { 1, 2, 3 };
 		lcp.duplicateZeros(input);
 		
+		// 0 0 0 0 0 0 0
 		input = new int[] { 0, 0, 0, 0, 0, 0, 0 };
 		lcp.duplicateZeros(input);
 	}

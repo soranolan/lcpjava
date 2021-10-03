@@ -63,6 +63,23 @@ public class Lcp_977 {
 	/**
 	 * time  : O(n)
 	 * space : O(n)
+	 * 
+	 * int length <- array length
+	 * int left = 0
+	 * int right = length - 1
+	 * int[] newArray
+	 * 
+	 * while left is lower than or equal to right
+	 * 		if array[left] lower than array[right]
+	 * 			newArray[i] = array[right] * array[right]
+	 * 			right--
+	 * 		else
+	 * 			newArray[i] = array[left] * array[left]
+	 * 			left++
+	 * 		end if
+	 * end while
+	 * 
+	 * return newArray
 	 * */
 	public int[] sortedSquares(int[] nums) {
 		int length = nums.length;
