@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Find Numbers with Even Number of Digits */
 public class Lcp_1295 {
 	
 	/**

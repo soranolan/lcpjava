@@ -2,6 +2,7 @@ package com.example.lcpjava.array;
 
 import java.util.Arrays;
 
+/** Squares of a Sorted Array */
 public class Lcp_977 {
 	
 	/**

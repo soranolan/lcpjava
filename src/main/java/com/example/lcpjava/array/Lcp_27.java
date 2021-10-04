@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Remove Element */
 public class Lcp_27 {
 	
 	/**

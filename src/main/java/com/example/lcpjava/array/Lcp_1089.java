@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Duplicate Zeros */
 public class Lcp_1089 {
 	
 	/**

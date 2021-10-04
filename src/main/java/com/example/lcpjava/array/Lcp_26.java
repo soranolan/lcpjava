@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Remove Duplicates from Sorted Array */
 public class Lcp_26 {
 	
 	/**

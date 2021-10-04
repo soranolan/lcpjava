@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Merge Sorted Array */
 public class Lcp_88 {
 	
 	/**

@@ -1,5 +1,6 @@
 package com.example.lcpjava.array;
 
+/** Max Consecutive Ones */
 public class Lcp_485 {
 	
 	/**
