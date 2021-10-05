@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Duplicate Zeros */
-public class Lcp_1089 {
+public class Lcp_1089_Duplicate_Zeros {
 	
 	/**
 	 * time  : O(n)
@@ -61,7 +60,7 @@ public class Lcp_1089 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_1089 lcp = new Lcp_1089();
+		Lcp_1089_Duplicate_Zeros lcp = new Lcp_1089_Duplicate_Zeros();
 		
 		// 1 0 0 2 3 0 0 4
 		int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };

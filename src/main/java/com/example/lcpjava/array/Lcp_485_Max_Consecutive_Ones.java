@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Max Consecutive Ones */
-public class Lcp_485 {
+public class Lcp_485_Max_Consecutive_Ones {
 	
 	/**
 	 * time  : O(n)
@@ -43,7 +42,7 @@ public class Lcp_485 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_485 lcp = new Lcp_485();
+		Lcp_485_Max_Consecutive_Ones lcp = new Lcp_485_Max_Consecutive_Ones();
 		
 		// 3
 		int[] input = { 1, 1, 0, 1, 1, 1 };

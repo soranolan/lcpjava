@@ -2,8 +2,7 @@ package com.example.lcpjava.array;
 
 import java.util.Arrays;
 
-/** Squares of a Sorted Array */
-public class Lcp_977 {
+public class Lcp_977_Squares_of_a_Sorted_Array {
 	
 	/**
 	 * time  : O(n log n)
@@ -102,7 +101,7 @@ public class Lcp_977 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_977 lcp = new Lcp_977();
+		Lcp_977_Squares_of_a_Sorted_Array lcp = new Lcp_977_Squares_of_a_Sorted_Array();
 		
 		// 0, 1, 9, 16, 100
 		int[] input = { -4, -1, 0, 3, 10 };

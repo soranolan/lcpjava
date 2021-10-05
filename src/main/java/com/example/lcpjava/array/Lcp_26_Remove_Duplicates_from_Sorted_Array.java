@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Remove Duplicates from Sorted Array */
-public class Lcp_26 {
+public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 	
 	/**
 	 * time  : O(n)
@@ -72,7 +71,7 @@ public class Lcp_26 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_26 lcp = new Lcp_26();
+		Lcp_26_Remove_Duplicates_from_Sorted_Array lcp = new Lcp_26_Remove_Duplicates_from_Sorted_Array();
 		int[] input = null;
 		int output = -1;
 		

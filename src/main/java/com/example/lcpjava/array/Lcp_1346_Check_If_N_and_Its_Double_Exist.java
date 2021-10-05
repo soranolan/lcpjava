@@ -3,8 +3,7 @@ package com.example.lcpjava.array;
 import java.util.HashSet;
 import java.util.Set;
 
-/** Check If N and Its Double Exist */
-public class Lcp_1346 {
+public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	
 	/**
 	 * time  : O(n)
@@ -83,7 +82,7 @@ public class Lcp_1346 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_1346 lcp = new Lcp_1346();
+		Lcp_1346_Check_If_N_and_Its_Double_Exist lcp = new Lcp_1346_Check_If_N_and_Its_Double_Exist();
 		int[] input = null;
 		boolean output = false;
 		

@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Find Numbers with Even Number of Digits */
-public class Lcp_1295 {
+public class Lcp_1295_Find_Numbers_with_Even_Number_of_Digits {
 	
 	/**
 	 * time  : O(n)
@@ -28,7 +27,7 @@ public class Lcp_1295 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_1295 lcp = new Lcp_1295();
+		Lcp_1295_Find_Numbers_with_Even_Number_of_Digits lcp = new Lcp_1295_Find_Numbers_with_Even_Number_of_Digits();
 		
 		// 2
 		int[] input = { 12, 345, 2, 6, 7896 };

@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Valid Mountain Array */
-public class Lcp_941 {
+public class Lcp_941_Valid_Mountain_Array {
 	
 	/**
 	 * time  : O(n)
@@ -137,7 +136,7 @@ public class Lcp_941 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_941 lcp = new Lcp_941();
+		Lcp_941_Valid_Mountain_Array lcp = new Lcp_941_Valid_Mountain_Array();
 		int[] input = null;
 		boolean output = false;
 		

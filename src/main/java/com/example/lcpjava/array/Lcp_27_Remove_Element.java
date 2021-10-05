@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Remove Element */
-public class Lcp_27 {
+public class Lcp_27_Remove_Element {
 	
 	/**
 	 * time  : O(n)
@@ -84,7 +83,7 @@ public class Lcp_27 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_27 lcp = new Lcp_27();
+		Lcp_27_Remove_Element lcp = new Lcp_27_Remove_Element();
 		int output = -1;
 		int val = -1;
 		

@@ -1,7 +1,6 @@
 package com.example.lcpjava.array;
 
-/** Merge Sorted Array */
-public class Lcp_88 {
+public class Lcp_88_Merge_Sorted_Array {
 	
 	/**
 	 * time  : O(n)
@@ -58,7 +57,7 @@ public class Lcp_88 {
 	}
 	
 	public static void main(String[] args) {
-		Lcp_88 lcp = new Lcp_88();
+		Lcp_88_Merge_Sorted_Array lcp = new Lcp_88_Merge_Sorted_Array();
 		
 		// 1 2 2 3 5 6
 		int[] nums1 = { 1, 2, 3, 0, 0, 0 };
