@@ -4,8 +4,8 @@ package com.example.lcpjava.array;
 public class Lcp_941 {
 	
 	/**
-	 * time    : O(n)
-	 * space   : O(1)
+	 * time  : O(n)
+	 * space : O(1)
 	 * 
 	 * boolean increasing <- false
 	 * boolean decreasing <- false
@@ -55,8 +55,8 @@ public class Lcp_941 {
 	}
 	
 	/**
-	 * time    : O(n)
-	 * space   : O(1)
+	 * time  : O(n)
+	 * space : O(1)
 	 * 
 	 * int length <- array length
 	 * int i <- 0
@@ -89,8 +89,8 @@ public class Lcp_941 {
 	}
 	
 	/**
-	 * time    : O(n)
-	 * space   : O(1)
+	 * time  : O(n)
+	 * space : O(1)
 	 * 
 	 * int length <- array length
 	 * if array is null || length is lower than three || array[0] is greater than or equal to array[1]
