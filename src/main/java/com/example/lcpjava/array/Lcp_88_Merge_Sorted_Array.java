@@ -10,7 +10,7 @@ public class Lcp_88_Merge_Sorted_Array {
 	 * int n2Right <- n - 1
 	 * int mergeRight <- m + n - 1
 	 * 
-	 * while n1Right grater than and equal to zero && n2Right greater than and equal to zero
+	 * while n1Right greater than and equal to zero && n2Right greater than and equal to zero
 	 * 		if nums1[n1Right] lower than nums2[n2Right]
 	 * 			nums1[mergeRight] <- nums2[n2Right]
 	 * 			n2Right--

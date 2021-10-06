@@ -109,6 +109,7 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 		for (int num : output) { System.out.print(num + " "); }
 		
 		System.out.println();
+		System.out.println("=====");
 		
 		// 4, 9, 9, 49, 121
 		input = new int[] { -7, -3, 2, 3, 11 };

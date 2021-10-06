@@ -20,8 +20,8 @@ public class Lcp_27_Remove_Element {
 	 * 
 	 * while left is not equal right
 	 * 		if array[left] is equal to val
-	 * 			array[left] = array[right]
-	 * 			array[right] = val
+	 * 			array[left] <- array[right]
+	 * 			array[right] <- val
 	 * 			right--
 	 * 		else
 	 * 			left++
@@ -64,7 +64,7 @@ public class Lcp_27_Remove_Element {
 	 * 
 	 * for int i <- 0 to array end
 	 * 		if array[i] is not equal to val
-	 * 			array[count] = array[i]
+	 * 			array[count] <- array[i]
 	 * 			count++
 	 * 		end if
 	 * end for
@@ -73,12 +73,17 @@ public class Lcp_27_Remove_Element {
 	 * */
 	public int removeElement(int[] nums, int val) {
 		int count = 0;
+		
 		for (int i = 0; i < nums.length; i++) {
 			if (nums[i] != val) {
 				nums[count] = nums[i];
 				count++;
 			}
 		}
+		
+		for (int num : nums) { System.out.print(num + " "); }
+		System.out.println();
+		
 		return count;
 	}
 	

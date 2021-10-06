@@ -11,16 +11,16 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * int length <- array length
 	 * 
 	 * if array is null || length is lower than three
-	 * 		return fasle
+	 * 		return false
 	 * end if
 	 * 
-	 * for int left <- 0 to length - 1
-	 * 		if array[left] is lower than array[left + 1]
+	 * for int i <- 0 to length - 1
+	 * 		if array[i] is lower than array[i + 1]
 	 * 			if decreasing is true
 	 * 				return false
 	 * 			end if
 	 * 			increasing <- true
-	 * 		else if array[left] is greater than array[left + 1]
+	 * 		else if array[i] is greater than array[i + 1]
 	 * 			if increasing is false
 	 * 				return false
 	 * 			end if
@@ -38,11 +38,11 @@ public class Lcp_941_Valid_Mountain_Array {
 		int length = arr.length;
 		if (arr == null || length < 3) { return false; }
 		
-		for (int left = 0; left < length - 1; left++) {
-			if (arr[left] < arr[left + 1]) {
+		for (int i = 0; i < length - 1; i++) {
+			if (arr[i] < arr[i + 1]) {
 				if (decreasing) { return false; }
 				increasing = true;
-			} else if (arr[left] > arr[left + 1]) {
+			} else if (arr[i] > arr[i + 1]) {
 				if (!increasing) { return false; }
 				decreasing = true;
 			} else {
@@ -98,14 +98,14 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * 
 	 * boolean increasing <- true
 	 * 
-	 * for int left <- 2 to array end
+	 * for int i <- 2 to array end
 	 * 		if increasing is true
-	 * 			if array[left - 1] is equal to array[left]
+	 * 			if array[i - 1] is equal to array[i]
 	 * 				return false
-	 * 			else if array[left - 1] is greater than array[left]
+	 * 			else if array[i - 1] is greater than array[i]
 	 * 				increasing <- false
 	 * 		else
-	 * 			if array[left - 1] <= array[left]
+	 * 			if array[i - 1] <= array[i]
 	 * 				return false
 	 * 			end if
 	 * 		end if
@@ -118,15 +118,15 @@ public class Lcp_941_Valid_Mountain_Array {
 		if (arr == null || length < 3 || arr[0] >= arr[1]) { return false; }
 		
 		boolean increasing = true;
-		for (int left = 2; left < arr.length; left++) {
+		for (int i = 2; i < arr.length; i++) {
 			if (increasing) {
-				if (arr[left - 1] == arr[left]) {
+				if (arr[i - 1] == arr[i]) {
 					return false;
-				} else if (arr[left - 1] > arr[left]) {
+				} else if (arr[i - 1] > arr[i]) {
 					increasing = false;
 				}
 			} else {
-				if (arr[left - 1] <= arr[left]) {
+				if (arr[i - 1] <= arr[i]) {
 					return false;
 				}
 			}
