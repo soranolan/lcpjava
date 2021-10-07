@@ -40,7 +40,7 @@ public class Lcp_27_Remove_Element {
 		int left = 0;
 		int right = length - 1;
 		
-		while (left < right) {
+		while (left < right) {																						// T : O(n)
 			if (nums[left] == val) {
 				nums[left] = nums[right];
 				nums[right] = val;
@@ -74,7 +74,7 @@ public class Lcp_27_Remove_Element {
 	public int removeElement(int[] nums, int val) {
 		int count = 0;
 		
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i < nums.length; i++) {																		// T : O(n)
 			if (nums[i] != val) {
 				nums[count] = nums[i];
 				count++;

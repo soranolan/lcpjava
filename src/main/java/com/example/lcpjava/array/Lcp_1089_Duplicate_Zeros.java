@@ -35,13 +35,13 @@ public class Lcp_1089_Duplicate_Zeros {
 	public void duplicateZeros(int[] arr) {
 		int length = arr.length;
 		int zeroCounts = 0;
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length; i++) {																			// T : O(n)
 			if (arr[i] == 0) { zeroCounts++; }
 		}
 		int left = length - 1;
 		int right = length + zeroCounts - 1;
 		
-		while (left != right) {
+		while (left != right) {																						// T : O(n)
 			assign(left, right, length, arr);
 			right--;
 			if (arr[left] == 0) {

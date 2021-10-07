@@ -41,7 +41,7 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 		
 		if (length == 0 || length == 1) { return false; }
 		
-		while (left < length) {
+		while (left < length) {																						// T : O(n)
 			if (arr[left] == arr[right] * 2 || arr[right] == arr[left] * 2) {
 				return true;
 			} else {
@@ -74,9 +74,11 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	 * */
 	public boolean checkIfExist(int[] arr) {
 		Set<Integer> container = new HashSet<>();
-		for (int i = 0; i < arr.length; i++) {
-			if (container.contains(arr[i] * 2) || (arr[i] % 2 == 0 && container.contains(arr[i] / 2))) { return true; }
-			container.add(arr[i]);
+		for (int i = 0; i < arr.length; i++) {																		// T : O(n)
+			if (container.contains(arr[i] * 2) || (arr[i] % 2 == 0 && container.contains(arr[i] / 2))) {			// T : O(1)
+				return true;
+			}
+			container.add(arr[i]);																					// T : O(1); S : O(n)
 		}
 		return false;
 	}

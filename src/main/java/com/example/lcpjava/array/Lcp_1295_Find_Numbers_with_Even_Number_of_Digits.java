@@ -20,7 +20,7 @@ public class Lcp_1295_Find_Numbers_with_Even_Number_of_Digits {
 	 * */
 	public int findNumbers(int[] nums) {
 		int even = 0;
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i < nums.length; i++) {																		// T : O(n)
 			if ((nums[i] > 9 && nums[i] < 100) || (nums[i] > 999 && nums[i] < 10000) || nums[i] == 100000) { even++; }
 		}
 		return even;

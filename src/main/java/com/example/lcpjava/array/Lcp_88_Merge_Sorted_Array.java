@@ -31,7 +31,7 @@ public class Lcp_88_Merge_Sorted_Array {
 		int n2Right = n - 1;
 		int mergeRight = m + n - 1;
 		
-		while (n1Right >= 0 && n2Right >= 0) {
+		while (n1Right >= 0 && n2Right >= 0) {																		// T : O(n)
 			if (nums1[n1Right] < nums2[n2Right]) {
 				assign(n2Right, mergeRight, nums1, nums2);
 				n2Right--;
@@ -42,7 +42,7 @@ public class Lcp_88_Merge_Sorted_Array {
 			mergeRight--;
 		}
 		
-		while (n2Right >= 0) {
+		while (n2Right >= 0) {																						// T : O(n)
 			assign(n2Right, mergeRight, nums1, nums2);
 			n2Right--;
 			mergeRight--;

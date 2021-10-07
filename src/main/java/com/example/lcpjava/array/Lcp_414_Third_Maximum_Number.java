@@ -38,7 +38,7 @@ public class Lcp_414_Third_Maximum_Number {
 		Integer max2 = null;
 		Integer max3 = null;
 		
-		for (Integer num : nums) {
+		for (Integer num : nums) {																					// O(n)
 			if (num.equals(max1) || num.equals(max2) || num.equals(max3)) { continue; }
 			if (max1 == null || num > max1) {
 				max3 = max2;
@@ -82,17 +82,17 @@ public class Lcp_414_Third_Maximum_Number {
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		Set<Integer> set = new HashSet<>();
 		
-		for (int num : nums) {
-			if (!set.contains(num)) {
-				set.add(num);
-				pq.offer(num);
-				if (pq.size() > 3) { pq.remove(); }
+		for (int num : nums) {																						// T : O(n)
+			if (!set.contains(num)) {																				// T : O(1)
+				set.add(num);																						// T : O(1); S : O(n)
+				pq.offer(num);																						// T : O(log n)
+				if (pq.size() > 3) { pq.remove(); }																	// T : O(log n)
 			}
 		}
 		
-		if (pq.size() == 2) { pq.remove(); }
+		if (pq.size() == 2) { pq.remove(); }																		// T : O(log n)
 		
-		return pq.peek();
+		return pq.peek();																							// T : O(1)
 	}
 	
 	/**
@@ -119,16 +119,16 @@ public class Lcp_414_Third_Maximum_Number {
 	public int thirdMax_3(int[] nums) {
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		
-		for (int num : nums) {
-			if (!pq.contains(num)) {
-				pq.offer(num);
-				if (pq.size() > 3) { pq.poll(); }
+		for (int num : nums) {																						// T : O(n)
+			if (!pq.contains(num)) {																				// T : O(n)
+				pq.offer(num);																						// T : O(log n)
+				if (pq.size() > 3) { pq.poll(); }																	// T : O(log n)
 			}
 		}
 		
-		if (pq.size() == 2) { pq.poll(); }
+		if (pq.size() == 2) { pq.poll(); }																			// T : O(log n)
 		
-		return pq.peek();
+		return pq.peek();																							// T : O(1)
 	}
 	
 	/**
@@ -164,7 +164,7 @@ public class Lcp_414_Third_Maximum_Number {
 		int max3 = nums[length - 1];
 		int count = 1;
 		
-		for (int i = length - 1; i > 0 ; i--) {
+		for (int i = length - 1; i > 0 ; i--) {																		// T : O(n)
 			if (nums[i] != nums[i - 1]) {
 				max3 = nums[i - 1];
 				count++;

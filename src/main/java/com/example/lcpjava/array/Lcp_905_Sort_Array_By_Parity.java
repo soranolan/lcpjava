@@ -29,7 +29,7 @@ public class Lcp_905_Sort_Array_By_Parity {
 		int left = 0;
 		int right = nums.length - 1;
 		
-		while (left < right) {
+		while (left < right) {																						// T : O(n)
 			if (nums[left] % 2 > nums[right] % 2) {
 				int temp = nums[left];
 				nums[left] = nums[right];
@@ -62,7 +62,7 @@ public class Lcp_905_Sort_Array_By_Parity {
 	public int[] sortArrayByParity(int[] nums) {
 		int left = 0;
 		
-		for (int right = 0; right < nums.length; right++) {
+		for (int right = 0; right < nums.length; right++) {															// T : O(n)
 			if (nums[right] % 2 == 0) {
 				int temp = nums[left];
 				nums[left] = nums[right];

@@ -23,7 +23,7 @@ public class Lcp_1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
 		int max = -1;
 		int length = arr.length;
 		
-		for (int i = length - 1; i >= 0; i--) {
+		for (int i = length - 1; i >= 0; i--) {																		// T : O(n)
 			int temp = arr[i];
 			arr[i] = max;
 			if (temp > max) { max = temp; }

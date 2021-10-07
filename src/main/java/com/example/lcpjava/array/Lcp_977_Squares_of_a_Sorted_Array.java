@@ -16,8 +16,8 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * return array
 	 * */
 	public int[] sortedSquares_1(int[] nums) {
-		for (int i = 0; i < nums.length; i++) { nums[i] = nums[i] * nums[i]; }
-		Arrays.sort(nums);
+		for (int i = 0; i < nums.length; i++) { nums[i] = nums[i] * nums[i]; }										// T : O(n)
+		Arrays.sort(nums);																							// T : O(n log n)
 		return nums;
 	}
 	
@@ -48,7 +48,7 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 		int right = length - 1;
 		int[] newArray = new int[length];
 		
-		for (int i = right; i >= 0; i--) {
+		for (int i = right; i >= 0; i--) {																			// T : O(n)
 			if (Math.abs(nums[left]) < Math.abs(nums[right])) {
 				newArray[i] = nums[right] * nums[right];
 				right--;
@@ -86,9 +86,9 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 		int left = 0;
 		int right = length - 1;
 		int i = right;
-		int[] newArray = new int[length];
+		int[] newArray = new int[length];																			// S : O(n)
 		
-		while (left <= right) {
+		while (left <= right) {																						// T : O(n)
 			if (Math.abs(nums[left]) < Math.abs(nums[right])) {
 				newArray[i--] = nums[right] * nums[right];
 				right--;

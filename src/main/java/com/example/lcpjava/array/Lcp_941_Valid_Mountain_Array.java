@@ -38,7 +38,7 @@ public class Lcp_941_Valid_Mountain_Array {
 		int length = arr.length;
 		if (arr == null || length < 3) { return false; }
 		
-		for (int i = 0; i < length - 1; i++) {
+		for (int i = 0; i < length - 1; i++) {																		// T : O(n)
 			if (arr[i] < arr[i + 1]) {
 				if (decreasing) { return false; }
 				increasing = true;
@@ -78,11 +78,11 @@ public class Lcp_941_Valid_Mountain_Array {
 		int length = arr.length;
 		int i = 0;
 		
-		while (i + 1 < length && arr[i] < arr[i + 1]) { i++; }
+		while (i + 1 < length && arr[i] < arr[i + 1]) { i++; }														// T : O(n)
 		
 		if (i == 0 || i == length - 1) { return false; }
 		
-		while (i + 1 < length && arr[i] > arr[i + 1]) { i++; }
+		while (i + 1 < length && arr[i] > arr[i + 1]) { i++; }														// T : O(n)
 		
 		return i == length - 1;
 	}
@@ -118,7 +118,7 @@ public class Lcp_941_Valid_Mountain_Array {
 		if (arr == null || length < 3 || arr[0] >= arr[1]) { return false; }
 		
 		boolean increasing = true;
-		for (int i = 2; i < arr.length; i++) {
+		for (int i = 2; i < arr.length; i++) {																		// T : O(n)
 			if (increasing) {
 				if (arr[i - 1] == arr[i]) {
 					return false;

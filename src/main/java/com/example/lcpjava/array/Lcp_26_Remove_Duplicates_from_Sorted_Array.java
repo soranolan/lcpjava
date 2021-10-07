@@ -25,7 +25,7 @@ public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 		int left = 0;
 		int right = 1;
 		
-		while (right < nums.length) {
+		while (right < nums.length) {																				// T : O(n)
 			if (nums[left] == nums[right]) {
 				right++;
 			} else {
@@ -58,7 +58,7 @@ public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 	public int removeDuplicates(int[] nums) {
 		int left = 0;
 		
-		for (int right = 1; right < nums.length; right++) {
+		for (int right = 1; right < nums.length; right++) {															// T : O(n)
 			if (nums[left] != nums[right]) {
 				left++;
 				nums[left] = nums[right];

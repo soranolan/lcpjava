@@ -23,7 +23,7 @@ public class Lcp_283_Move_Zeroes {
 	public void moveZeroes_1(int[] nums) {
 		int left = 0;
 		
-		for (int right = 1; right < nums.length; right++) {
+		for (int right = 1; right < nums.length; right++) {															// T : O(n)
 			if (nums[left] == 0) {
 				if (nums[right] != 0) {
 					nums[left] = nums[right];
@@ -56,7 +56,8 @@ public class Lcp_283_Move_Zeroes {
 	 * */
 	public void moveZeroes_2(int[] nums) {
 		int left = 0;
-		for (int right = 0; right < nums.length; right++) {
+		
+		for (int right = 0; right < nums.length; right++) {															// T : O(n)
 			if (nums[right] != 0) {
 				int temp = nums[right];
 				nums[right] = nums[left];
@@ -92,7 +93,7 @@ public class Lcp_283_Move_Zeroes {
 		int left = 0;
 		int right = 0;
 		
-		while (right < nums.length) {
+		while (right < nums.length) {																				// T : O(n)
 			if (nums[right] == 0) {
 				right++;
 				continue;
@@ -126,7 +127,7 @@ public class Lcp_283_Move_Zeroes {
 	public void moveZeroes(int[] nums) {
 		int snowBall = 0;
 		
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i < nums.length; i++) {																		// T : O(n)
 			if (nums[i] == 0) {
 				snowBall++;
 			} else if (snowBall > 0) {

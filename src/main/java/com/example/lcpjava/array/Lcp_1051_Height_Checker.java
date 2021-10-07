@@ -22,10 +22,10 @@ public class Lcp_1051_Height_Checker {
 	 * */
 	public int heightChecker_1(int[] heights) {
 		int count = 0;
-		int[] clone = heights.clone();
-		Arrays.sort(clone);
+		int[] clone = heights.clone();																				// S : O(n)
+		Arrays.sort(clone);																							// T : O(n log n)
 		
-		for (int i = 0; i < heights.length; i++) {
+		for (int i = 0; i < heights.length; i++) {																	// T : O(n)
 			if (heights[i] != clone[i]) { count++; }
 		}
 		
@@ -64,14 +64,14 @@ public class Lcp_1051_Height_Checker {
 	 * return count
 	 * */
 	public int heightChecker(int[] heights) {
-		int[] bucket = new int[101];
-		for (int height : heights) { bucket[height]++; }
+		int[] bucket = new int[101];																				// S : O(n)
+		for (int height : heights) { bucket[height]++; }															// T : O(n)
 		
 		int count = 0;
 		int bucketIndex = 0;
 		
-		for (int i = 0; i < heights.length; i++) {
-			while (bucket[bucketIndex] == 0) { bucketIndex++; }
+		for (int i = 0; i < heights.length; i++) {																	// T : O(n)
+			while (bucket[bucketIndex] == 0) { bucketIndex++; }														// T : O(max n)
 			if (heights[i] != bucketIndex) { count++; }
 			bucket[bucketIndex]--;
 		}

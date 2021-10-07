@@ -29,7 +29,7 @@ public class Lcp_485_Max_Consecutive_Ones {
 		int temp = 0;
 		int max = 0;
 		int length = nums.length;
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length; i++) {																			// T : O(n)
 			if (nums[i] == 1) {
 				temp++;
 			} else {
