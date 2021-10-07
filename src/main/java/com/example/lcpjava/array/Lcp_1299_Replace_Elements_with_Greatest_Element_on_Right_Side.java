@@ -9,7 +9,7 @@ public class Lcp_1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
 	 * int max <- -1
 	 * int length <- array length
 	 * 
-	 * for int i <- length - 1 to array end
+	 * for int i <- length - 1 to array head
 	 * 		int temp <- array[i]
 	 * 		array[i] <- max
 	 * 		if temp is greater than max
