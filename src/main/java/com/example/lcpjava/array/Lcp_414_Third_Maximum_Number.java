@@ -158,7 +158,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * return max3
 	 * */
 	public int thirdMax(int[] nums) {
-		Arrays.sort(nums);
+		Arrays.sort(nums);																							// T : O(n log n)
 		
 		int length = nums.length;
 		int max3 = nums[length - 1];
