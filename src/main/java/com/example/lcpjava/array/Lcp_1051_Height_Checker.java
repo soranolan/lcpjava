@@ -38,7 +38,7 @@ public class Lcp_1051_Height_Checker {
 	 *         O(n)           for loop
 	 * space : O(n)
 	 * 
-	 * count sort
+	 * Counting sort
 	 * 
 	 * int[] bucket <- size constraint + 1
 	 * 
