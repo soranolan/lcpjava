@@ -72,9 +72,11 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * while left is lower than or equal to right
 	 * 		if array[left] lower than array[right]
 	 * 			newArray[i] = array[right] * array[right]
+	 * 			i--
 	 * 			right--
 	 * 		else
 	 * 			newArray[i] = array[left] * array[left]
+	 * 			i--
 	 * 			left++
 	 * 		end if
 	 * end while
@@ -102,10 +104,12 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	
 	public static void main(String[] args) {
 		Lcp_977_Squares_of_a_Sorted_Array lcp = new Lcp_977_Squares_of_a_Sorted_Array();
+		int[] input = null;
+		int[] output = null;
 		
 		// 0, 1, 9, 16, 100
-		int[] input = { -4, -1, 0, 3, 10 };
-		int[] output = lcp.sortedSquares(input);
+		input = new int[] { -4, -1, 0, 3, 10 };
+		output = lcp.sortedSquares(input);
 		for (int num : output) { System.out.print(num + " "); }
 		
 		System.out.println();
