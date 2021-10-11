@@ -16,11 +16,12 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * end for
 	 * 
 	 * for int i <- 0 to array end
-	 * 		if max is equal to array[i]
+	 * 		int num <- array[i]
+	 * 		if max is equal to num
 	 * 			index <- i
 	 * 			continue
 	 * 		end if
-	 * 		if max is lower than array[i] multiply two
+	 * 		if max is lower than num multiply two
 	 * 			return -1
 	 * 		end if
 	 * end for
@@ -36,11 +37,12 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 		}
 		
 		for (int i = 0; i < nums.length; i++) {																		// T : O(n)
-			if (max == nums[i]) {
+			int num = nums[i];
+			if (max == num) {
 				index = i;
 				continue;
 			}
-			if (max < nums[i] * 2) { return -1; }
+			if (max < num * 2) { return -1; }
 		}
 		
 		return index;
@@ -55,12 +57,13 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * int index <- -1
 	 * 
 	 * for int i <- 0 to array end
-	 * 		if max is lower than array[i]
+	 * 		int num <- array[i]
+	 * 		if max is lower than num
 	 * 			second <- max
-	 * 			max <- array[i]
+	 * 			max <- num
 	 * 			index <- i
-	 * 		else if second is lower than array[i]
-	 * 			second <- array[i]
+	 * 		else if second is lower than num
+	 * 			second <- num
 	 * 		end if
 	 * end for
 	 * 
@@ -72,12 +75,13 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 		int index = -1;
 		
 		for (int i = 0; i < nums.length; i++) {																		// T : O(n)
-			if (max < nums[i]) {
+			int num = nums[i];
+			if (max < num) {
 				second = max;
-				max = nums[i];
+				max = num;
 				index = i;
-			} else if (second < nums[i]) {
-				second = nums[i];
+			} else if (second < num) {
+				second = num;
 			}
 		}
 		
