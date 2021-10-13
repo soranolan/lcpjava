@@ -47,7 +47,7 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 	
 	/**
 	 * time  : O(n)
-	 * space : O(1)
+	 * space : O(1) assume the returned list does not count as extra space
 	 * 
 	 * Cyclic sort
 	 * 
