@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int max <- 0

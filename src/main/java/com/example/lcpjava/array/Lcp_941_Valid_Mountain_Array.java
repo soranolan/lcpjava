@@ -54,7 +54,7 @@ public class Lcp_941_Valid_Mountain_Array {
 	}
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int length <- array length

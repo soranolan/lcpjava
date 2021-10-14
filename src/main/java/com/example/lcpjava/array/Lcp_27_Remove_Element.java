@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 public class Lcp_27_Remove_Element {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int count <- 0
@@ -32,7 +32,7 @@ public class Lcp_27_Remove_Element {
 	 * */
 	public int removeElement_1(int[] nums, int val) {
 		int count = 0;
-		for (int num : nums) {
+		for (int num : nums) {																						// T : O(n)
 			if (num == val) { count++; }
 		}
 		

@@ -8,7 +8,7 @@ import java.util.Set;
 public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(n)
 	 * 
 	 * int length <- array length
@@ -46,7 +46,7 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 	}
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1) assume the returned list does not count as extra space
 	 * 
 	 * Cyclic sort

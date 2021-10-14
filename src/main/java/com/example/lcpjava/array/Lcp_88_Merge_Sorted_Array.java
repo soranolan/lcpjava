@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 public class Lcp_88_Merge_Sorted_Array {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int n1Right <- m - 1

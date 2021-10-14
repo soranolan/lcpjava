@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 public class Lcp_1089_Duplicate_Zeros {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int length <- arr.length

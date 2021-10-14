@@ -6,7 +6,7 @@ import java.util.Set;
 public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m * n)
 	 * space : O(1)
 	 * 
 	 * int left <- 0

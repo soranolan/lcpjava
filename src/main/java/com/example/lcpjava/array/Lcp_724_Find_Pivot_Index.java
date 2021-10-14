@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 public class Lcp_724_Find_Pivot_Index {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
 	 * int sum <- 0
