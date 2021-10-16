@@ -29,6 +29,34 @@ public class Lcp_14_Longest_Common_Prefix {
 	}
 	
 	/**
+	 * time  : O(m * n)
+	 * space : O(1)
+	 * 
+	 * for int i <- 0 to array[0] length
+	 * 		char c <- array[0] charAt(i)
+	 * 		for int j <- 1 to array end
+	 * 			if i is greater than or equal to array[j] length || c is not equal to array[j] charAt(i)
+	 * 				return array[0] substring zero to i
+	 * 			end if
+	 * 		end for
+	 * end for
+	 * 
+	 * return array[0]
+	 * */
+	public String longestCommonPrefix_2(String[] strs) {
+		String first = strs[0];
+		for (int i = 0; i < first.length(); i++) {																	// T : O(m)
+			char c = first.charAt(i);
+			for (int j = 1; j < strs.length; j++) {																	// T : O(n)
+				if (i >= strs[j].length() || c != strs[j].charAt(i)) {
+					return first.substring(0, i);																	// T : O(m)
+				}
+			}
+		}
+		return first;
+	}
+	
+	/**
 	 * time  : O(n log n)
 	 * space : O(n)
 	 * 
@@ -49,7 +77,7 @@ public class Lcp_14_Longest_Common_Prefix {
 	 * 
 	 * return sb to string
 	 * */
-	public String longestCommonPrefix_2(String[] strs) {
+	public String longestCommonPrefix_3(String[] strs) {
 		Arrays.sort(strs);																							// T : O(n log n)
 		StringBuilder sb = new StringBuilder();																		// S : O(n)
 		char[] first = strs[0].toCharArray();
