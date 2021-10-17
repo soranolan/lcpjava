@@ -6,6 +6,47 @@ public class Lcp_485_Max_Consecutive_Ones {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
+	 * int count <- 0
+	 * int max <- 0
+	 * 
+	 * for number in array
+	 * 		if number is equal to one
+	 * 			count++
+	 * 		else
+	 * 			if max is lower than count
+	 * 				max <- count
+	 * 			end if
+	 * 			count <- 0
+	 * 		end if
+	 * end for
+	 * 
+	 * if max is lower than count
+	 * 		max <- count
+	 * end if
+	 * 
+	 * return max
+	 * */
+	public int findMaxConsecutiveOnes_1(int[] nums) {
+		int count = 0;
+		int max = 0;
+		
+		for (int num : nums) {																						// T : O(n)
+			if (num == 1) {
+				count++;
+			} else {
+				if (max < count) { max = count; }
+				count = 0;
+			}
+		}
+		if (max < count) { max = count; }
+		
+		return max;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * 
 	 * int temp <- 0
 	 * int max <- 0
 	 * 
