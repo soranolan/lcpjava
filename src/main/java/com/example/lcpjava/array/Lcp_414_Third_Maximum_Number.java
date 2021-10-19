@@ -31,7 +31,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * 		end if
 	 * end for
 	 * 
-	 * return max3 == null ? max1 : max3
+	 * return if max3 is equal to null than max1 else max3
 	 * */
 	public int thirdMax_1(int[] nums) {
 		Integer max1 = null;
