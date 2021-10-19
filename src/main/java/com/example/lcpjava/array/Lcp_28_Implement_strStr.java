@@ -56,6 +56,8 @@ public class Lcp_28_Implement_strStr {
 	 * time  : O(m + n)
 	 * space : O(n)
 	 * 
+	 * KMP
+	 * 
 	 * int hIdx <- 0
 	 * int nIdx <- 0
 	 * int hLen <- haystack length
