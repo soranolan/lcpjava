@@ -16,7 +16,7 @@ public class Lcp_27_Remove_Element {
 	 * 
 	 * int length <- array.length
 	 * int left <- 0
-	 * int right <- length - 1
+	 * int right <- length minus one
 	 * 
 	 * while left is not equal right
 	 * 		if array[left] is equal to val
@@ -28,7 +28,7 @@ public class Lcp_27_Remove_Element {
 	 * 		end if
 	 * end while
 	 * 
-	 * return length - count
+	 * return length minus count
 	 * */
 	public int removeElement_1(int[] nums, int val) {
 		int count = 0;
@@ -62,7 +62,7 @@ public class Lcp_27_Remove_Element {
 	 * 
 	 * int count <- 0
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		if array[i] is not equal to val
 	 * 			array[count] <- array[i]
 	 * 			count++

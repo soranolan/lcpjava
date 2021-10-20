@@ -14,13 +14,13 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * 		return false
 	 * end if
 	 * 
-	 * for int i <- 0 to length - 1
-	 * 		if array[i] is lower than array[i + 1]
+	 * for int i <- 0; if i is lower than length minus one; i++
+	 * 		if array[i] is lower than array[i plus one]
 	 * 			if decreasing is true
 	 * 				return false
 	 * 			end if
 	 * 			increasing <- true
-	 * 		else if array[i] is greater than array[i + 1]
+	 * 		else if array[i] is greater than array[i plus one]
 	 * 			if increasing is false
 	 * 				return false
 	 * 			end if
@@ -60,19 +60,19 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * int length <- array length
 	 * int i <- 0
 	 * 
-	 * while i + 1 is lower than length && array[i] is lower than array[i + 1]
+	 * while i plus one is lower than length && array[i] is lower than array[i plus one]
 	 * 		i++
 	 * end while
 	 * 
-	 * if i is equal to zero || i is equal to length - 1
+	 * if i is equal to zero || i is equal to length minus one
 	 * 		return false
 	 * end if
 	 * 
-	 * while i + 1 is lower than length && array[i] is greater than array[i + 1]
+	 * while i plus one is lower than length && array[i] is greater than array[i plus one]
 	 * 		i++
 	 * end while
 	 * 
-	 * return i == length - 1
+	 * return if i is equal to length minus one
 	 * */
 	public boolean validMountainArray_2(int[] arr) {
 		int length = arr.length;
@@ -98,14 +98,15 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * 
 	 * boolean increasing <- true
 	 * 
-	 * for int i <- 2 to array end
+	 * for int i <- 2; if i is lower than array length; i++
 	 * 		if increasing is true
-	 * 			if array[i - 1] is equal to array[i]
+	 * 			if array[i minus one] is equal to array[i]
 	 * 				return false
-	 * 			else if array[i - 1] is greater than array[i]
+	 * 			else if array[i minus one] is greater than array[i]
 	 * 				increasing <- false
+	 * 			end if
 	 * 		else
-	 * 			if array[i - 1] <= array[i]
+	 * 			if array[i minus one] <= array[i]
 	 * 				return false
 	 * 			end if
 	 * 		end if

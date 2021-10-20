@@ -12,7 +12,7 @@ public class Lcp_1051_Height_Checker {
 	 * int[] clone <- array clone
 	 * array sort clone
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		if array[i] is not equal to clone[i]
 	 * 			count++
 	 * 		end if
@@ -40,7 +40,7 @@ public class Lcp_1051_Height_Checker {
 	 * 
 	 * Counting sort
 	 * 
-	 * int[] bucket <- size constraint + 1
+	 * int[] bucket <- size constraint plus 1
 	 * 
 	 * for number in array
 	 * 		bucket[number]++
@@ -49,8 +49,8 @@ public class Lcp_1051_Height_Checker {
 	 * int count <- 0
 	 * int bucketIndex <- 0
 	 * 
-	 * for int i <- 0 to array end
-	 * 		while bucket[bucketIndex] == 0
+	 * for int i <- 0; if i is lower than array length; i++
+	 * 		while bucket[bucketIndex] is equal to zero
 	 * 			bucketIndex++
 	 * 		end while
 	 * 		

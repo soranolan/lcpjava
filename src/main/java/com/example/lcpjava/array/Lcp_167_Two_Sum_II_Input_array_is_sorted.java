@@ -12,7 +12,7 @@ public class Lcp_167_Two_Sum_II_Input_array_is_sorted {
 	 * Map<number, index> map <- empty map
 	 * int[] result <- empty array[2]
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		int pair <- target minus numbers[i]
 	 * 		if map contain pair
 	 * 			result[0] <- map get(pair) plus one

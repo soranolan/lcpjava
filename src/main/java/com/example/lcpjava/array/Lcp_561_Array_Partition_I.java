@@ -11,7 +11,7 @@ public class Lcp_561_Array_Partition_I {
 	 * array sort
 	 * int sum <- 0
 	 * 
-	 * for int i <- 0 to array end; i <- i plus two
+	 * for int i <- 0; if i is lower than array length; i <- i plus two
 	 * 		sum <- sum plus array[i]
 	 * end for
 	 * 
@@ -35,7 +35,7 @@ public class Lcp_561_Array_Partition_I {
 	 * 
 	 * int sum <- 0
 	 * boolean isOdd <- true
-	 * for int i <- 0 to container end
+	 * for int i <- 0; if i is lower than container length; i++
 	 * 		while container[i] is greater than zero
 	 * 			if isOdd
 	 * 				sum <- sum plus (i minus 10000)
@@ -84,20 +84,20 @@ public class Lcp_561_Array_Partition_I {
 	 * for number in array
 	 * 		container[number minus min]++
 	 * end for
-	 * for int i <- 1 to container end
+	 * for int i <- 1; if i is lower than container length; i++
 	 * 		container[i] <- container[i] plus container[i minus one]
 	 * end for
 	 * 
 	 * int length <- array length
 	 * int[] sorted <- empty array[length]
-	 * for int i <- length minus one to array head
+	 * for int i <- length minus one; if i is greater than or equal to zero; i--
 	 * 		int index <- array[i] minus min
 	 * 		sorted[container[index] minus one] <- array[i]
 	 * 		container[index]--
 	 * end for
 	 * 
 	 * int sum <- 0
-	 * for int i <- 0 to sorted end; i <- i plus two
+	 * for int i <- 0; if i is lower than sorted length; i <- i plus two
 	 * 		sum <- sum plus sorted[i]
 	 * end for
 	 * 
@@ -155,13 +155,10 @@ public class Lcp_561_Array_Partition_I {
 	 * for number in array
 	 * 		container[number minus min]++
 	 * end for
-	 * for int i <- 1 to container end
-	 * 		container[i] <- container[i] plus container[i minus one]
-	 * end for
 	 * 
 	 * int sum <- 0
 	 * boolean isOdd <- true
-	 * for int i <- 0 to container end
+	 * for int i <- 0; if i is lower than container length; i++
 	 * 		while container[i] is greater than zero
 	 * 			if isOdd
 	 * 				sum <- sum plus (i minus 10000)

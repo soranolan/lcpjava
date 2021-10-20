@@ -18,38 +18,38 @@ public class Lcp_54_Spiral_Matrix {
 	 * int rows <- m
 	 * int cols <- n
 	 * 
-	 * List<Integer> result
+	 * List<Integer> result <- empty ArrayList
 	 * 
-	 * while result size is lower than m * n
-	 * 		for int i <- col to i is lower than cols
+	 * while result size is lower than m multiply n
+	 * 		for int i <- col; if i is lower than cols; i++
 	 * 			result add array[row][i]
 	 * 		end for
 	 * 		
-	 * 		if result size is greater than or equal to m * n
+	 * 		if result size is greater than or equal to m multiply n
 	 * 			break
 	 * 		end if
 	 * 		
-	 * 		for int i <- row + 1 to i is lower than rows - 1
+	 * 		for int i <- row plus one; if i is lower than rows minus one; i++
 	 * 			result add array[i][cols - 1]
 	 * 		end for
 	 * 		
-	 * 		if result size is greater than or equal to m * n
+	 * 		if result size is greater than or equal to m multiply n
 	 * 			break
 	 * 		end if
 	 * 		
-	 * 		for int i <- cols - 1 to i is greater than or equal to col
-	 * 			result add array[rows - 1][i]
+	 * 		for int i <- cols minus one; if i is greater than or equal to col; i--
+	 * 			result add array[rows minus one][i]
 	 * 		end for
 	 * 		
-	 * 		if result size is greater than or equal to m * n
+	 * 		if result size is greater than or equal to m multiply n
 	 * 			break
 	 * 		end if
 	 * 		
-	 * 		for int i <- rows - 2 to i is greater than row
+	 * 		for int i <- rows minus two; if i is greater than row; i--
 	 * 			result add array[i][col]
 	 * 		end for
 	 * 		
-	 * 		if result size is greater than or equal to m * n
+	 * 		if result size is greater than or equal to m multiply n
 	 * 			break
 	 * 		end if
 	 * 		

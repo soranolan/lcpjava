@@ -8,7 +8,7 @@ public class Lcp_283_Move_Zeroes {
 	 * 
 	 * int left <- 0
 	 * 
-	 * for int right <- 1 to array end
+	 * for int right <- 1; if right is lower than array length; right++
 	 * 		if array[left] is equal to zero
 	 * 			if array[right] is not equal to zero
 	 * 				array[left] <- array[right]
@@ -45,7 +45,7 @@ public class Lcp_283_Move_Zeroes {
 	 * 
 	 * int left <- 0
 	 * 
-	 * for int right <- 0 to array end
+	 * for int right <- 0; if right is lower than array length; right++
 	 * 		if array[right] is not equal to zero
 	 * 			int temp <- array[right]
 	 * 			array[right] <- array[left]
@@ -113,13 +113,13 @@ public class Lcp_283_Move_Zeroes {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * int snowBall = 0;
+	 * int snowBall <- 0;
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		if array[i] is equal to zero
 	 * 			snowBall++
 	 * 		else if snowBall is greater than zero
-	 * 			array[i - snowBall] <- array[i]
+	 * 			array[i minus snowBall] <- array[i]
 	 * 			array[i] <- 0
 	 * 		end if
 	 * end for

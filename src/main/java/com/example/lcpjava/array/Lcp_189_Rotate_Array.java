@@ -9,11 +9,11 @@ public class Lcp_189_Rotate_Array {
 	 * int length <- array length
 	 * int[] copy <- empty array[length]
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than length; i++
 	 * 		copy[(i plus k) mod length] <- array[i]
 	 * end for
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than length; i++
 	 * 		array[i] <- copy[i]
 	 * end for
 	 * */

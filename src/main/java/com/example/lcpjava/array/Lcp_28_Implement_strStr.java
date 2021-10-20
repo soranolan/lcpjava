@@ -18,7 +18,7 @@ public class Lcp_28_Implement_strStr {
 	 * 			nIdx++
 	 * 		else
 	 * 			hIdx++
-	 * 			hIdx <- hIdx - nIdx
+	 * 			hIdx <- hIdx minus nIdx
 	 * 			nIdx <- 0
 	 * 			pos <- hIdx
 	 * 		end if
@@ -65,7 +65,7 @@ public class Lcp_28_Implement_strStr {
 	 * 			hIdx++
 	 * 			nIdx++
 	 * 		else if nIdx is greater than zero
-	 * 			nIdx <- lps[nIdx - 1]
+	 * 			nIdx <- lps[nIdx minus one]
 	 * 		else
 	 * 			hIdx++
 	 * 		end if
@@ -105,11 +105,11 @@ public class Lcp_28_Implement_strStr {
 	 * 
 	 * while right is lower than length
 	 * 		if pattern charAt(left) is equal to pattern charAt(right)
-	 * 			lps[right] <- left + 1
+	 * 			lps[right] <- left plus one
 	 * 			left++
 	 * 			right++
 	 * 		else if left is greater than zero
-	 * 			left <- lps[left - 1]
+	 * 			left <- lps[left minus one]
 	 * 		else
 	 * 			lps[right] <- 0
 	 * 			right++

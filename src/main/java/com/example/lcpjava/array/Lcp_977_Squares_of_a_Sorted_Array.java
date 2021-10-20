@@ -9,7 +9,7 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * space : O(1)
 	 * 
 	 * for number in array
-	 * 		number <- number * number
+	 * 		number <- number multiply number
 	 * end for
 	 * sort array
 	 * 
@@ -26,16 +26,16 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * space : O(n)
 	 * 
 	 * int length <- array length
-	 * int left = 0
-	 * int right = length - 1
-	 * int[] newArray
+	 * int left <- 0
+	 * int right <- length minus one
+	 * int[] newArray <- empty array[length]
 	 * 
-	 * for i <- right to 0 i--
+	 * for i <- right; if i is greater than or equal to zero; i--
 	 * 		if array[left] lower than array[right]
-	 * 			newArray[i] = array[right] * array[right]
+	 * 			newArray[i] <- array[right] multiply array[right]
 	 * 			right--
 	 * 		else
-	 * 			newArray[i] = array[left] * array[left]
+	 * 			newArray[i] <- array[left] multiply array[left]
 	 * 			left++
 	 * 		end if
 	 * end for
@@ -65,17 +65,17 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * space : O(n)
 	 * 
 	 * int length <- array length
-	 * int left = 0
-	 * int right = length - 1
-	 * int[] newArray
+	 * int left <- 0
+	 * int right <- length minus one
+	 * int[] newArray <- empty array[length]
 	 * 
 	 * while left is lower than or equal to right
 	 * 		if array[left] lower than array[right]
-	 * 			newArray[i] = array[right] * array[right]
+	 * 			newArray[i] <- array[right] multiply array[right]
 	 * 			i--
 	 * 			right--
 	 * 		else
-	 * 			newArray[i] = array[left] * array[left]
+	 * 			newArray[i] <- array[left] multiply array[left]
 	 * 			i--
 	 * 			left++
 	 * 		end if

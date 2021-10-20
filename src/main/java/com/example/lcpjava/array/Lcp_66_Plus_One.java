@@ -8,15 +8,15 @@ public class Lcp_66_Plus_One {
 	 * 
 	 * int length <- array length
 	 * 
-	 * for int right <- length - 1 to array head
-	 * 		if array[right] is lower than 9
+	 * for int right <- length minus one; if right is greater than or equal to zero; right--
+	 * 		if array[right] is lower than nine
 	 * 			array[right] += 1
 	 * 			return array
 	 * 		end if
 	 * 		array[right] <- 0
 	 * end for
 	 * 
-	 * int[] exceed <- length + 1
+	 * int[] exceed <- length plus one
 	 * exceed[0] <- 1
 	 * 
 	 * return exceed

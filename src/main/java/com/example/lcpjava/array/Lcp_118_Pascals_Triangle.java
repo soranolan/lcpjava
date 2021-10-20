@@ -12,8 +12,8 @@ public class Lcp_118_Pascals_Triangle {
 	 * List<List<Integer>> outer <- empty list
 	 * List<Integer> inner <- empty list
 	 * 
-	 * for int i <- 0 to numRows
-	 * 		for int j <- inner size minus one to zero
+	 * for int i <- 0; if i is lower than numRows; i++
+	 * 		for int j <- inner size minus one; if j is greater than zero; j--
 	 * 			inner set (j, inner get (j) plus inner get (j - 1))
 	 * 		end for
 	 * 		inner add one

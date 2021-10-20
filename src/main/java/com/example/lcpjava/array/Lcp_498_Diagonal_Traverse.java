@@ -10,9 +10,9 @@ public class Lcp_498_Diagonal_Traverse {
 	 * int col <- 0
 	 * int rows <- array length
 	 * int cols <- array[0] length
-	 * int[] result <- rows * cols
+	 * int[] result <- rows multiply cols
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than result length; i++
 	 * 		result[i] <- array[row][col]
 	 * 		if row plus col mod two is equal to zero
 	 * 			if col is equal to cols minus one

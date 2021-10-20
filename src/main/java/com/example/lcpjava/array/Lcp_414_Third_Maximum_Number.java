@@ -59,8 +59,8 @@ public class Lcp_414_Third_Maximum_Number {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * PriorityQueue<Integer> pq
-	 * Set<Integer> set
+	 * PriorityQueue<Integer> pq <- empty PriorityQueue
+	 * Set<Integer> set <- empty HashSet
 	 * 
 	 * for number in array
 	 * 		if set does not contain number
@@ -99,7 +99,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * PriorityQueue<Integer> pq
+	 * PriorityQueue<Integer> pq <- empty PriorityQueue
 	 * 
 	 * for number in array
 	 * 		if pq does not contain number
@@ -138,12 +138,12 @@ public class Lcp_414_Third_Maximum_Number {
 	 * array sort
 	 * 
 	 * int length <- array length
-	 * int count = 0;
-	 * int max3 <- array[length - 1]
+	 * int count <- 0;
+	 * int max3 <- array[length minus one]
 	 * 
-	 * for int i <- length - 1 to array head
-	 * 		if array[i] is not equal to array[i - 1]
-	 * 			max3 <- array[i - 1]
+	 * for int i <- length minus one; if i is greater than zero; i--
+	 * 		if array[i] is not equal to array[i minus one]
+	 * 			max3 <- array[i minus one]
 	 * 			count++
 	 * 		end if
 	 * 		if count is equal to three
@@ -152,7 +152,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * end for
 	 * 
 	 * if count is equal to two
-	 * 		return array[length - 1]
+	 * 		return array[length minus one]
 	 * end if
 	 * 
 	 * return max3

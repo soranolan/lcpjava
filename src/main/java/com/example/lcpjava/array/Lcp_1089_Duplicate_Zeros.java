@@ -15,8 +15,8 @@ public class Lcp_1089_Duplicate_Zeros {
 	 * 		end if
 	 * end for
 	 * 
-	 * int left <- length - 1
-	 * int right <- length + zeroCounts - 1
+	 * int left <- length minus one
+	 * int right <- length plus zeroCounts minus one
 	 * 
 	 * while left not equal right
 	 * 		if right is lower than length

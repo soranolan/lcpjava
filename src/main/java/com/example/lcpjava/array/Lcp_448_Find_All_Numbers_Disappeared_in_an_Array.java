@@ -12,14 +12,14 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 	 * space : O(n)
 	 * 
 	 * int length <- array length
-	 * Set<Integer> container
-	 * List<Integer> result
+	 * Set<Integer> container <- empty HashSet
+	 * List<Integer> result <- empty ArrayList
 	 * 
 	 * for number in array
 	 * 		container add number
 	 * end for
 	 * 
-	 * for int i <- 1 to length
+	 * for int i <- 1; if i is lower than or equal to length; i++
 	 * 		if container not contain i
 	 * 			result add i
 	 * 		end if
@@ -51,23 +51,23 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 	 * 
 	 * Cyclic sort
 	 * 
-	 * List<Integer> result
+	 * List<Integer> result <- empty ArrayList
 	 * int length <- array length
 	 * int i <- 0
 	 * 
 	 * while i is lower than array length
 	 * 		int temp <- array[i]
-	 * 		if temp is not equal to (i + 1) && temp is not equal to array[temp - 1]
-	 * 			array[i] <- array[temp - 1]
-	 * 			array[temp - 1] <- temp
+	 * 		if temp is not equal to (i plus one) && temp is not equal to array[temp minus one]
+	 * 			array[i] <- array[temp minus one]
+	 * 			array[temp minus one] <- temp
 	 * 		else
 	 * 			i++
 	 * 		end if
 	 * end while
 	 * 
-	 * for int j <- 0 to array end
-	 * 		if array[j] is not equal to (j + 1)
-	 * 			result add (j + 1)
+	 * for int j <- 0; if j is lower than length; j++
+	 * 		if array[j] is not equal to (j plus one)
+	 * 			result add (j plus one)
 	 * 		end if
 	 * end for
 	 * 

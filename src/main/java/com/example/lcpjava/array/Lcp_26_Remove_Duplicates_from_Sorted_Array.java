@@ -6,20 +6,20 @@ public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * int left = 0
-	 * int right = 1
+	 * int left <- 0
+	 * int right <- 1
 	 * 
 	 * while right is lower than array length
 	 * 		if array[left] is equal to array[right]
 	 * 			right++
 	 * 		else
 	 * 			left++
-	 * 			array[left] = array[right]
+	 * 			array[left] <- array[right]
 	 * 			right++
 	 * 		end if
 	 * end while
 	 * 
-	 * return left + 1
+	 * return left plus one
 	 * */
 	public int removeDuplicates_1(int[] nums) {
 		int left = 0;
@@ -46,14 +46,14 @@ public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 	 * 
 	 * int left <- 0
 	 * 
-	 * for int right <- 1 to end
+	 * for int right <- 1; if right is lower than array length; right++
 	 * 		if array[left] not equal to array[right]
 	 * 			left++
-	 * 			array[left] = array[right]
+	 * 			array[left] <- array[right]
 	 * 		end if
 	 * end for
 	 * 
-	 * return left + 1
+	 * return left plus one
 	 * */
 	public int removeDuplicates(int[] nums) {
 		int left = 0;

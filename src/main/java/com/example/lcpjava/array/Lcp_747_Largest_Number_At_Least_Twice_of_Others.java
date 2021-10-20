@@ -15,7 +15,7 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * 		end if
 	 * end for
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		int num <- array[i]
 	 * 		if max is equal to num
 	 * 			index <- i
@@ -56,7 +56,7 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * int second <- -1
 	 * int index <- -1
 	 * 
-	 * for int i <- 0 to array end
+	 * for int i <- 0; if i is lower than array length; i++
 	 * 		int num <- array[i]
 	 * 		if max is lower than num
 	 * 			second <- max

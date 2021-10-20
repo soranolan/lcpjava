@@ -10,7 +10,7 @@ public class Lcp_14_Longest_Common_Prefix {
 	 * 
 	 * String prefix <- array[0]
 	 * 
-	 * for int i <- 1 to array end
+	 * for int i <- 1; if i is lower than array length; i++
 	 * 		while array[i] index of prefix is not equal to zero
 	 * 			prefix <- prefix substring from zero to prefix length minus one
 	 * 		end while
@@ -32,9 +32,9 @@ public class Lcp_14_Longest_Common_Prefix {
 	 * time  : O(m * n)
 	 * space : O(1)
 	 * 
-	 * for int i <- 0 to array[0] length
+	 * for int i <- 0; if i is lower than array[0] length; i++
 	 * 		char c <- array[0] charAt(i)
-	 * 		for int j <- 1 to array end
+	 * 		for int j <- 1; if j is lower than array length; j++
 	 * 			if i is greater than or equal to array[j] length || c is not equal to array[j] charAt(i)
 	 * 				return array[0] substring zero to i
 	 * 			end if
@@ -108,7 +108,7 @@ public class Lcp_14_Longest_Common_Prefix {
 	 * 		end if
 	 * end for
 	 * 
-	 * for int i <- 0 to shortest end
+	 * for int i <- 0; if i is lower than shortest length; i++
 	 * 		boolean isSame <- false
 	 * 		char current <- shortest charAt(i)
 	 * 		for string in array

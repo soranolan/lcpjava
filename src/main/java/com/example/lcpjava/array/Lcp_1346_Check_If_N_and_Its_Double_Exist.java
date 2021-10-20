@@ -28,7 +28,7 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	 * 		end if
 	 * 		if right is equal to length
 	 * 			left++
-	 * 			right <- left + 1
+	 * 			right <- left plus one
 	 * 		end if
 	 * end while
 	 * 
@@ -64,10 +64,10 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	 * Set<Integer> container
 	 * 
 	 * for int i <- 0 to array end
-	 * 		if container contains arr[i] multiple two || arr[i] mod two is equal to zero and container contains arr[i] divide two
+	 * 		if container contains array[i] multiple two || array[i] mod two is equal to zero and container contains array[i] divide two
 	 * 			return true
 	 * 		end if
-	 * 		container add arr[i]
+	 * 		container add array[i]
 	 * end for
 	 * 
 	 * return false

@@ -11,8 +11,8 @@ public class Lcp_344_Reverse_String {
 	 * 
 	 * while left is lower than right
 	 * 		char temp <- array[left]
-	 * 		array[left] <- array[right -1]
-	 * 		array[right - 1] <- temp
+	 * 		array[left] <- array[right minus one]
+	 * 		array[right minus one] <- temp
 	 * 		left++
 	 * 		right--
 	 * end while

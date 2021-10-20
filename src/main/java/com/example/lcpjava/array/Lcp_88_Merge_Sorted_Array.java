@@ -6,9 +6,9 @@ public class Lcp_88_Merge_Sorted_Array {
 	 * time  : O(m + n)
 	 * space : O(1)
 	 * 
-	 * int n1Right <- m - 1
-	 * int n2Right <- n - 1
-	 * int mergeRight <- m + n - 1
+	 * int n1Right <- m minus one
+	 * int n2Right <- n minus one
+	 * int mergeRight <- m plus n minus one
 	 * 
 	 * while n1Right greater than and equal to zero && n2Right greater than and equal to zero
 	 * 		if nums1[n1Right] lower than nums2[n2Right]
