@@ -9,15 +9,15 @@ public class Lcp_118_Pascals_Triangle {
 	 * time  : O(n ^ 2)
 	 * space : O(n ^ 2)
 	 * 
-	 * List<List<Integer>> outer
-	 * List<Integer> inner
+	 * List<List<Integer>> outer <- empty list
+	 * List<Integer> inner <- empty list
 	 * 
 	 * for int i <- 0 to numRows
 	 * 		for int j <- inner size minus one to zero
 	 * 			inner set (j, inner get (j) plus inner get (j - 1))
 	 * 		end for
 	 * 		inner add one
-	 * 		List<Integer> clone inner
+	 * 		List<Integer> clone <- clone inner
 	 * 		outer add clone
 	 * end for
 	 * 
