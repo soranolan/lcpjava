@@ -106,7 +106,7 @@ public class Lcp_941_Valid_Mountain_Array {
 	 * 				increasing <- false
 	 * 			end if
 	 * 		else
-	 * 			if array[i minus one] <= array[i]
+	 * 			if array[i minus one] is lower than or equal to array[i]
 	 * 				return false
 	 * 			end if
 	 * 		end if
