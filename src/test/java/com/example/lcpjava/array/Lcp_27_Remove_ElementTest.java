@@ -35,7 +35,7 @@ class Lcp_27_Remove_ElementTest {
 		Lcp_27_Remove_Element lcp = new Lcp_27_Remove_Element();
 		
 		int expect = 0;
-		int[] input = {  };
+		int[] input = {};
 		int val = 0;
 		int test = lcp.removeElement(input, val);
 		

@@ -27,7 +27,7 @@ class Lcp_88_Merge_Sorted_ArrayTest {
 		int[] expect = { 1 };
 		int[] test = { 1 };
 		int m = 1;
-		int[] nums2 = {  };
+		int[] nums2 = {};
 		int n = 0;
 		lcp.merge(test, m, nums2, n);
 		

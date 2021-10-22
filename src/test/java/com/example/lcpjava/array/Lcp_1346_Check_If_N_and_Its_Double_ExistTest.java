@@ -40,7 +40,7 @@ class Lcp_1346_Check_If_N_and_Its_Double_ExistTest {
 	void test_case_4() {
 		Lcp_1346_Check_If_N_and_Its_Double_Exist lcp = new Lcp_1346_Check_If_N_and_Its_Double_Exist();
 		
-		int[] input = {  };
+		int[] input = {};
 		boolean test = lcp.checkIfExist(input);
 		
 		assertThat(test).isFalse();

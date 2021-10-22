@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import com.example.lcpjava.linkedlist.Lcp_141_Linked_List_Cycle.ListNode;
 
-
 class Lcp_141_Linked_List_CycleTest {
 	
 	@Test
