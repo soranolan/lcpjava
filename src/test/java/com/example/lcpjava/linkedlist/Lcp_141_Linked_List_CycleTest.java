@@ -24,6 +24,7 @@ class Lcp_141_Linked_List_CycleTest {
 		node4.next = node2;
 		
 		boolean test = lcp.hasCycle(node1);
+		
 		assertThat(test).isTrue();
 	}
 	
@@ -38,6 +39,7 @@ class Lcp_141_Linked_List_CycleTest {
 		node2.next = node1;
 		
 		boolean test = lcp.hasCycle(node1);
+		
 		assertThat(test).isTrue();
 	}
 	
@@ -48,6 +50,7 @@ class Lcp_141_Linked_List_CycleTest {
 		ListNode node1 = lcp.new ListNode(1);
 		
 		boolean test = lcp.hasCycle(node1);
+		
 		assertThat(test).isFalse();
 	}
 	

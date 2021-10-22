@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 import com.example.lcpjava.linkedlist.MyLinkedList.Node;
@@ -29,17 +30,15 @@ class Lcp_707_Design_Linked_ListTest {
 		obj.deleteAtIndex(6);
 		obj.deleteAtIndex(4);
 		
-		List<Integer> result = new ArrayList<>();
+		Integer[] expect = { 5, 2, 3, 7, 2 };
+		List<Integer> test = new ArrayList<>();
 		Node current = obj.head;
 		while (current != null) {
-			result.add(current.val);
+			test.add(current.val);
 			current = current.next;
 		}
 		
-		int[] expect = new int[] { 5, 2, 3, 7, 2 };
-		int[] test = result.stream().mapToInt(i -> i).toArray();
-		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(Arrays.asList(expect));
 	}
 	
 	@Test
