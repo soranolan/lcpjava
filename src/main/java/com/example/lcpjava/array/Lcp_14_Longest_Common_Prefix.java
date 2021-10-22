@@ -153,25 +153,4 @@ public class Lcp_14_Longest_Common_Prefix {
 		return sb.toString();
 	}
 	
-	public static void main(String[] args) {
-		Lcp_14_Longest_Common_Prefix lcp = new Lcp_14_Longest_Common_Prefix();
-		String[] input = null;
-		String output = null;
-		
-		// "fl"
-		input = new String[] { "flower", "flow", "flight" };
-		output = lcp.longestCommonPrefix(input);
-		System.out.println(output);
-
-		// ""
-		input = new String[] { "dog", "racecar", "car" };
-		output = lcp.longestCommonPrefix(input);
-		System.out.println(output);
-
-		// ""
-		input = new String[] { "c", "acc", "ccc" };
-		output = lcp.longestCommonPrefix(input);
-		System.out.println(output);
-	}
-	
 }

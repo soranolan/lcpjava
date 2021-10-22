@@ -97,20 +97,4 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_448_Find_All_Numbers_Disappeared_in_an_Array lcp = new Lcp_448_Find_All_Numbers_Disappeared_in_an_Array();
-		int [] input = null;
-		List<Integer> output = null;
-		
-		// 5 6
-		input = new int[] { 4,3,2,7,8,2,3,1 };
-		output = lcp.findDisappearedNumbers(input);
-		System.out.println(output);
-		
-		// 2
-		input = new int[] { 1, 1 };
-		output = lcp.findDisappearedNumbers(input);
-		System.out.println(output);
-	}
-	
 }

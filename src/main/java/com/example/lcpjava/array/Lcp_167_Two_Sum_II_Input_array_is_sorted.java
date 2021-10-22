@@ -89,32 +89,4 @@ public class Lcp_167_Two_Sum_II_Input_array_is_sorted {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_167_Two_Sum_II_Input_array_is_sorted lcp = new Lcp_167_Two_Sum_II_Input_array_is_sorted();
-		int[] input = null;
-		int target = -1;
-		int[] output = null;
-		
-		// 1 2
-		input = new int[] { 2, 7, 11, 15 };
-		target = 9;
-		output = lcp.twoSum(input, target);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 1 3
-		input = new int[] { 2, 3, 4 };
-		target = 6;
-		output = lcp.twoSum(input, target);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 1 2
-		input = new int[] { -1, 0 };
-		target = -1;
-		output = lcp.twoSum(input, target);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-	}
-	
 }

@@ -38,30 +38,4 @@ public class Lcp_724_Find_Pivot_Index {
 		return -1;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_724_Find_Pivot_Index lcp = new Lcp_724_Find_Pivot_Index();
-		int[] input = null;
-		int output = -1;
-		
-		// 3
-		input = new int[] { 1, 7, 3, 6, 5, 6 };
-		output = lcp.pivotIndex(input);
-		System.out.println(output);
-		
-		// -1
-		input = new int[] { 1, 2, 3 };
-		output = lcp.pivotIndex(input);
-		System.out.println(output);
-		
-		// 0
-		input = new int[] { 2, 1, -1 };
-		output = lcp.pivotIndex(input);
-		System.out.println(output);
-		
-		// -1
-		input = new int[] { -1, -1, -1, -1, -1, -1 };
-		output = lcp.pivotIndex(input);
-		System.out.println(output);
-	}
-	
 }

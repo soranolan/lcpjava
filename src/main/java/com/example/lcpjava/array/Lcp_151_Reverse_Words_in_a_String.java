@@ -86,35 +86,4 @@ public class Lcp_151_Reverse_Words_in_a_String {
 		return new String(result, 0, index - 1);
 	}
 	
-	public static void main(String[] args) {
-		Lcp_151_Reverse_Words_in_a_String lcp = new Lcp_151_Reverse_Words_in_a_String();
-		String input = null;
-		String output = null;
-		
-		// "blue is sky the"
-		input = "the sky is blue";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-		
-		// "world hello"
-		input = "  hello world  ";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-		
-		// "example good a"
-		input = "a good   example";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-		
-		// "Alice Loves Bob"
-		input = "  Bob    Loves  Alice   ";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-		
-		// "bob like even not does Alice"
-		input = "Alice does not even like bob";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-	}
-	
 }

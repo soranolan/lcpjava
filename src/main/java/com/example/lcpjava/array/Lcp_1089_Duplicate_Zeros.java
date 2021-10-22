@@ -59,20 +59,4 @@ public class Lcp_1089_Duplicate_Zeros {
 		if (right < length) { arr[right] = arr[left]; }
 	}
 	
-	public static void main(String[] args) {
-		Lcp_1089_Duplicate_Zeros lcp = new Lcp_1089_Duplicate_Zeros();
-		
-		// 1 0 0 2 3 0 0 4
-		int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };
-		lcp.duplicateZeros(input);
-		
-		// 1 2 3
-		input = new int[] { 1, 2, 3 };
-		lcp.duplicateZeros(input);
-		
-		// 0 0 0 0 0 0 0
-		input = new int[] { 0, 0, 0, 0, 0, 0, 0 };
-		lcp.duplicateZeros(input);
-	}
-	
 }

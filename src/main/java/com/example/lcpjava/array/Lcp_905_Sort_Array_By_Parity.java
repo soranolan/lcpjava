@@ -74,29 +74,4 @@ public class Lcp_905_Sort_Array_By_Parity {
 		return nums;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_905_Sort_Array_By_Parity lcp = new Lcp_905_Sort_Array_By_Parity();
-		int[] input = null;
-		int[] output = null;
-		
-		// 2 4 3 1
-		input = new int[] { 3, 1, 2, 4 };
-		output = lcp.sortArrayByParity(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 0
-		input = new int[] { 0 };
-		output = lcp.sortArrayByParity(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 0 2 1
-		input = new int[] { 0, 1, 2 };
-		output = lcp.sortArrayByParity(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-	}
-	
 }

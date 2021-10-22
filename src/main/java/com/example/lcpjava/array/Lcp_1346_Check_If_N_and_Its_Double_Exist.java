@@ -83,35 +83,4 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 		return false;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_1346_Check_If_N_and_Its_Double_Exist lcp = new Lcp_1346_Check_If_N_and_Its_Double_Exist();
-		int[] input = null;
-		boolean output = false;
-		
-		// true
-		input = new int[] { 10, 2, 5, 3 };
-		output = lcp.checkIfExist(input);
-		System.out.println(output);
-		
-		// true
-		input = new int[] { 7, 1, 14, 11 };
-		output = lcp.checkIfExist(input);
-		System.out.println(output);
-		
-		// false
-		input = new int[] { 3, 1, 7, 11 };
-		output = lcp.checkIfExist(input);
-		System.out.println(output);
-		
-		// false
-		input = new int[] { };
-		output = lcp.checkIfExist(input);
-		System.out.println(output);
-		
-		// false
-		input = new int[] { 1 };
-		output = lcp.checkIfExist(input);
-		System.out.println(output);
-	}
-	
 }

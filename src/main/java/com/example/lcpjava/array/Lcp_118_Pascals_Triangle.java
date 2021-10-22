@@ -39,20 +39,4 @@ public class Lcp_118_Pascals_Triangle {
 		return outer;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_118_Pascals_Triangle lcp = new Lcp_118_Pascals_Triangle();
-		int input = -1;
-		List<List<Integer>> output = null;
-		
-		// [ [ 1 ], [ 1, 1 ], [ 1, 2, 1 ], [ 1, 3, 3, 1 ], [ 1, 4, 6, 4, 1 ] ]
-		input = 5;
-		output = lcp.generate(input);
-		System.out.println(output);
-		
-		// [ [ 1 ] ]
-		input = 1;
-		output = lcp.generate(input);
-		System.out.println(output);
-	}
-	
 }

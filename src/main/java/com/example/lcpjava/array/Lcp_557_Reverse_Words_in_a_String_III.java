@@ -61,20 +61,4 @@ public class Lcp_557_Reverse_Words_in_a_String_III {
 		}
 	}
 	
-	public static void main(String[] args) {
-		Lcp_557_Reverse_Words_in_a_String_III lcp = new Lcp_557_Reverse_Words_in_a_String_III();
-		String input = null;
-		String output = null;
-		
-		// "s'teL ekat edoCteeL tsetnoc"
-		input = "Let's take LeetCode contest";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-		
-		// "doG gniD"
-		input = "God Ding";
-		output = lcp.reverseWords(input);
-		System.out.println(output);
-	}
-	
 }

@@ -82,18 +82,4 @@ public class Lcp_485_Max_Consecutive_Ones {
 		return max;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_485_Max_Consecutive_Ones lcp = new Lcp_485_Max_Consecutive_Ones();
-		
-		// 3
-		int[] input = { 1, 1, 0, 1, 1, 1 };
-		int output = lcp.findMaxConsecutiveOnes(input);
-		System.out.println(output);
-		
-		// 2
-		input = new int[] { 1, 0, 1, 1, 0, 1 };
-		output = lcp.findMaxConsecutiveOnes(input);
-		System.out.println(output);
-	}
-	
 }

@@ -79,30 +79,4 @@ public class Lcp_1051_Height_Checker {
 		return count;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_1051_Height_Checker lcp = new Lcp_1051_Height_Checker();
-		int[] input = null;
-		int output = -1;
-		
-		// 3
-		input = new int[] { 1, 1, 4, 2, 1, 3 };
-		output = lcp.heightChecker(input);
-		System.out.println(output);
-		
-		// 5
-		input = new int[] { 5, 1, 2, 3, 4 };
-		output = lcp.heightChecker(input);
-		System.out.println(output);
-		
-		// 0
-		input = new int[] { 1, 2, 3, 4, 5 };
-		output = lcp.heightChecker(input);
-		System.out.println(output);
-		
-		// 16
-		input = new int[] { 0, 100, 0, 99, 0, 98, 0, 97, 0, 96, 0, 95, 0, 94, 0, 93, 0, 92, 0, 91, 0, 90 };
-		output = lcp.heightChecker(input);
-		System.out.println(output);
-	}
-	
 }

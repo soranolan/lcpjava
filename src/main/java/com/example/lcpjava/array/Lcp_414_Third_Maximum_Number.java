@@ -177,25 +177,4 @@ public class Lcp_414_Third_Maximum_Number {
 		return max3;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_414_Third_Maximum_Number lcp = new Lcp_414_Third_Maximum_Number();
-		int[] input = null;
-		int output = -1;
-		
-		// 1
-		input = new int[] { 3, 2, 1 };
-		output = lcp.thirdMax(input);
-		System.out.println(output);
-		
-		// 2
-		input = new int[] { 1, 2 };
-		output = lcp.thirdMax(input);
-		System.out.println(output);
-		
-		// 1
-		input = new int[] { 2, 2, 3, 1 };
-		output = lcp.thirdMax(input);
-		System.out.println(output);
-	}
-	
 }

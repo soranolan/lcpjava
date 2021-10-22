@@ -136,30 +136,4 @@ public class Lcp_941_Valid_Mountain_Array {
 		return !increasing;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_941_Valid_Mountain_Array lcp = new Lcp_941_Valid_Mountain_Array();
-		int[] input = null;
-		boolean output = false;
-		
-		// false
-		input = new int[] { 2, 1 };
-		output = lcp.validMountainArray(input);
-		System.out.println(output);
-		
-		// false
-		input = new int[] { 3, 5, 5 };
-		output = lcp.validMountainArray(input);
-		System.out.println(output);
-		
-		// true
-		input = new int[] { 0, 3, 2, 1 };
-		output = lcp.validMountainArray(input);
-		System.out.println(output);
-		
-		// false
-		input = new int[] { 2, 0, 2 };
-		output = lcp.validMountainArray(input);
-		System.out.println(output);
-	}
-	
 }

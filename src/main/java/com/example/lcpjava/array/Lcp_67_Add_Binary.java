@@ -61,23 +61,4 @@ public class Lcp_67_Add_Binary {
 		return sb.reverse().toString();																				// T : O(n)
 	}
 	
-	public static void main(String[] args) {
-		Lcp_67_Add_Binary lcp = new Lcp_67_Add_Binary();
-		String inputA = null;
-		String inputB = null;
-		String output = null;
-		
-		// 100
-		inputA = "11";
-		inputB = "1";
-		output = lcp.addBinary(inputA, inputB);
-		System.out.println(output);
-		
-		// 10101
-		inputA = "1010";
-		inputB = "1011";
-		output = lcp.addBinary(inputA, inputB);
-		System.out.println(output);
-	}
-	
 }

@@ -140,41 +140,4 @@ public class Lcp_28_Implement_strStr {
 		return lps;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
-		String haystack = null;
-		String needle = null;
-		int output = -1;
-		
-		// 2
-		haystack = "hello";
-		needle = "ll";
-		output = lcp.strStr(haystack, needle);
-		System.out.println(output);
-		
-		// -1
-		haystack = "aaaaa";
-		needle = "bba";
-		output = lcp.strStr(haystack, needle);
-		System.out.println(output);
-		
-		// 0
-		haystack = "";
-		needle = "";
-		output = lcp.strStr(haystack, needle);
-		System.out.println(output);
-		
-		// 4
-		haystack = "mississippi";
-		needle = "issip";
-		output = lcp.strStr(haystack, needle);
-		System.out.println(output);
-		
-		// 9
-		haystack = "mississippi";
-		needle = "pi";
-		output = lcp.strStr(haystack, needle);
-		System.out.println(output);
-	}
-	
 }

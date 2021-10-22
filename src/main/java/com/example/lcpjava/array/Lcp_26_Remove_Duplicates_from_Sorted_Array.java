@@ -70,20 +70,4 @@ public class Lcp_26_Remove_Duplicates_from_Sorted_Array {
 		return left + 1;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_26_Remove_Duplicates_from_Sorted_Array lcp = new Lcp_26_Remove_Duplicates_from_Sorted_Array();
-		int[] input = null;
-		int output = -1;
-		
-		// 2; 1 2
-		input = new int[] { 1, 1, 2 };
-		output = lcp.removeDuplicates(input);
-		System.out.println(output);
-		
-		// 5; 0 1 2 3 4
-		input = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-		output = lcp.removeDuplicates(input);
-		System.out.println(output);
-	}
-	
 }

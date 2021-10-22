@@ -73,20 +73,4 @@ public class Lcp_189_Rotate_Array {
 		}
 	}
 	
-	public static void main(String[] args) {
-		Lcp_189_Rotate_Array lcp = new Lcp_189_Rotate_Array();
-		int[] input = null;
-		int k = -1;
-		
-		// 5 6 7 1 2 3 4
-		input = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-		k = 3;
-		lcp.rotate(input, k);
-		
-		// 3 99 -1 -100
-		input = new int[] { -1, -100, 3, 99 };
-		k = 2;
-		lcp.rotate(input, k);
-	}
-	
 }

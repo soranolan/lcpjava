@@ -87,34 +87,4 @@ public class Lcp_27_Remove_Element {
 		return count;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_27_Remove_Element lcp = new Lcp_27_Remove_Element();
-		int output = -1;
-		int val = -1;
-		
-		// 2; 2 2
-		int[] input = { 3, 2, 2, 3 };
-		val = 3;
-		output = lcp.removeElement(input, val);
-		System.out.println(output);
-		
-		// 5; 0 1 2 3 4
-		input = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
-		val = 2;
-		output = lcp.removeElement(input, val);
-		System.out.println(output);
-		
-		// 0;
-		input = new int[] { };
-		val = 0;
-		output = lcp.removeElement(input, val);
-		System.out.println(output);
-		
-		// 0;
-		input = new int[] { 1 };
-		val = 1;
-		output = lcp.removeElement(input, val);
-		System.out.println(output);
-	}
-	
 }

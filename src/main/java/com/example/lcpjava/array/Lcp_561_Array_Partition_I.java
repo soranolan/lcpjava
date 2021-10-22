@@ -201,20 +201,4 @@ public class Lcp_561_Array_Partition_I {
 		return sum;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_561_Array_Partition_I lcp = new Lcp_561_Array_Partition_I();
-		int[] input = null;
-		int output = -1;
-		
-		// 4
-		input = new int[] { 1, 4, 3, 2 };
-		output = lcp.arrayPairSum(input);
-		System.out.println(output);
-		
-		// 9
-		input = new int[] { 6, 2, 6, 5, 1, 2 };
-		output = lcp.arrayPairSum(input);
-		System.out.println(output);
-	}
-	
 }

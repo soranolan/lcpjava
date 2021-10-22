@@ -67,25 +67,4 @@ public class Lcp_119_Pascals_Triangle_II {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_119_Pascals_Triangle_II lcp = new Lcp_119_Pascals_Triangle_II();
-		int input = -1;
-		List<Integer> output = null;
-		
-		// 1 3 3 1
-		input = 3;
-		output = lcp.getRow(input);
-		System.out.println(output);
-		
-		// 1
-		input = 0;
-		output = lcp.getRow(input);
-		System.out.println(output);
-		
-		// 1 1
-		input = 1;
-		output = lcp.getRow(input);
-		System.out.println(output);
-	}
-	
 }

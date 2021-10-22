@@ -56,29 +56,4 @@ public class Lcp_88_Merge_Sorted_Array {
 		nums1[mergeRight] = nums2[n2Right];
 	}
 	
-	public static void main(String[] args) {
-		Lcp_88_Merge_Sorted_Array lcp = new Lcp_88_Merge_Sorted_Array();
-		
-		// 1 2 2 3 5 6
-		int[] nums1 = { 1, 2, 3, 0, 0, 0 };
-		int m = 3;
-		int[] nums2 = { 2, 5, 6 };
-		int n = 3;
-		lcp.merge(nums1, m, nums2, n);
-		
-		// 1
-		nums1 = new int[] { 1 };
-		m = 1;
-		nums2 = new int[] {};
-		n = 0;
-		lcp.merge(nums1, m, nums2, n);
-		
-		// 1
-		nums1 = new int[] { 0 };
-		m = 0;
-		nums2 = new int[] { 1 };
-		n = 1;
-		lcp.merge(nums1, m, nums2, n);
-	}
-	
 }

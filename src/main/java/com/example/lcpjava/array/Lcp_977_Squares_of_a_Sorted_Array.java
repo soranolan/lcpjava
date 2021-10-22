@@ -102,23 +102,4 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 		return newArray;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_977_Squares_of_a_Sorted_Array lcp = new Lcp_977_Squares_of_a_Sorted_Array();
-		int[] input = null;
-		int[] output = null;
-		
-		// 0, 1, 9, 16, 100
-		input = new int[] { -4, -1, 0, 3, 10 };
-		output = lcp.sortedSquares(input);
-		for (int num : output) { System.out.print(num + " "); }
-		
-		System.out.println();
-		System.out.println("=====");
-		
-		// 4, 9, 9, 49, 121
-		input = new int[] { -7, -3, 2, 3, 11 };
-		output = lcp.sortedSquares(input);
-		for (int num : output) { System.out.print(num + " "); }
-	}
-	
 }

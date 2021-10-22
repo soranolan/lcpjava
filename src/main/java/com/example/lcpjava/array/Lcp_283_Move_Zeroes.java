@@ -140,21 +140,4 @@ public class Lcp_283_Move_Zeroes {
 		System.out.println();
 	}
 	
-	public static void main(String[] args) {
-		Lcp_283_Move_Zeroes lcp = new Lcp_283_Move_Zeroes();
-		int[] input = null;
-		
-		// 1 3 12 0 0
-		input = new int[] { 0, 1, 0, 3, 12 };
-		lcp.moveZeroes(input);
-		
-		// 1 3 12 0 0
-		input = new int[] { 0, 0, 1, 3, 12 };
-		lcp.moveZeroes(input);
-		
-		// 0
-		input = new int[] { 0 };
-		lcp.moveZeroes(input);
-	}
-	
 }

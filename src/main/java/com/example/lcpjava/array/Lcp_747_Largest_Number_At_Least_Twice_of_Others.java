@@ -88,25 +88,4 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 		return max >= second * 2 ? index : -1;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_747_Largest_Number_At_Least_Twice_of_Others lcp = new Lcp_747_Largest_Number_At_Least_Twice_of_Others();
-		int[] input = null;
-		int output = -1;
-		
-		// 1
-		input = new int[] { 3, 6, 1, 0 };
-		output = lcp.dominantIndex(input);
-		System.out.println(output);
-		
-		// -1
-		input = new int[] { 1, 2, 3, 4 };
-		output = lcp.dominantIndex(input);
-		System.out.println(output);
-		
-		// 0
-		input = new int[] { 1 };
-		output = lcp.dominantIndex(input);
-		System.out.println(output);
-	}
-	
 }

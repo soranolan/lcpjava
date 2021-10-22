@@ -26,18 +26,4 @@ public class Lcp_1295_Find_Numbers_with_Even_Number_of_Digits {
 		return even;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_1295_Find_Numbers_with_Even_Number_of_Digits lcp = new Lcp_1295_Find_Numbers_with_Even_Number_of_Digits();
-		
-		// 2
-		int[] input = { 12, 345, 2, 6, 7896 };
-		int output = lcp.findNumbers(input);
-		System.out.println(output);
-		
-		// 1
-		input = new int[] { 555, 901, 482, 1771 };
-		output = lcp.findNumbers(input);
-		System.out.println(output);
-	}
-	
 }

@@ -99,40 +99,4 @@ public class Lcp_54_Spiral_Matrix {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_54_Spiral_Matrix lcp = new Lcp_54_Spiral_Matrix();
-		int[][] input = null;
-		List<Integer> output = null;
-		
-		// 1 2 3 6 9 8 7 4 5
-		input = new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-		output = lcp.spiralOrder(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 1 2 3 4 8 12 11 10 9 5 6 7
-		input = new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
-		output = lcp.spiralOrder(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 2 3
-		input = new int[][] { { 2, 3 } };
-		output = lcp.spiralOrder(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
-		input = new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
-		output = lcp.spiralOrder(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// 1 2 3 4 8 12 11 10 9 5 6 7
-		input = new int[][] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
-		output = lcp.spiralOrder(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-	}
-	
 }

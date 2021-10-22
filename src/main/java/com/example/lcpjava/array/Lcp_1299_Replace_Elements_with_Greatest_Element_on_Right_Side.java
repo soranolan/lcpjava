@@ -32,22 +32,4 @@ public class Lcp_1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
 		return arr;
 	}
 	
-	public static void main(String[] args) {
-		Lcp_1299_Replace_Elements_with_Greatest_Element_on_Right_Side lcp = new Lcp_1299_Replace_Elements_with_Greatest_Element_on_Right_Side();
-		int[] input = null;
-		int[] output = null;
-		
-		// 18 6 6 6 1 -1
-		input = new int[] { 17, 18, 5, 4, 6, 1 };
-		output = lcp.replaceElements(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-		
-		// -1
-		input = new int[] { 400 };
-		output = lcp.replaceElements(input);
-		for (int num : output) { System.out.print(num + " "); }
-		System.out.println();
-	}
-	
 }
