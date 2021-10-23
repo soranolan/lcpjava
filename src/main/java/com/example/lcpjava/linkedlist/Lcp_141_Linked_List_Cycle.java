@@ -18,7 +18,7 @@ public class Lcp_141_Linked_List_Cycle {
 	 * ListNode slow <- head
 	 * ListNode fast <- head
 	 * 
-	 * while fast is not null && fast next is not null
+	 * while fast is not equal to null && fast next is not equal to null
 	 * 		slow <- slow next
 	 * 		fast <- fast next next
 	 * 		if slow is equal to fast
