@@ -4,19 +4,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.lcpjava.linkedlist.Lcp_19_Remove_Nth_Node_From_End_of_List.ListNode;
-
 class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	
 	@Test
 	void test_case_1() {
 		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
 		
-		ListNode expect = lcp.new ListNode(1);
-		ListNode node2 = lcp.new ListNode(2);
-		ListNode node3 = lcp.new ListNode(3);
-		ListNode node4 = lcp.new ListNode(4);
-		ListNode node5 = lcp.new ListNode(5);
+		ListNode expect = new ListNode(1);
+		ListNode node2 = new ListNode(2);
+		ListNode node3 = new ListNode(3);
+		ListNode node4 = new ListNode(4);
+		ListNode node5 = new ListNode(5);
 		
 		expect.next = node2;
 		node2.next = node3;
@@ -36,7 +34,7 @@ class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	void test_case_2() {
 		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
 		
-		ListNode expect = lcp.new ListNode(1);
+		ListNode expect = new ListNode(1);
 		
 		int n = 1;
 		
@@ -49,8 +47,8 @@ class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	void test_case_3() {
 		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
 		
-		ListNode expect = lcp.new ListNode(1);
-		ListNode node2 = lcp.new ListNode(2);
+		ListNode expect = new ListNode(1);
+		ListNode node2 = new ListNode(2);
 		
 		expect.next = node2;
 		
@@ -67,8 +65,8 @@ class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	void test_case_4() {
 		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
 		
-		ListNode node1 = lcp.new ListNode(1);
-		ListNode expect = lcp.new ListNode(2);
+		ListNode node1 = new ListNode(1);
+		ListNode expect = new ListNode(2);
 		
 		node1.next = expect;
 		

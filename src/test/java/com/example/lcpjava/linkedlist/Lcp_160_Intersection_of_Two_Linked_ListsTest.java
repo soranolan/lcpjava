@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.lcpjava.linkedlist.Lcp_160_Intersection_of_Two_Linked_Lists.ListNode;
-
 
 class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 	
@@ -13,16 +11,16 @@ class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 	void test_case_1() {
 		Lcp_160_Intersection_of_Two_Linked_Lists lcp = new Lcp_160_Intersection_of_Two_Linked_Lists();
 		
-		ListNode A1 = lcp.new ListNode(4);
-		ListNode A2 = lcp.new ListNode(1);
+		ListNode A1 = new ListNode(4);
+		ListNode A2 = new ListNode(1);
 		
-		ListNode B1 = lcp.new ListNode(5);
-		ListNode B2 = lcp.new ListNode(6);
-		ListNode B3 = lcp.new ListNode(1);
+		ListNode B1 = new ListNode(5);
+		ListNode B2 = new ListNode(6);
+		ListNode B3 = new ListNode(1);
 		
-		ListNode expect = lcp.new ListNode(8);
-		ListNode C2 = lcp.new ListNode(4);
-		ListNode C3 = lcp.new ListNode(5);
+		ListNode expect = new ListNode(8);
+		ListNode C2 = new ListNode(4);
+		ListNode C3 = new ListNode(5);
 		
 		A1.next = A2;
 		A2.next = expect;
@@ -43,14 +41,14 @@ class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 	void test_case_2() {
 		Lcp_160_Intersection_of_Two_Linked_Lists lcp = new Lcp_160_Intersection_of_Two_Linked_Lists();
 		
-		ListNode A1 = lcp.new ListNode(1);
-		ListNode A2 = lcp.new ListNode(9);
-		ListNode A3 = lcp.new ListNode(1);
+		ListNode A1 = new ListNode(1);
+		ListNode A2 = new ListNode(9);
+		ListNode A3 = new ListNode(1);
 		
-		ListNode B1 = lcp.new ListNode(3);
+		ListNode B1 = new ListNode(3);
 		
-		ListNode expect = lcp.new ListNode(2);
-		ListNode C2 = lcp.new ListNode(4);
+		ListNode expect = new ListNode(2);
+		ListNode C2 = new ListNode(4);
 		
 		A1.next = A2;
 		A2.next = A3;
@@ -69,12 +67,12 @@ class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 	void test_case_3() {
 		Lcp_160_Intersection_of_Two_Linked_Lists lcp = new Lcp_160_Intersection_of_Two_Linked_Lists();
 		
-		ListNode A1 = lcp.new ListNode(2);
-		ListNode A2 = lcp.new ListNode(6);
-		ListNode A3 = lcp.new ListNode(4);
+		ListNode A1 = new ListNode(2);
+		ListNode A2 = new ListNode(6);
+		ListNode A3 = new ListNode(4);
 		
-		ListNode B1 = lcp.new ListNode(1);
-		ListNode B2 = lcp.new ListNode(5);
+		ListNode B1 = new ListNode(1);
+		ListNode B2 = new ListNode(5);
 		
 		A1.next = A2;
 		A2.next = A3;

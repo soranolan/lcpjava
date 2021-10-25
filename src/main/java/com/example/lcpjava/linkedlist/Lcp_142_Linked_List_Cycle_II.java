@@ -2,19 +2,6 @@ package com.example.lcpjava.linkedlist;
 
 public class Lcp_142_Linked_List_Cycle_II {
 	
-	public class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-		@Override
-		public String toString() {
-			return "ListNode [val=" + val + ", next=" + next + "]";
-		}
-	}
-	
 	/**
 	 * time  : O(n)
 	 * space : O(1)
