@@ -53,7 +53,7 @@ public class Lcp_19_Remove_Nth_Node_From_End_of_List {
 			n--;
 		}
 		
-		while (fast.next != null) {																					// T : O(n)
+		while (fast.next != null) {																					// T : O(m - n)
 			slow = slow.next;
 			fast = fast.next;
 		}
