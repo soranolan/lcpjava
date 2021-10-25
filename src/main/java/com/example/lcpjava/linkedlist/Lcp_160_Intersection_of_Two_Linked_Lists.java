@@ -9,6 +9,10 @@ public class Lcp_160_Intersection_of_Two_Linked_Lists {
 			val = x;
 			next = null;
 		}
+		@Override
+		public String toString() {
+			return "ListNode [val=" + val + ", next=" + next + "]";
+		}
 	}
 	
 	/**
