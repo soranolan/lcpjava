@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class Lcp_203_Remove_Linked_List_ElementsTest {
+class Lcp_203_Remove_Linked_List_ElementsTest {
 	
 	@Test
 	void test_case_1() {
