@@ -10,8 +10,14 @@ public class Node {
 	
 	public Node child;
 	
+	public Node random;
+	
 	public Node(int val) {
 		this.val = val;
+		this.prev = null;
+		this.next = null;
+		this.child = null;
+		this.random = null;
 	}
 	
 	@Override
