@@ -35,7 +35,7 @@ public class Lcp_61_Rotate_List {
 	 * 
 	 * return newHead next
 	 * */
-	public ListNode rotateRight(ListNode head, int k) {
+	public ListNode rotateRight_1(ListNode head, int k) {
 		if (head == null) { return head; }
 		
 		ListNode newHead = new ListNode(0);
@@ -62,6 +62,57 @@ public class Lcp_61_Rotate_List {
 		leftTail.next = null;
 		
 		return newHead.next;
+	}
+	
+	/**
+	 * time  : O(m + n)
+	 * space : O(1)
+	 * 
+	 * if head is equal to null
+	 * 		return head
+	 * end if
+	 * 
+	 * ListNode newTail <- head
+	 * int size <- 1
+	 * while newTail next is not equal to null
+	 * 		newTail <- newTail next
+	 * 		size++
+	 * end while
+	 * 
+	 * newTail next <- head
+	 * k <- k mod size
+	 * int target <- size minus k
+	 * while target is greater than zero
+	 * 		newTail <- newTail next
+	 * 		target--
+	 * end while
+	 * 
+	 * head <- newTail next
+	 * newTail next <- null
+	 * 
+	 * return head
+	 * */
+	public ListNode rotateRight(ListNode head, int k) {
+		if (head == null) { return head; }
+		
+		ListNode newTail = head;
+		int size = 1;
+		while (newTail.next != null) {																				// T : O(n)
+			newTail = newTail.next;
+			size++;
+		}
+		
+		newTail.next = head;
+		k %= size;
+		int target = size - k;
+		while (target > 0) {																						// T : O(m)
+			newTail = newTail.next;
+			target--;
+		}
+		
+		head = newTail.next;
+		newTail.next = null;
+		return head;
 	}
 	
 }
