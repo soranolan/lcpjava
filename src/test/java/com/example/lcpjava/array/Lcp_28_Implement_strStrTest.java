@@ -10,60 +10,60 @@ class Lcp_28_Implement_strStrTest {
 	void test_case_1() {
 		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
 		
-		int expect = 2;
+		int expected = 2;
 		String haystack = "hello";
 		String needle = "ll";
 		int test = lcp.strStr(haystack, needle);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
 		
-		int expect = -1;
+		int expected = -1;
 		String haystack = "aaaaa";
 		String needle = "bba";
 		int test = lcp.strStr(haystack, needle);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_3() {
 		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
 		
-		int expect = 0;
+		int expected = 0;
 		String haystack = "";
 		String needle = "";
 		int test = lcp.strStr(haystack, needle);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_4() {
 		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
 		
-		int expect = 4;
+		int expected = 4;
 		String haystack = "mississippi";
 		String needle = "issip";
 		int test = lcp.strStr(haystack, needle);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_5() {
 		Lcp_28_Implement_strStr lcp = new Lcp_28_Implement_strStr();
 		
-		int expect = 9;
+		int expected = 9;
 		String haystack = "mississippi";
 		String needle = "pi";
 		int test = lcp.strStr(haystack, needle);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

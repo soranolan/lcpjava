@@ -10,44 +10,44 @@ class Lcp_724_Find_Pivot_IndexTest {
 	void test_case_1() {
 		Lcp_724_Find_Pivot_Index lcp = new Lcp_724_Find_Pivot_Index();
 		
-		int expect = 3;
+		int expected = 3;
 		int[] input = { 1, 7, 3, 6, 5, 6 };
 		int test = lcp.pivotIndex(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_724_Find_Pivot_Index lcp = new Lcp_724_Find_Pivot_Index();
 		
-		int expect = -1;
+		int expected = -1;
 		int[] input = { 1, 2, 3 };
 		int test = lcp.pivotIndex(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_3() {
 		Lcp_724_Find_Pivot_Index lcp = new Lcp_724_Find_Pivot_Index();
 		
-		int expect = 0;
+		int expected = 0;
 		int[] input = { 2, 1, -1 };
 		int test = lcp.pivotIndex(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_4() {
 		Lcp_724_Find_Pivot_Index lcp = new Lcp_724_Find_Pivot_Index();
 		
-		int expect = -1;
+		int expected = -1;
 		int[] input = { -1, -1, -1, -1, -1, -1 };
 		int test = lcp.pivotIndex(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

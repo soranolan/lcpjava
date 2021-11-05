@@ -10,30 +10,30 @@ class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_ListTest {
 	void test_case_1() {
 		Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List lcp = new Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List();
 		
-		Node expect = new Node(1);
-		Node expect2 = new Node(2);
-		Node expect3 = new Node(3);
-		Node expect4 = new Node(7);
-		Node expect5 = new Node(8);
-		Node expect6 = new Node(11);
-		Node expect7 = new Node(12);
-		Node expect8 = new Node(9);
-		Node expect9 = new Node(10);
-		Node expect10 = new Node(4);
-		Node expect11 = new Node(5);
-		Node expect12 = new Node(6);
+		Node expected = new Node(1);
+		Node expected2 = new Node(2);
+		Node expected3 = new Node(3);
+		Node expected4 = new Node(7);
+		Node expected5 = new Node(8);
+		Node expected6 = new Node(11);
+		Node expected7 = new Node(12);
+		Node expected8 = new Node(9);
+		Node expected9 = new Node(10);
+		Node expected10 = new Node(4);
+		Node expected11 = new Node(5);
+		Node expected12 = new Node(6);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
-		expect5.next = expect6;
-		expect6.next = expect7;
-		expect7.next = expect8;
-		expect8.next = expect9;
-		expect9.next = expect10;
-		expect10.next = expect11;
-		expect11.next = expect12;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
+		expected5.next = expected6;
+		expected6.next = expected7;
+		expected7.next = expected8;
+		expected8.next = expected9;
+		expected9.next = expected10;
+		expected10.next = expected11;
+		expected11.next = expected12;
 		
 		Node node1 = new Node(1);
 		Node node2 = new Node(2);
@@ -68,7 +68,7 @@ class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_ListTest {
 		
 		Node test = lcp.flatten(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

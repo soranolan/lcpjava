@@ -13,22 +13,22 @@ class Lcp_448_Find_All_Numbers_Disappeared_in_an_ArrayTest {
 	void test_case_1() {
 		Lcp_448_Find_All_Numbers_Disappeared_in_an_Array lcp = new Lcp_448_Find_All_Numbers_Disappeared_in_an_Array();
 		
-		Integer[] expect = { 5, 6 };
+		Integer[] expected = { 5, 6 };
 		int[] input = { 4, 3, 2, 7, 8, 2, 3, 1 };
 		List<Integer> test = lcp.findDisappearedNumbers(input);
 		
-		assertThat(test).isEqualTo(Arrays.asList(expect));
+		assertThat(test).isEqualTo(Arrays.asList(expected));
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_448_Find_All_Numbers_Disappeared_in_an_Array lcp = new Lcp_448_Find_All_Numbers_Disappeared_in_an_Array();
 		
-		Integer[] expect = { 2 };
+		Integer[] expected = { 2 };
 		int[] input = { 1, 1 };
 		List<Integer> test = lcp.findDisappearedNumbers(input);
 		
-		assertThat(test).isEqualTo(Arrays.asList(expect));
+		assertThat(test).isEqualTo(Arrays.asList(expected));
 	}
 	
 }

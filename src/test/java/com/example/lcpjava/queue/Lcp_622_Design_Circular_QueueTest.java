@@ -10,7 +10,7 @@ class Lcp_622_Design_Circular_QueueTest {
 	void test_case_1() {
 		boolean test = false;
 		int result = -1;
-		int expect = -1;
+		int expected = -1;
 		
 		MyCircularQueue myCircularQueue = new MyCircularQueue(3);
 		
@@ -26,9 +26,9 @@ class Lcp_622_Design_Circular_QueueTest {
 		test = myCircularQueue.enQueue(4);
 		assertThat(test).isFalse();
 		
-		expect = 3;
+		expected = 3;
 		result = myCircularQueue.Rear();
-		assertThat(result).isEqualTo(expect);
+		assertThat(result).isEqualTo(expected);
 		
 		test = myCircularQueue.isFull();
 		assertThat(test).isTrue();
@@ -39,9 +39,9 @@ class Lcp_622_Design_Circular_QueueTest {
 		test = myCircularQueue.enQueue(4);
 		assertThat(test).isTrue();
 		
-		expect = 4;
+		expected = 4;
 		result = myCircularQueue.Rear();
-		assertThat(result).isEqualTo(expect);
+		assertThat(result).isEqualTo(expected);
 	}
 	
 	@Test

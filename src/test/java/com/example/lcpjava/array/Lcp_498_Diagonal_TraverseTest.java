@@ -10,22 +10,22 @@ class Lcp_498_Diagonal_TraverseTest {
 	void test_case_1() {
 		Lcp_498_Diagonal_Traverse lcp = new Lcp_498_Diagonal_Traverse();
 		
-		int[] expect = { 1, 2, 4, 7, 5, 3, 6, 8, 9 };
+		int[] expected = { 1, 2, 4, 7, 5, 3, 6, 8, 9 };
 		int[][] input = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		int[] test = lcp.findDiagonalOrder(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_498_Diagonal_Traverse lcp = new Lcp_498_Diagonal_Traverse();
 		
-		int[] expect = { 1, 2, 3, 4 };
+		int[] expected = { 1, 2, 3, 4 };
 		int[][] input = { { 1, 2 }, { 3, 4 } };
 		int[] test = lcp.findDiagonalOrder(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

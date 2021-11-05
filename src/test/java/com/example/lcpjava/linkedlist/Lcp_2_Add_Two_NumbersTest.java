@@ -10,12 +10,12 @@ class Lcp_2_Add_Two_NumbersTest {
 	void test_case_1() {
 		Lcp_2_Add_Two_Numbers lcp = new Lcp_2_Add_Two_Numbers();
 		
-		ListNode expect = new ListNode(7);
-		ListNode expect2 = new ListNode(0);
-		ListNode expect3 = new ListNode(8);
+		ListNode expected = new ListNode(7);
+		ListNode expected2 = new ListNode(0);
+		ListNode expected3 = new ListNode(8);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
+		expected.next = expected2;
+		expected2.next = expected3;
 		
 		ListNode l1_1 = new ListNode(2);
 		ListNode l1_2 = new ListNode(4);
@@ -33,14 +33,14 @@ class Lcp_2_Add_Two_NumbersTest {
 		
 		ListNode test = lcp.addTwoNumbers(l1_1, l2_1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_2_Add_Two_Numbers lcp = new Lcp_2_Add_Two_Numbers();
 		
-		ListNode expect = new ListNode(0);
+		ListNode expected = new ListNode(0);
 		
 		ListNode l1_1 = new ListNode(0);
 		
@@ -48,29 +48,29 @@ class Lcp_2_Add_Two_NumbersTest {
 		
 		ListNode test = lcp.addTwoNumbers(l1_1, l2_1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_3() {
 		Lcp_2_Add_Two_Numbers lcp = new Lcp_2_Add_Two_Numbers();
 		
-		ListNode expect = new ListNode(8);
-		ListNode expect2 = new ListNode(9);
-		ListNode expect3 = new ListNode(9);
-		ListNode expect4 = new ListNode(9);
-		ListNode expect5 = new ListNode(0);
-		ListNode expect6 = new ListNode(0);
-		ListNode expect7 = new ListNode(0);
-		ListNode expect8 = new ListNode(1);
+		ListNode expected = new ListNode(8);
+		ListNode expected2 = new ListNode(9);
+		ListNode expected3 = new ListNode(9);
+		ListNode expected4 = new ListNode(9);
+		ListNode expected5 = new ListNode(0);
+		ListNode expected6 = new ListNode(0);
+		ListNode expected7 = new ListNode(0);
+		ListNode expected8 = new ListNode(1);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
-		expect5.next = expect6;
-		expect6.next = expect7;
-		expect7.next = expect8;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
+		expected5.next = expected6;
+		expected6.next = expected7;
+		expected7.next = expected8;
 		
 		ListNode l1_1 = new ListNode(9);
 		ListNode l1_2 = new ListNode(9);
@@ -98,7 +98,7 @@ class Lcp_2_Add_Two_NumbersTest {
 		
 		ListNode test = lcp.addTwoNumbers(l1_1, l2_1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

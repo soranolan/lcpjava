@@ -10,16 +10,16 @@ class Lcp_203_Remove_Linked_List_ElementsTest {
 	void test_case_1() {
 		Lcp_203_Remove_Linked_List_Elements lcp = new Lcp_203_Remove_Linked_List_Elements();
 		
-		ListNode expect = new ListNode(1);
-		ListNode expect2 = new ListNode(2);
-		ListNode expect3 = new ListNode(3);
-		ListNode expect4 = new ListNode(4);
-		ListNode expect5 = new ListNode(5);
+		ListNode expected = new ListNode(1);
+		ListNode expected2 = new ListNode(2);
+		ListNode expected3 = new ListNode(3);
+		ListNode expected4 = new ListNode(4);
+		ListNode expected5 = new ListNode(5);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
 		
 		ListNode node1 = new ListNode(1);
 		ListNode node2 = new ListNode(2);
@@ -40,7 +40,7 @@ class Lcp_203_Remove_Linked_List_ElementsTest {
 		
 		ListNode test = lcp.removeElements(node1, val);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test

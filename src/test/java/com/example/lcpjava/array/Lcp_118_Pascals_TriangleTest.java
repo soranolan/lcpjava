@@ -38,17 +38,17 @@ class Lcp_118_Pascals_TriangleTest {
 		inner5.add(4);
 		inner5.add(1);
 		
-		List<List<Integer>> expect = new ArrayList<>();
-		expect.add(inner1);
-		expect.add(inner2);
-		expect.add(inner3);
-		expect.add(inner4);
-		expect.add(inner5);
+		List<List<Integer>> expected = new ArrayList<>();
+		expected.add(inner1);
+		expected.add(inner2);
+		expected.add(inner3);
+		expected.add(inner4);
+		expected.add(inner5);
 		
 		int input = 5;
 		List<List<Integer>> test = lcp.generate(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
@@ -57,13 +57,13 @@ class Lcp_118_Pascals_TriangleTest {
 		
 		List<Integer> inner1 = new ArrayList<>();
 		inner1.add(1);
-		List<List<Integer>> expect = new ArrayList<>();
-		expect.add(inner1);
+		List<List<Integer>> expected = new ArrayList<>();
+		expected.add(inner1);
 		
 		int input = 1;
 		List<List<Integer>> test = lcp.generate(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

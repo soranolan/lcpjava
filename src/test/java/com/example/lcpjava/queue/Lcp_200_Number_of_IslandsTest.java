@@ -10,7 +10,7 @@ class Lcp_200_Number_of_IslandsTest {
 	void test_case_1() {
 		Lcp_200_Number_of_Islands lcp = new Lcp_200_Number_of_Islands();
 		
-		int expect = 1;
+		int expected = 1;
 		
 		char[][] grid = {
 			{ '1', '1', '1', '1', '0' },
@@ -22,14 +22,14 @@ class Lcp_200_Number_of_IslandsTest {
 		
 		test = lcp.numIslands(grid);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_200_Number_of_Islands lcp = new Lcp_200_Number_of_Islands();
 		
-		int expect = 3;
+		int expected = 3;
 		
 		char[][] grid = {
 				{ '1', '1', '0', '0', '0' },
@@ -41,7 +41,7 @@ class Lcp_200_Number_of_IslandsTest {
 		
 		test = lcp.numIslands(grid);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

@@ -10,24 +10,24 @@ class Lcp_67_Add_BinaryTest {
 	void test_case_1() {
 		Lcp_67_Add_Binary lcp = new Lcp_67_Add_Binary();
 		
-		String expect = "100";
+		String expected = "100";
 		String inputA = "11";
 		String inputB = "1";
 		String test = lcp.addBinary(inputA, inputB);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_67_Add_Binary lcp = new Lcp_67_Add_Binary();
 		
-		String expect = "10101";
+		String expected = "10101";
 		String inputA = "1010";
 		String inputB = "1011";
 		String test = lcp.addBinary(inputA, inputB);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

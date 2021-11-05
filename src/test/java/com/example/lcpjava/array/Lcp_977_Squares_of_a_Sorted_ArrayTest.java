@@ -10,22 +10,22 @@ class Lcp_977_Squares_of_a_Sorted_ArrayTest {
 	void test_case_1() {
 		Lcp_977_Squares_of_a_Sorted_Array lcp = new Lcp_977_Squares_of_a_Sorted_Array();
 		
-		int[] expect = { 0, 1, 9, 16, 100 };
+		int[] expected = { 0, 1, 9, 16, 100 };
 		int[] input = { -4, -1, 0, 3, 10 };
 		int[] test = lcp.sortedSquares(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_977_Squares_of_a_Sorted_Array lcp = new Lcp_977_Squares_of_a_Sorted_Array();
 		
-		int[] expect = { 4, 9, 9, 49, 121 };
+		int[] expected = { 4, 9, 9, 49, 121 };
 		int[] input = { -7, -3, 2, 3, 11 };
 		int[] test = lcp.sortedSquares(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

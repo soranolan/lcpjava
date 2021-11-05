@@ -10,22 +10,22 @@ class Lcp_561_Array_Partition_ITest {
 	void test_case_1() {
 		Lcp_561_Array_Partition_I lcp = new Lcp_561_Array_Partition_I();
 		
-		int expect = 4;
+		int expected = 4;
 		int[] input = { 1, 4, 3, 2 };
 		int test = lcp.arrayPairSum(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_561_Array_Partition_I lcp = new Lcp_561_Array_Partition_I();
 		
-		int expect = 9;
+		int expected = 9;
 		int[] input = { 6, 2, 6, 5, 1, 2 };
 		int test = lcp.arrayPairSum(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

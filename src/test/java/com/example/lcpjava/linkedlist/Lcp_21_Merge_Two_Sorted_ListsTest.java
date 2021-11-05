@@ -10,18 +10,18 @@ class Lcp_21_Merge_Two_Sorted_ListsTest {
 	void test_case_1() {
 		Lcp_21_Merge_Two_Sorted_Lists lcp = new Lcp_21_Merge_Two_Sorted_Lists();
 		
-		ListNode expect = new ListNode(1);
-		ListNode expect2 = new ListNode(1);
-		ListNode expect3 = new ListNode(2);
-		ListNode expect4 = new ListNode(3);
-		ListNode expect5 = new ListNode(4);
-		ListNode expect6 = new ListNode(4);
+		ListNode expected = new ListNode(1);
+		ListNode expected2 = new ListNode(1);
+		ListNode expected3 = new ListNode(2);
+		ListNode expected4 = new ListNode(3);
+		ListNode expected5 = new ListNode(4);
+		ListNode expected6 = new ListNode(4);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
-		expect5.next = expect6;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
+		expected5.next = expected6;
 		
 		ListNode l1_1 = new ListNode(1);
 		ListNode l1_2 = new ListNode(2);
@@ -39,7 +39,7 @@ class Lcp_21_Merge_Two_Sorted_ListsTest {
 		
 		ListNode test = lcp.mergeTwoLists(l1_1, l2_1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
@@ -55,31 +55,31 @@ class Lcp_21_Merge_Two_Sorted_ListsTest {
 	void test_case_3() {
 		Lcp_21_Merge_Two_Sorted_Lists lcp = new Lcp_21_Merge_Two_Sorted_Lists();
 		
-		ListNode expect = new ListNode(0);
+		ListNode expected = new ListNode(0);
 		
 		ListNode l2 = new ListNode(0);
 		
 		ListNode test = lcp.mergeTwoLists(null, l2);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_4() {
 		Lcp_21_Merge_Two_Sorted_Lists lcp = new Lcp_21_Merge_Two_Sorted_Lists();
 		
-		ListNode expect = new ListNode(1);
-		ListNode expect2 = new ListNode(2);
-		ListNode expect3 = new ListNode(3);
-		ListNode expect4 = new ListNode(4);
-		ListNode expect5 = new ListNode(5);
-		ListNode expect6 = new ListNode(6);
+		ListNode expected = new ListNode(1);
+		ListNode expected2 = new ListNode(2);
+		ListNode expected3 = new ListNode(3);
+		ListNode expected4 = new ListNode(4);
+		ListNode expected5 = new ListNode(5);
+		ListNode expected6 = new ListNode(6);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
-		expect5.next = expect6;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
+		expected5.next = expected6;
 		
 		ListNode l1_1 = new ListNode(1);
 		ListNode l1_2 = new ListNode(2);
@@ -97,7 +97,7 @@ class Lcp_21_Merge_Two_Sorted_ListsTest {
 		
 		ListNode test = lcp.mergeTwoLists(l1_1, l2_1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

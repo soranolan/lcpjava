@@ -10,16 +10,16 @@ class Lcp_328_Odd_Even_Linked_ListTest {
 	void test_case_1() {
 		Lcp_328_Odd_Even_Linked_List lcp = new Lcp_328_Odd_Even_Linked_List();
 		
-		ListNode expect = new ListNode(1);
-		ListNode expect2 = new ListNode(3);
-		ListNode expect3 = new ListNode(5);
-		ListNode expect4 = new ListNode(2);
-		ListNode expect5 = new ListNode(4);
+		ListNode expected = new ListNode(1);
+		ListNode expected2 = new ListNode(3);
+		ListNode expected3 = new ListNode(5);
+		ListNode expected4 = new ListNode(2);
+		ListNode expected5 = new ListNode(4);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
 		
 		ListNode node1 = new ListNode(1);
 		ListNode node2 = new ListNode(2);
@@ -34,27 +34,27 @@ class Lcp_328_Odd_Even_Linked_ListTest {
 		
 		ListNode test = lcp.oddEvenList(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_328_Odd_Even_Linked_List lcp = new Lcp_328_Odd_Even_Linked_List();
 		
-		ListNode expect = new ListNode(2);
-		ListNode expect2 = new ListNode(3);
-		ListNode expect3 = new ListNode(6);
-		ListNode expect4 = new ListNode(7);
-		ListNode expect5 = new ListNode(1);
-		ListNode expect6 = new ListNode(5);
-		ListNode expect7 = new ListNode(4);
+		ListNode expected = new ListNode(2);
+		ListNode expected2 = new ListNode(3);
+		ListNode expected3 = new ListNode(6);
+		ListNode expected4 = new ListNode(7);
+		ListNode expected5 = new ListNode(1);
+		ListNode expected6 = new ListNode(5);
+		ListNode expected7 = new ListNode(4);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
-		expect5.next = expect6;
-		expect6.next = expect7;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
+		expected5.next = expected6;
+		expected6.next = expected7;
 		
 		ListNode node1 = new ListNode(2);
 		ListNode node2 = new ListNode(1);
@@ -73,7 +73,7 @@ class Lcp_328_Odd_Even_Linked_ListTest {
 		
 		ListNode test = lcp.oddEvenList(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

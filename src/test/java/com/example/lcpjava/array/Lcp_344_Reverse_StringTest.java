@@ -10,22 +10,22 @@ class Lcp_344_Reverse_StringTest {
 	void test_case_1() {
 		Lcp_344_Reverse_String lcp = new Lcp_344_Reverse_String();
 		
-		char[] expect = { 'o', 'l', 'l', 'e', 'h' };
+		char[] expected = { 'o', 'l', 'l', 'e', 'h' };
 		char[] test = { 'h', 'e', 'l', 'l', 'o' };
 		lcp.reverseString(test);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_344_Reverse_String lcp = new Lcp_344_Reverse_String();
 		
-		char[] expect = { 'h', 'a', 'n', 'n', 'a', 'H' };
+		char[] expected = { 'h', 'a', 'n', 'n', 'a', 'H' };
 		char[] test = { 'H', 'a', 'n', 'n', 'a', 'h' };
 		lcp.reverseString(test);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }

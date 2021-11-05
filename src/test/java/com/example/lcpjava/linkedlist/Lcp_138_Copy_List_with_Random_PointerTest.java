@@ -10,21 +10,21 @@ class Lcp_138_Copy_List_with_Random_PointerTest {
 	void test_case_1() {
 		Lcp_138_Copy_List_with_Random_Pointer lcp = new Lcp_138_Copy_List_with_Random_Pointer();
 		
-		Node expect = new Node(7);
-		Node expect2 = new Node(13);
-		Node expect3 = new Node(11);
-		Node expect4 = new Node(10);
-		Node expect5 = new Node(1);
+		Node expected = new Node(7);
+		Node expected2 = new Node(13);
+		Node expected3 = new Node(11);
+		Node expected4 = new Node(10);
+		Node expected5 = new Node(1);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
-		expect3.next = expect4;
-		expect4.next = expect5;
+		expected.next = expected2;
+		expected2.next = expected3;
+		expected3.next = expected4;
+		expected4.next = expected5;
 		
-		expect2.random = expect;
-		expect3.random = expect5;
-		expect4.random = expect3;
-		expect5.random = expect;
+		expected2.random = expected;
+		expected3.random = expected5;
+		expected4.random = expected3;
+		expected5.random = expected;
 		
 		Node node1 = new Node(7);
 		Node node2 = new Node(13);
@@ -44,20 +44,20 @@ class Lcp_138_Copy_List_with_Random_PointerTest {
 		
 		Node test = lcp.copyRandomList(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_138_Copy_List_with_Random_Pointer lcp = new Lcp_138_Copy_List_with_Random_Pointer();
 		
-		Node expect = new Node(1);
-		Node expect2 = new Node(2);
+		Node expected = new Node(1);
+		Node expected2 = new Node(2);
 		
-		expect.next = expect2;
+		expected.next = expected2;
 		
-		expect.random = expect2;
-		expect2.random = expect2;
+		expected.random = expected2;
+		expected2.random = expected2;
 		
 		Node node1 = new Node(1);
 		Node node2 = new Node(2);
@@ -69,21 +69,21 @@ class Lcp_138_Copy_List_with_Random_PointerTest {
 		
 		Node test = lcp.copyRandomList(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_3() {
 		Lcp_138_Copy_List_with_Random_Pointer lcp = new Lcp_138_Copy_List_with_Random_Pointer();
 		
-		Node expect = new Node(3);
-		Node expect2 = new Node(3);
-		Node expect3 = new Node(3);
+		Node expected = new Node(3);
+		Node expected2 = new Node(3);
+		Node expected3 = new Node(3);
 		
-		expect.next = expect2;
-		expect2.next = expect3;
+		expected.next = expected2;
+		expected2.next = expected3;
 		
-		expect2.random = expect;
+		expected2.random = expected;
 		
 		Node node1 = new Node(3);
 		Node node2 = new Node(3);
@@ -96,7 +96,7 @@ class Lcp_138_Copy_List_with_Random_PointerTest {
 		
 		Node test = lcp.copyRandomList(node1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test

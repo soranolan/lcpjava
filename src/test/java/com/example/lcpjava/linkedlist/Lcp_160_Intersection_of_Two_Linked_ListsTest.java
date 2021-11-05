@@ -17,23 +17,23 @@ class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 		ListNode B2 = new ListNode(6);
 		ListNode B3 = new ListNode(1);
 		
-		ListNode expect = new ListNode(8);
+		ListNode expected = new ListNode(8);
 		ListNode C2 = new ListNode(4);
 		ListNode C3 = new ListNode(5);
 		
 		A1.next = A2;
-		A2.next = expect;
+		A2.next = expected;
 		
 		B1.next = B2;
 		B2.next = B3;
-		B3.next = expect;
+		B3.next = expected;
 		
-		expect.next = C2;
+		expected.next = C2;
 		C2.next = C3;
 		
 		ListNode test = lcp.getIntersectionNode(A1, B1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
@@ -46,20 +46,20 @@ class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 		
 		ListNode B1 = new ListNode(3);
 		
-		ListNode expect = new ListNode(2);
+		ListNode expected = new ListNode(2);
 		ListNode C2 = new ListNode(4);
 		
 		A1.next = A2;
 		A2.next = A3;
-		A3.next = expect;
+		A3.next = expected;
 		
-		B1.next = expect;
+		B1.next = expected;
 		
-		expect.next = C2;
+		expected.next = C2;
 		
 		ListNode test = lcp.getIntersectionNode(A1, B1);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test

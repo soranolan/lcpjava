@@ -30,7 +30,7 @@ class Lcp_707_Design_Linked_ListTest {
 		obj.deleteAtIndex(6);
 		obj.deleteAtIndex(4);
 		
-		Integer[] expect = { 5, 2, 3, 7, 2 };
+		Integer[] expected = { 5, 2, 3, 7, 2 };
 		List<Integer> test = new ArrayList<>();
 		Node current = obj.head;
 		while (current != null) {
@@ -38,7 +38,7 @@ class Lcp_707_Design_Linked_ListTest {
 			current = current.next;
 		}
 		
-		assertThat(test).isEqualTo(Arrays.asList(expect));
+		assertThat(test).isEqualTo(Arrays.asList(expected));
 	}
 	
 	@Test

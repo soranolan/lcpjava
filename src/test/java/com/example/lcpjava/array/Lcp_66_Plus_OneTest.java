@@ -10,44 +10,44 @@ class Lcp_66_Plus_OneTest {
 	void test_case_1() {
 		Lcp_66_Plus_One lcp = new Lcp_66_Plus_One();
 		
-		int[] expect = { 1, 2, 4 };
+		int[] expected = { 1, 2, 4 };
 		int[] input = { 1, 2, 3 };
 		int[] test = lcp.plusOne(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
 		Lcp_66_Plus_One lcp = new Lcp_66_Plus_One();
 		
-		int[] expect = { 4, 3, 2, 2 };
+		int[] expected = { 4, 3, 2, 2 };
 		int[] input = { 4, 3, 2, 1 };
 		int[] test = lcp.plusOne(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_3() {
 		Lcp_66_Plus_One lcp = new Lcp_66_Plus_One();
 		
-		int[] expect = { 1 };
+		int[] expected = { 1 };
 		int[] input = { 0 };
 		int[] test = lcp.plusOne(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_4() {
 		Lcp_66_Plus_One lcp = new Lcp_66_Plus_One();
 		
-		int[] expect = { 1, 0 };
+		int[] expected = { 1, 0 };
 		int[] input = { 9 };
 		int[] test = lcp.plusOne(input);
 		
-		assertThat(test).isEqualTo(expect);
+		assertThat(test).isEqualTo(expected);
 	}
 	
 }
