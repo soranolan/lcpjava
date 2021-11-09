@@ -100,6 +100,9 @@ public class Lcp_752_Open_the_Lock {
 	}
 	
 	/**
+	 * time  : O(10 ^ n / 2)
+	 * space : O(n)
+	 * 
 	 * Set<String> left <- new HashSet
 	 * Set<String> right <- new HashSet
 	 * Set<String> deadend <- new HashSet<>(Arrays.asList(deadends))
