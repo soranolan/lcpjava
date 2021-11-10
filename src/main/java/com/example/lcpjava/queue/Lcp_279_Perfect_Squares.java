@@ -1,7 +1,10 @@
 package com.example.lcpjava.queue;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
@@ -81,6 +84,8 @@ public class Lcp_279_Perfect_Squares {
 	 * time  : O(sqrt(n))
 	 * space : O(1)
 	 * 
+	 * Math is the king!
+	 * 
 	 * Lagrange's Four Square theorem
 	 * Legendre's three-square theorem
 	 * 
@@ -106,7 +111,7 @@ public class Lcp_279_Perfect_Squares {
 	 * 
 	 * return 3
 	 * */
-	public int numSquares(int n) {
+	public int numSquares_2(int n) {
 		if (isSqrt(n)) { return 1; }
 		
 		while ((n & 3) == 0) { n >>= 2; }
@@ -124,8 +129,130 @@ public class Lcp_279_Perfect_Squares {
 	
 	public boolean isSqrt(int number) {
 		int sqrt = (int) Math.sqrt(number);
-		if (Math.pow(sqrt, 2) == number) { return true; }
+		if (sqrt * sqrt == number) { return true; }
 		return false;
+	}
+	
+	/**
+	 * dp[0] = 0
+	 * 
+	 * dp[1] = 1
+	 * 				= dp[0] + 1
+	 * 				= dp[1 - 1 * 1] + 1
+	 * 
+	 * dp[2] = 2
+	 * 				= dp[1] + 1
+	 * 				= dp[2 - 1 * 1] + 1
+	 * 
+	 * dp[3] = 3
+	 * 				= dp[2] + 1
+	 * 				= dp[3 - 1 * 1] + 1
+	 * 
+	 * dp[4] = 1
+	 * 				= 1 ^ 2 * 4 or 2 ^ 2
+	 * 				= 4 or 1
+	 * 				= dp[3] + 1 or dp[1]
+	 * 				= dp[3] + 1 or dp[0] + 1
+	 * 				= dp[4 - 1 * 1] + 1 or dp[4 - 2 * 2] + 1
+	 * 
+	 * dp[5] = 2
+	 * 				= 1 ^ 2 * 5 or 2 ^ 2 + 1
+	 * 				= 5 or 2
+	 * 				= 2
+	 * 				= dp[4] + 1 or dp[1] + 1
+	 * 				= dp[5 - 1 * 1] + 1 or dp[5 - 2 * 2] + 1
+	 * 
+	 * dp[6] = 3
+	 * 				= 1 ^ 2 * 6 or 2 ^ 2 + 1 + 1
+	 * 				= 6 or 3
+	 * 				= 3
+	 * 				= dp[5] + 1 or dp[3]
+	 * 				= dp[5] + 1 or dp[2] + 1
+	 * 				= dp[6 - 1 * 1] + 1 or dp[6 - 2 * 2] + 1
+	 * 
+	 * dp[7] = 4
+	 * 				= 1 ^ 2 * 7 or 2 ^ 2 + 1 + 1 + 1
+	 * 				= 7 or 4
+	 * 				= 4
+	 * 				= dp[6] + 1 or dp[3] + 1
+	 * 				= dp[7 - 1 * 1] + 1 or dp[7 - 2 * 2] + 1
+	 * 
+	 * dp[13] = 2
+	 * 				= 1 or 4 or 9
+	 * 				= 1 + 12 or 4 + 9 or 9 + 4
+	 * 				= 1 + dp[12] or 1 + dp[9] or 1 + dp[4]
+	 * */
+	/**
+	 * time  : O(n * sqrt(n))
+	 * space : O(n)
+	 * 
+	 * int[] dp <- new int[n plus one]
+	 * Arrays fill(dp, Integer max value)
+	 * dp[0] <- 0
+	 * 
+	 * for int i <- 1; if i is lower than or equal to n; i++
+	 * 		int min <- Integer max value
+	 * 		int j <- 1
+	 * 		while i minus j multiply j is greater than or equal to zero
+	 * 			min <- Math min(min, dp[i minus j multiply j] plus one)
+	 * 			j++
+	 * 		end while
+	 * 		dp[i] <- min
+	 * end for
+	 * 
+	 * return dp[n]
+	 * */
+	public int numSquares_3(int n) {
+		int[] dp = new int[n + 1];																					// S : O(n)
+		Arrays.fill(dp, Integer.MAX_VALUE);
+		dp[0] = 0;
+		
+		for (int i = 1; i <= n; i++) {																				// T : O(n)
+			int min = Integer.MAX_VALUE;
+			int j = 1;
+			while (i - j * j >= 0) {																				// T : O(sqrt(n))
+				min = Math.min(min, dp[i - j * j] + 1);
+				j++;
+			}
+			dp[i] = min;
+		}
+		
+		return dp[n];
+	}
+	
+	/**
+	 * time  : O(n * sqrt(n))
+	 * space : O(n)
+	 * 
+	 * if list size is equal to zero
+	 * 		list add(0)
+	 * end if
+	 * 
+	 * while list size is lower than or equal to n
+	 * 		int size <- list size
+	 * 		int min <- Integer max value
+	 * 		
+	 * 		for int i <- 1; if i multiply i is lower than or equal to size; i++
+	 * 			min <- Math min(min, list get(size minus i multiply i) plus one
+	 * 		end for
+	 * 		
+	 * 		list add(min)
+	 * end while
+	 * 
+	 * return list get(n)
+	 * */
+	static List<Integer> static_dp = new ArrayList<>();																// S : O(n)
+	public int numSquares(int n) {
+		if (static_dp.size() == 0) { static_dp.add(0); }
+		
+		while (static_dp.size() <= n) {																				// T : O(n)
+			int size = static_dp.size();
+			int min = Integer.MAX_VALUE;
+			for (int i = 1; i * i <= size; i++) { min = Math.min(min, static_dp.get(size - i * i) + 1); }			// T : O(sqrt(n))
+			static_dp.add(min);
+		}
+		
+		return static_dp.get(n);
 	}
 	
 }
