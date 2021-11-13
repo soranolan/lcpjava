@@ -6,7 +6,7 @@ public class Lcp_20_Valid_Parentheses {
 	
 	/**
 	 * time  : O(n)
-	 * space : O(1)
+	 * space : O(n)
 	 * 
 	 * Stack<Character> stack <- new Stack
 	 * char[] parentheses <- s to char array
@@ -32,7 +32,7 @@ public class Lcp_20_Valid_Parentheses {
 	 * return stack is empty
 	 * */
 	public boolean isValid(String s) {
-		Stack<Character> stack = new Stack<>();
+		Stack<Character> stack = new Stack<>();																		// S : O(n)
 		char[] parentheses = s.toCharArray();
 		
 		for (char right : parentheses) {																			// T : O(n)
