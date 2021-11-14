@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
+import java.util.Stack;
 
 public class Lcp_200_Number_of_Islands {
 	
@@ -269,6 +270,89 @@ public class Lcp_200_Number_of_Islands {
 				visited[row][col] = true;
 				queue.offer(new int[] { row, col });																// T : O(1)
 			}
+		}
+	}
+	
+	/**
+	 * time  : O(m * n)
+	 * space : O(m * n)
+	 * 
+	 * Stack<int[]> stack <- new Stack
+	 * int rows <- grid length
+	 * int cols <- grid[0] length
+	 * int islands <- 0
+	 * 
+	 * for int row <- 0; if row is lower than rows; row++
+	 * 		for int col <- 0; if col is lower than cols; col++
+	 * 			if grid[row][col] is not equal to '1'
+	 * 				continue
+	 * 			end if
+	 * 			
+	 * 			stack push(int array [row, col])
+	 * 			DFS(stack, grid)
+	 * 			islands++
+	 * 		end for
+	 * end for
+	 * 
+	 * return islands
+	 * */
+	public int numIslands_4(char[][] grid) {
+		Stack<int[]> stack = new Stack<>();																			// T : O(m * n)
+		int rows = grid.length;
+		int cols = grid[0].length;
+		int islands = 0;
+		
+		for (int row = 0; row < rows; row++) {																		// T : O(m)
+			for (int col = 0; col < cols; col++) {																	// T : O(n)
+				if (grid[row][col] != '1') { continue; }
+				
+				stack.push(new int[] { row, col });
+				DFS_2(stack, grid);
+				islands++;
+			}
+		}
+		
+		return islands;
+	}
+	
+	/**
+	 * int rows <- grid length
+	 * int cols <- grid[0] length
+	 * 
+	 * while stack is not empty
+	 * 		int coordinate <- stack pop
+	 * 		int row <- coordinate[0]
+	 * 		int col <- coordinate[1]
+	 * 		
+	 * 		if row is lower than zero || col is lower than zero || row is greater than or equal to rows || col is greater than or equal to cols || grid[row][col] is not equal to '1'
+	 * 			continue
+	 * 		end if
+	 * 		
+	 * 		gird[row][col] <- '2'
+	 * 		
+	 * 		stack push(int array [row minus one, col])
+	 * 		stack push(int array [row plus one, col])
+	 * 		stack push(int array [row, col minus one])
+	 * 		stack push(int array [row, col plus one])
+	 * end while
+	 * */
+	public void DFS_2(Stack<int[]> stack, char[][] grid) {
+		int rows = grid.length;
+		int cols = grid[0].length;
+		
+		while (!stack.isEmpty()) {
+			int[] coordinate = stack.pop();
+			int row = coordinate[0];
+			int col = coordinate[1];
+			
+			if (row < 0 || col < 0 || row >= rows || col >= cols || grid[row][col] != '1') { continue; }
+			
+			grid[row][col] = '2';
+			
+			stack.push(new int[] { row - 1, col });
+			stack.push(new int[] { row + 1, col });
+			stack.push(new int[] { row, col - 1 });
+			stack.push(new int[] { row, col + 1 });
 		}
 	}
 	
