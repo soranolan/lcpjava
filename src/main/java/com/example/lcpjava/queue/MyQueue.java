@@ -22,8 +22,4 @@ public class MyQueue {
 		return false;
 	}
 	
-	public void move() {
-		
-	}
-	
 }
