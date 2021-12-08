@@ -1,4 +1,4 @@
-package com.example.lcpjava.stack;
+package com.example.lcpjava.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
