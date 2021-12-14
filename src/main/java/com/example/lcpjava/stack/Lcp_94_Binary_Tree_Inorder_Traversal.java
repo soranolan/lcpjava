@@ -11,6 +11,36 @@ public class Lcp_94_Binary_Tree_Inorder_Traversal {
 	 * space : O(n)
 	 * 
 	 * List<Integer> result <- new ArrayList
+	 * traversal(root, result)
+	 * return result
+	 * */
+	public List<Integer> inorderTraversal_1(TreeNode root) {
+		List<Integer> result = new ArrayList<>();
+		traversal(root, result);
+		return result;
+	}
+	
+	/**
+	 * if current is equal to null
+	 * 		return
+	 * end if
+	 * 
+	 * traversal(current left, result)
+	 * result add(current val)
+	 * traversal(current right, result)
+	 * */
+	public void traversal(TreeNode current, List<Integer> result) {
+		if (current == null) { return; }
+		traversal(current.left, result);
+		result.add(current.val);
+		traversal(current.right, result);
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * 
+	 * List<Integer> result <- new ArrayList
 	 * Stack<TreeNode> stack <- new Stack
 	 * TreeNode current <- root
 	 * 
@@ -27,7 +57,7 @@ public class Lcp_94_Binary_Tree_Inorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> inorderTraversal(TreeNode root) {
+	public List<Integer> inorderTraversal_2(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
 		TreeNode current = root;
@@ -41,6 +71,96 @@ public class Lcp_94_Binary_Tree_Inorder_Traversal {
 			current = stack.pop();
 			result.add(current.val);
 			current = current.right;
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * 
+	 * List<Integer> result <- new ArrayList
+	 * Stac<TreeNode> stack <- new Stack
+	 * TreeNode current <- root
+	 * 
+	 * while current is not equal to null || stack is not empty
+	 * 		if current is not equal to null
+	 * 			stack push(current)
+	 * 			current <- current left
+	 * 		else
+	 * 			current <- stack pop
+	 * 			result add(current val)
+	 * 			current <- current right
+	 * 		end if
+	 * end while
+	 * 
+	 * return result
+	 * */
+	public List<Integer> inorderTraversal_3(TreeNode root) {
+		List<Integer> result = new ArrayList<>();
+		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
+		TreeNode current = root;
+		
+		while (current != null || !stack.isEmpty()) {																// T : O(n)
+			if (current != null) {
+				stack.push(current);
+				current = current.left;
+			} else {
+				current = stack.pop();
+				result.add(current.val);
+				current = current.right;
+			}
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * 
+	 * List<Integer> result <- new ArrayList
+	 * TreeNode current <- root
+	 * TreeNode previous <- null
+	 * 
+	 * while current is not equal to null
+	 * 		if current left is not equal to null
+	 * 			previous <- current left
+	 * 			while previous right is not equal to null
+	 * 				previous <- previous right
+	 * 			end while
+	 * 			
+	 * 			previous right <- current
+	 * 			TreeNode temp <- current
+	 * 			current <- current left
+	 * 			temp left <- null
+	 * 		else
+	 * 			result add(current val)
+	 * 			current <- current right
+	 * 		end if
+	 * end while
+	 * 
+	 * return result
+	 * */
+	public List<Integer> inorderTraversal(TreeNode root) {
+		List<Integer> result = new ArrayList<>();
+		TreeNode current = root;
+		TreeNode previous = null;
+		
+		while (current != null) {
+			if (current.left != null) {
+				previous = current.left;
+				while (previous.right != null) { previous = previous.right; }
+				
+				previous.right = current;
+				TreeNode temp = current;
+				current = current.left;
+				temp.left = null;
+			} else {
+				result.add(current.val);
+				current = current.right;
+			}
 		}
 		
 		return result;
