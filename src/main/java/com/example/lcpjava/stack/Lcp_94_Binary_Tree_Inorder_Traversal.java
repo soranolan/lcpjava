@@ -120,6 +120,8 @@ public class Lcp_94_Binary_Tree_Inorder_Traversal {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
+	 * Morris Traversal - Threaded binary tree
+	 * 
 	 * List<Integer> result <- new ArrayList
 	 * TreeNode current <- root
 	 * TreeNode previous <- null
