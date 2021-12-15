@@ -69,13 +69,13 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
 		
 		TreeNode current = root;
-		stack.push(current);
+		stack.push(current);																						// T : O(1)
 		
 		while (!stack.isEmpty()) {																					// T : O(n)
-			current = stack.pop();
-			result.add(current.val);
-			if (current.right != null) { stack.push(current.right); }
-			if (current.left != null) { stack.push(current.left); }
+			current = stack.pop();																					// T : O(1)
+			result.add(current.val);																				// T : O(1)
+			if (current.right != null) { stack.push(current.right); }												// T : O(1)
+			if (current.left != null) { stack.push(current.left); }													// T : O(1)
 		}
 		
 		return result;
@@ -108,11 +108,11 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 		
 		while (current != null || !stack.isEmpty()) {																// T : O(n)
 			if (current != null) {
-				stack.push(current.right);
-				result.add(current.val);
+				stack.push(current.right);																			// T : O(1)
+				result.add(current.val);																			// T : O(1)
 				current = current.left;
 			} else {
-				current = stack.pop();
+				current = stack.pop();																				// T : O(1)
 			}
 		}
 		
