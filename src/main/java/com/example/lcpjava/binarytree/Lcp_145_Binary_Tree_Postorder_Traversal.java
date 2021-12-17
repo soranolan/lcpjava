@@ -123,7 +123,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 			
 			if (current != null) { result.add(current.val); }														// T : O(1)
 			
-			while (!stack.isEmpty() && current == stack.peek().right) {												// T : O(1)
+			while (!stack.isEmpty() && current == stack.peek().right) {
 				current = stack.pop();																				// T : O(1)
 				result.add(current.val);																			// T : O(1)
 			}
@@ -193,7 +193,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 		stack.push(current);																						// T : O(1)
 		stack.push(current);																						// T : O(1)
 		
-		while (!stack.isEmpty()) {																					// T : O(1)
+		while (!stack.isEmpty()) {																					// T : O(n)
 			current = stack.pop();																					// T : O(1)
 			if (!stack.isEmpty() && current == stack.peek()) {														// T : O(1)
 				if (current.right != null) {
