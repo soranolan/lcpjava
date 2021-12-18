@@ -62,11 +62,11 @@ public class Lcp_102_Binary_Tree_Level_Order_Traversal {
 	public void BFS(Queue<TreeNode> queue, List<List<Integer>> result) {
 		while (!queue.isEmpty()) {																					// T : O(n)
 			List<Integer> level = new ArrayList<>();
-			int size = queue.size();
+			int size = queue.size();																				// T : O(1)
 			
 			while (size > 0) {
-				TreeNode current = queue.poll();
-				level.add(current.val);
+				TreeNode current = queue.poll();																	// T : O(1)
+				level.add(current.val);																				// T : O(1)
 				if (current.left != null) { queue.offer(current.left); }											// T : O(1)
 				if (current.right != null) { queue.offer(current.right); }											// T : O(1)
 				size--;
@@ -109,8 +109,8 @@ public class Lcp_102_Binary_Tree_Level_Order_Traversal {
 	 * */
 	public void DFS(TreeNode current, int depth, List<List<Integer>> result) {
 		if (current == null) { return; }
-		if (depth == result.size()) { result.add(new ArrayList<>()); }
-		result.get(depth).add(current.val);
+		if (depth == result.size()) { result.add(new ArrayList<>()); }												// T : O(1)
+		result.get(depth).add(current.val);																			// T : O(1)
 		DFS(current.left, depth + 1, result);
 		DFS(current.right, depth + 1, result);
 	}

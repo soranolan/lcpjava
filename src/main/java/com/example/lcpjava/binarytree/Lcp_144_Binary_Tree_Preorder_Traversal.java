@@ -31,7 +31,7 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	 * */
 	public void traversal(TreeNode current, List<Integer> result) {
 		if (current == null) { return; }
-		result.add(current.val);
+		result.add(current.val);																					// T : O(1)
 		traversal(current.left, result);
 		traversal(current.right, result);
 	}
