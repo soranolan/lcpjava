@@ -109,26 +109,26 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 		return null
 	 * end if
 	 * 
-	 * TreeNode root <- new TreeNode(postorder[postEnd])
-	 * int rootIndex <- memo get(root val)
+	 * TreeNode current <- new TreeNode(postorder[postEnd])
+	 * int rootIndex <- memo get(current val)
 	 * int leftNodeNum <- rootIndex minus inStart
 	 * 
-	 * root left <- build(inStart, rootIndex minus one, postorder, postStart, postStart plus leftNodeNum minus one, memo)
-	 * root right <- build(rootIndex plus one, inEnd, postorder, postStart plus leftNodeNum, postEnd minus one, memo)
+	 * current left <- build(inStart, rootIndex minus one, postorder, postStart, postStart plus leftNodeNum minus one, memo)
+	 * current right <- build(rootIndex plus one, inEnd, postorder, postStart plus leftNodeNum, postEnd minus one, memo)
 	 * 
-	 * return root
+	 * return current
 	 * */
 	public TreeNode build_2(int inStart, int inEnd, int[] postorder, int postStart, int postEnd, Map<Integer, Integer> memo) {
 		if (inStart > inEnd || postStart > postEnd) { return null; }
 		
-		TreeNode root = new TreeNode(postorder[postEnd]);
-		int rootIndex = memo.get(root.val);
+		TreeNode current = new TreeNode(postorder[postEnd]);
+		int rootIndex = memo.get(current.val);
 		int leftNodeNum = rootIndex - inStart;
 		
-		root.left = build_2(inStart, rootIndex - 1, postorder, postStart, postStart + leftNodeNum - 1, memo);
-		root.right = build_2(rootIndex + 1, inEnd, postorder, postStart + leftNodeNum, postEnd - 1, memo);
+		current.left = build_2(inStart, rootIndex - 1, postorder, postStart, postStart + leftNodeNum - 1, memo);
+		current.right = build_2(rootIndex + 1, inEnd, postorder, postStart + leftNodeNum, postEnd - 1, memo);
 		
-		return root;
+		return current;
 	}
 	
 	/**
@@ -158,13 +158,13 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 		return null
 	 * end if
 	 * 
-	 * TreeNode root <- new TreeNode(postorder[postIndex])
+	 * TreeNode current <- new TreeNode(postorder[postIndex])
 	 * postIndex--
 	 * 
-	 * root right <- build(inorder, postorder, root val)
-	 * root left <- build(inorder, postorder, rootValue)
+	 * current right <- build(inorder, postorder, current val)
+	 * current left <- build(inorder, postorder, rootValue)
 	 * 
-	 * return root
+	 * return current
 	 * */
 	public TreeNode build(int[] inorder, int[] postorder, int rootValue) {
 		if (postIndex < 0) { return null; }
@@ -174,13 +174,13 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 			return null;
 		}
 		
-		TreeNode root = new TreeNode(postorder[postIndex]);
+		TreeNode current = new TreeNode(postorder[postIndex]);
 		postIndex--;
 		
-		root.right = build(inorder, postorder, root.val);
-		root.left = build(inorder, postorder, rootValue);
+		current.right = build(inorder, postorder, current.val);
+		current.left = build(inorder, postorder, rootValue);
 		
-		return root;
+		return current;
 	}
 	
 }
