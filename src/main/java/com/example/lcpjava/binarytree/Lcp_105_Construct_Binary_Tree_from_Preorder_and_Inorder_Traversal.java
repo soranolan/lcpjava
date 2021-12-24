@@ -14,8 +14,9 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * 		return null
 	 * end if
 	 * 
-	 * int inIndex <- 0
 	 * int preIndex <- 0
+	 * int inIndex <- 0
+	 * 
 	 * TreeNode root <- new TreeNode(preorder[preIndex])
 	 * preIndex++
 	 * 
@@ -47,8 +48,9 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	public TreeNode buildTree_1(int[] preorder, int[] inorder) {
 		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
 		
-		int inIndex = 0;
 		int preIndex = 0;
+		int inIndex = 0;
+		
 		TreeNode root = new TreeNode(preorder[preIndex]);
 		preIndex++;
 		
