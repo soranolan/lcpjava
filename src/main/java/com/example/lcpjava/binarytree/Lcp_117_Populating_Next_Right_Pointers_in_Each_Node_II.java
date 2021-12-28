@@ -48,20 +48,20 @@ public class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II {
 	public Node connect_1(Node root) {
 		if (root == null) { return null; }
 		
-		Queue<Node> queue = new LinkedList<>();
-		if (root.right != null) { queue.offer(root.right); }
-		if (root.left != null) { queue.offer(root.left); }
+		Queue<Node> queue = new LinkedList<>();																		// S : O(n)
+		if (root.right != null) { queue.offer(root.right); }														// T : O(1)
+		if (root.left != null) { queue.offer(root.left); }															// T : O(1)
 		
-		while (!queue.isEmpty()) {
+		while (!queue.isEmpty()) {																					// T : O(n)
 			Node nextNode = null;
-			int size = queue.size();
+			int size = queue.size();																				// T : O(1)
 			while (size > 0) {
 				size--;
-				Node current = queue.poll();
+				Node current = queue.poll();																		// T : O(1)
 				current.next = nextNode;
 				nextNode = current;
-				if (current.right != null) { queue.offer(current.right); }
-				if (current.left != null) { queue.offer(current.left); }
+				if (current.right != null) { queue.offer(current.right); }											// T : O(1)
+				if (current.left != null) { queue.offer(current.left); }											// T : O(1)
 			}
 		}
 		
