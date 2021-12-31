@@ -44,4 +44,9 @@ public class TreeNode {
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		return "TreeNode [val=" + val + "]";
+	}
+	
 }
