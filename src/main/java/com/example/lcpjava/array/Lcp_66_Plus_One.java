@@ -10,7 +10,7 @@ public class Lcp_66_Plus_One {
 	 * 
 	 * for int right <- length minus one; if right is greater than or equal to zero; right--
 	 * 		if array[right] is lower than nine
-	 * 			array[right] += 1
+	 * 			array[right] <- array[right] plus one
 	 * 			return array
 	 * 		end if
 	 * 		array[right] <- 0

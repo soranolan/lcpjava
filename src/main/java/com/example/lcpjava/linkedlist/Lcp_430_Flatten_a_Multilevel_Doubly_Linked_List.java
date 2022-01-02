@@ -25,7 +25,7 @@ public class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List {
 	 * 		end if
 	 * 		
 	 * 		parent next <- parent child
-	 * 		parent child prev <- parent;
+	 * 		parent child prev <- parent
 	 * 		parent child <- null
 	 * end while
 	 * 

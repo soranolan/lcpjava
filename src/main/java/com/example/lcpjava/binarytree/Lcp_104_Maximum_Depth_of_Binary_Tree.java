@@ -149,8 +149,8 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * 		top_down_max <- Math max(depth, top_down_max)
 	 * end if
 	 * 
-	 * top_down(current left, depth plus one);
-	 * top_down(current right, depth plus one);
+	 * top_down(current left, depth plus one)
+	 * top_down(current right, depth plus one)
 	 * */
 	public void top_down(TreeNode current, int depth) {
 		if (current == null) { return; }

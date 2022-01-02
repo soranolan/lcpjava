@@ -10,7 +10,7 @@ public class Lcp_724_Find_Pivot_Index {
 	 * int leftSum <- 0
 	 * 
 	 * for number in array
-	 * 		sum += number
+	 * 		sum <- sum plus number
 	 * end for
 	 * 
 	 * for int i <- 0; if i is lower than array length; i++
@@ -18,7 +18,7 @@ public class Lcp_724_Find_Pivot_Index {
 	 * 		if leftSum multiply two is equal to sum minus num
 	 * 			return i
 	 * 		end if
-	 * 		leftSum += num
+	 * 		leftSum <- leftSum plus num
 	 * end for
 	 * 
 	 * return -1

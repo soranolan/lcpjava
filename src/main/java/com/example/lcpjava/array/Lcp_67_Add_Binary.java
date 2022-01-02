@@ -12,7 +12,7 @@ public class Lcp_67_Add_Binary {
 	 * StringBuilder sb <- empty StringBuilder
 	 * 
 	 * while lengthA is greater than zero || lengthB is greater than zero
-	 * 		int sum <- carry;
+	 * 		int sum <- carry
 	 * 		if lengthA is greater than zero
 	 * 			sum <- sum plus a charAt(lengthA minus one) minus '0'
 	 * 			lengthA--

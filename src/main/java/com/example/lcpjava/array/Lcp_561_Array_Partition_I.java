@@ -30,7 +30,7 @@ public class Lcp_561_Array_Partition_I {
 	 * 
 	 * int[] container <- empty array[20001]
 	 * for number in array
-	 * 		container[number plus 10000]++;
+	 * 		container[number plus 10000]++
 	 * end for
 	 * 
 	 * int sum <- 0
@@ -41,7 +41,7 @@ public class Lcp_561_Array_Partition_I {
 	 * 				sum <- sum plus (i minus 10000)
 	 * 			end if
 	 * 			isOdd <- not isOdd
-	 * 			container[i]--;
+	 * 			container[i]--
 	 * 		end while
 	 * end for
 	 * 
@@ -164,7 +164,7 @@ public class Lcp_561_Array_Partition_I {
 	 * 				sum <- sum plus (i minus 10000)
 	 * 			end if
 	 * 			isOdd <- not isOdd
-	 * 			container[i]--;
+	 * 			container[i]--
 	 * 		end while
 	 * end for
 	 * 

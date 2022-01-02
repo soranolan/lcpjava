@@ -23,7 +23,7 @@ public class Lcp_328_Odd_Even_Linked_List {
 	 * 
 	 * odd next <- evenHead
 	 * 
-	 * return head;
+	 * return head
 	 * */
 	public ListNode oddEvenList(ListNode head) {
 		if (head == null) { return head; } 

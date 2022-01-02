@@ -84,7 +84,7 @@ public class Lcp_733_Flood_Fill {
 	 * 		
 	 * 		DFS(image, stack, originalColor, newColor)
 	 * end if
-	 * return image;
+	 * return image
 	 * */
 	public int[][] floodFill_2(int[][] image, int sr, int sc, int newColor) {
 		int originalColor = image[sr][sc];

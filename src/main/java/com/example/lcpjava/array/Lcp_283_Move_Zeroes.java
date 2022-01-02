@@ -113,7 +113,7 @@ public class Lcp_283_Move_Zeroes {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * int snowBall <- 0;
+	 * int snowBall <- 0
 	 * 
 	 * for int i <- 0; if i is lower than array length; i++
 	 * 		if array[i] is equal to zero

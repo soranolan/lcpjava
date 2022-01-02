@@ -138,7 +138,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * array sort
 	 * 
 	 * int length <- array length
-	 * int count <- 0;
+	 * int count <- 0
 	 * int max3 <- array[length minus one]
 	 * 
 	 * for int i <- length minus one; if i is greater than zero; i--

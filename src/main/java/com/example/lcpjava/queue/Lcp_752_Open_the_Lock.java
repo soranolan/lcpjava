@@ -15,7 +15,7 @@ public class Lcp_752_Open_the_Lock {
 	 * Queue<String> queue <- new LinkedList
 	 * Set<String> deadend <- new HashSet(Arrays.asList(deadends))
 	 * Set<String> visited <- new HashSet
-	 * String initial <- 0000;
+	 * String initial <- 0000
 	 * int moves <- 0
 	 * 
 	 * queue.offer(initial)
