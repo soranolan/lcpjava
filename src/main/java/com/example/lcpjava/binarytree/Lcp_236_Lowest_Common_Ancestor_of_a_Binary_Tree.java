@@ -134,7 +134,7 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	private static int BOTH_PENDING = 2;
 	private static int LEFT_DONE = 1;
 	private static int BOTH_DONE = 0;
-	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	public TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null) { return null; }
 		
 		Stack<Pair> stack = new Stack<Pair>();																		// S : O(n)
@@ -255,12 +255,10 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * fastest but weirdest, cause it traverse all node
-	 * 
 	 * DFS(root, p, q)
 	 * */
 	TreeNode lca = null;
-	public TreeNode lowestCommonAncestor_(TreeNode root, TreeNode p, TreeNode q) {
+	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 		DFS(root, p, q);
 		return lca;
 	}
