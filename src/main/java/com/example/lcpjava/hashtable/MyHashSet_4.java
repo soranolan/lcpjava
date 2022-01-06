@@ -9,9 +9,9 @@ public class MyHashSet_4 {
 	
 	public Node[] bucket;
 	
-	public final static double LOAD_FACTOR = 0.7D;
+	public static final int INITIAL_SIZE = 1;
 	
-	public final static int INITIAL_SIZE = 1;
+	public static final double LOAD_FACTOR = 0.7D;
 	
 	public int size;
 	
@@ -27,7 +27,7 @@ public class MyHashSet_4 {
 		if (oldNode == null) {
 			bucket[index] = newNode;
 		} else {
-			BSTHelper.addNode(oldNode, newNode);
+			Helper.addNode(oldNode, newNode);
 		}
 		size++;
 		if (size > (int) (LOAD_FACTOR * bucket.length)) { rehash(); }
@@ -37,7 +37,7 @@ public class MyHashSet_4 {
 		int index = hash(key);
 		Node current = bucket[index];
 		if (current == null) { return; }
-		bucket[index] = BSTHelper.removeNode(current, key);
+		bucket[index] = Helper.removeNode(current, key);
 		size--;
 	}
 	
@@ -45,7 +45,7 @@ public class MyHashSet_4 {
 		int index = hash(key);
 		Node current = bucket[index];
 		if (current == null) { return false; }
-		return BSTHelper.containNode(current, key);
+		return Helper.containNode(current, key);
 	}
 	
 	public int hash(int key) {
@@ -58,7 +58,7 @@ public class MyHashSet_4 {
 		bucket = newBucket;
 		for (Node oldNode : oldBucket) {
 			if (oldNode == null) { continue; }
-			List<Node> list = BSTHelper.treeToList(oldNode);
+			List<Node> list = Helper.treeToList(oldNode);
 			Iterator<Node> it = list.iterator();
 			while (it.hasNext()) { add(it.next().val); }
 		}
@@ -81,7 +81,7 @@ class Node {
 	
 }
 
-class BSTHelper {
+class Helper {
 	
 	public static List<Node> treeToList(Node current) {
 		List<Node> list = new LinkedList<>();
