@@ -2,7 +2,7 @@ package com.example.lcpjava.hashtable;
 
 public class MyHashSet_3 {
 	
-	int[] bucket;
+	public int[] bucket;
 	
 	public MyHashSet_3() {
 		bucket = new int[1000000 / 32 + 1];

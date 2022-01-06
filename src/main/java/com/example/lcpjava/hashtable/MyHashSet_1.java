@@ -2,7 +2,7 @@ package com.example.lcpjava.hashtable;
 
 public class MyHashSet_1 {
 	
-	boolean[] bucket;
+	public boolean[] bucket;
 	
 	public MyHashSet_1() {
 		bucket = new boolean[1000000 + 1];
