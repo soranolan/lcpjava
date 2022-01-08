@@ -37,8 +37,8 @@ public class MyHashMap_2 {
 	}
 	
 	public ListNode findPrevious(int index, int key) {
-		if (bucket[index] == null) { return bucket[index] = new ListNode(-1, -1); }
 		ListNode current = bucket[index];
+		if (current == null) { return bucket[index] = new ListNode(-1, -1); }
 		while (current.next != null && current.next.key != key) { current = current.next; }
 		return current;
 	}
