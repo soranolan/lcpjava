@@ -52,6 +52,7 @@ public class MyHashSet_4 {
 	}
 	
 	public void rehash() {
+		size = 0;
 		Node[] newBucket = new Node[bucket.length * 2];
 		Node[] oldBucket = bucket;
 		bucket = newBucket;
