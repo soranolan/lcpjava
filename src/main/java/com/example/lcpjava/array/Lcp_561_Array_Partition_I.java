@@ -161,7 +161,7 @@ public class Lcp_561_Array_Partition_I {
 	 * for int i <- 0; if i is lower than container length; i++
 	 * 		while container[i] is greater than zero
 	 * 			if isOdd
-	 * 				sum <- sum plus (i minus 10000)
+	 * 				sum <- sum plus (i plus min)
 	 * 			end if
 	 * 			isOdd <- not isOdd
 	 * 			container[i]--
