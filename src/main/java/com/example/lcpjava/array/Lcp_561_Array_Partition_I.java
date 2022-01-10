@@ -143,7 +143,7 @@ public class Lcp_561_Array_Partition_I {
 	 * int min <- array[0]
 	 * int max <- array[0]
 	 * for number in array
-	 * 		if max is lowert than number
+	 * 		if max is lower than number
 	 * 			max <- number
 	 * 		else if min is greater than number
 	 * 			min <- number
