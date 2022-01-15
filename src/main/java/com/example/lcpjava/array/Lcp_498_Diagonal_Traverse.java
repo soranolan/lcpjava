@@ -14,7 +14,7 @@ public class Lcp_498_Diagonal_Traverse {
 	 * 
 	 * for int i <- 0; if i is lower than result length; i++
 	 * 		result[i] <- array[row][col]
-	 * 		if row plus col mod two is equal to zero
+	 * 		if row plus col modulo two is equal to zero
 	 * 			if col is equal to cols minus one
 	 * 				row++
 	 * 			else if row is equal to zero

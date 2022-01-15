@@ -93,11 +93,11 @@ public class Lcp_279_Perfect_Squares {
 	 * 		return 1
 	 * end if
 	 * 
-	 * while n mod four is equal to zero
+	 * while n modulo four is equal to zero
 	 * 		n <- n divide four
 	 * end while
 	 * 
-	 * if n mod eight is equal to seven
+	 * if n modulo eight is equal to seven
 	 * 		return 4
 	 * end if
 	 * 

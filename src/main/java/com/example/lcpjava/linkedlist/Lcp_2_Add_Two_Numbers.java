@@ -19,7 +19,7 @@ public class Lcp_2_Add_Two_Numbers {
 	 * 		if sum is lower than and equal to nine
 	 * 			tail next <- new ListNode(sum)
 	 * 		else
-	 * 			tail next <- new ListNode(sum mod ten)
+	 * 			tail next <- new ListNode(sum modulo ten)
 	 * 		end if
 	 * 		
 	 * 		if l1 is not equal to null
@@ -88,7 +88,7 @@ public class Lcp_2_Add_Two_Numbers {
 	 * 		
 	 * 		int sum <- v1 plus v2 plus carry
 	 * 		carry <- sum divide ten
-	 * 		sum <- sum mod ten
+	 * 		sum <- sum modulo ten
 	 * 		
 	 * 		tail next <- new ListNode(sum)
 	 * 		tail <- tail next

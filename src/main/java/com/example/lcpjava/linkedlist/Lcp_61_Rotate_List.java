@@ -22,7 +22,7 @@ public class Lcp_61_Rotate_List {
 	 * 		size++
 	 * end while
 	 * 
-	 * k <- k mod size
+	 * k <- k modulo size
 	 * int target <- size minus k
 	 * while target is greater than zero
 	 * 		leftTail <- leftTail next
@@ -80,7 +80,7 @@ public class Lcp_61_Rotate_List {
 	 * end while
 	 * 
 	 * newTail next <- head
-	 * k <- k mod size
+	 * k <- k modulo size
 	 * int target <- size minus k
 	 * while target is greater than zero
 	 * 		newTail <- newTail next

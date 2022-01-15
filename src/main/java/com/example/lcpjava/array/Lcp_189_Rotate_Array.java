@@ -10,7 +10,7 @@ public class Lcp_189_Rotate_Array {
 	 * int[] copy <- empty array[length]
 	 * 
 	 * for int i <- 0; if i is lower than length; i++
-	 * 		copy[(i plus k) mod length] <- array[i]
+	 * 		copy[(i plus k) modulo length] <- array[i]
 	 * end for
 	 * 
 	 * for int i <- 0; if i is lower than length; i++
@@ -33,7 +33,7 @@ public class Lcp_189_Rotate_Array {
 	 * space : O(1)
 	 * 
 	 * int length <- array length
-	 * k <- k mod length
+	 * k <- k modulo length
 	 * 
 	 * reverse whole array
 	 * reverse array from index zero to k minus one

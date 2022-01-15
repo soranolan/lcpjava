@@ -111,7 +111,7 @@ public class Lcp_217_Contains_Duplicate {
 	 * 		end if
 	 * 		
 	 * 		int index <- number divide 32;
-	 * 		int shift <- number mod 32;
+	 * 		int shift <- number modulo 32;
 	 * 		int bit <- 1 << shift;
 	 * 		
 	 * 		if number is not negative

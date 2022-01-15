@@ -10,15 +10,15 @@ public class Lcp_905_Sort_Array_By_Parity {
 	 * int right <- array length minus one
 	 * 
 	 * while left is lower than right
-	 * 		if array[left] mod two is greater than array[right] mod two
+	 * 		if array[left] modulo two is greater than array[right] modulo two
 	 * 			int temp <- array[left]
 	 * 			array[left] <- array[right]
 	 * 			array[right] <- temp
 	 * 		end if
-	 * 		if array[left] mod two is equal to zero
+	 * 		if array[left] modulo two is equal to zero
 	 * 			left++
 	 * 		end if
-	 * 		if array[right] mod two is equal to one
+	 * 		if array[right] modulo two is equal to one
 	 * 			right--
 	 * 		end if
 	 * end while
@@ -49,7 +49,7 @@ public class Lcp_905_Sort_Array_By_Parity {
 	 * int left <- 0
 	 * 
 	 * for int right <- 0; if right is lower than array length; right++
-	 * 		if array[right] mod two is equal to zero
+	 * 		if array[right] modulo two is equal to zero
 	 * 			int temp <- array[left]
 	 * 			array[left] <- array[right]
 	 * 			array[right] <- temp

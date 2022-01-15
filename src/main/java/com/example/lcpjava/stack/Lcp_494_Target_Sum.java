@@ -168,7 +168,7 @@ public class Lcp_494_Target_Sum {
 	 * if target is greater than total || target is lower than negative total
 	 * 		return 0
 	 * end if
-	 * if (target plus total) mod two is not equal to zero
+	 * if (target plus total) modulo two is not equal to zero
 	 * 		return 0
 	 * end if
 	 * 

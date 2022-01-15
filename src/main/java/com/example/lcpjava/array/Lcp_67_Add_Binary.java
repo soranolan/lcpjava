@@ -23,7 +23,7 @@ public class Lcp_67_Add_Binary {
 	 * 			lengthB--
 	 * 		end if
 	 * 		
-	 * 		sb append sum mod two
+	 * 		sb append sum modulo two
 	 * 		carry <- sum divide two
 	 * end while
 	 * 
