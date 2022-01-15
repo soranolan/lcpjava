@@ -6,7 +6,7 @@ public class Lcp_142_Linked_List_Cycle_II {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * Floy'd Cycle Detection Algorithm
+	 * Floyd Cycle Detection Algorithm
 	 * 
 	 * ListNode slow <- head
 	 * ListNode fast <- head
