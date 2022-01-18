@@ -216,7 +216,7 @@ public class Lcp_205_Isomorphic_Strings {
 	 * 
 	 * return true
 	 * */
-	public boolean isIsomorphic(String s, String t) {
+	public boolean isIsomorphic_5(String s, String t) {
 		int[] sArr = new int[256];																					// S : O(256)
 		int[] tArr = new int[256];																					// S : O(256)
 		
@@ -232,6 +232,43 @@ public class Lcp_205_Isomorphic_Strings {
 				tArr[tChar] = sChar;
 			}
 			if (sArr[sChar] != tChar || tArr[tChar] != sChar) { return false; }
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(512)
+	 * 
+	 * int[] sArr <- new int[256]
+	 * int[] tArr <- new int[256]
+	 * 
+	 * for int i <- 0; if i is lower than s length; i++
+	 * 		char sChar <- s charAt(i)
+	 * 		char tChar <- t charAt(i)
+	 * 		
+	 * 		if sArr[sChar] is not equal to tArr[tChar]
+	 * 			return false
+	 * 		end if
+	 * 		
+	 * 		sArr[sChar] <- i plus one
+	 * 		tArr[tChar] <- i plus one
+	 * end for
+	 * 
+	 * return true
+	 * */
+	public boolean isIsomorphic(String s, String t) {
+		int[] sArr = new int[256];																					// S : O(256)
+		int[] tArr = new int[256];																					// S : O(256)
+		
+		for (int i = 0; i < s.length(); i++) {																		// T : O(n)
+			char sChar = s.charAt(i);																				// T : O(1)
+			char tChar = t.charAt(i);																				// T : O(1)
+			
+			if (sArr[sChar] != tArr[tChar]) { return false; }
+			sArr[sChar] = i + 1;
+			tArr[tChar] = i + 1;
 		}
 		
 		return true;
