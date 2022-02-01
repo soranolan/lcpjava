@@ -89,16 +89,16 @@ public class Lcp_1394_Find_Lucky_Integer_in_an_Array {
 	 * 
 	 * warning : will change the input array
 	 * 
-	 * stack								¡U		heap						
-	 * int[] arr			s_0x0001		¡U		arr[0] = 2			h_0x0001
-	 * 										¡U									
-	 * 										¡U		arr[1] = 2			h_0x0002
-	 * 										¡U		arr[1] = 65538		h_0x0002
-	 * 										¡U									
-	 * 										¡U		arr[2] = 3			h_0x0003
-	 * 										¡U		arr[3] = 4			h_0x0004
-	 * int num = 2			s_0x0002		¡U									
-	 * int num = 65538		s_0x0002		¡U									
+	 * stack								|		heap						
+	 * int[] arr			s_0x0001		|		arr[0] = 2			h_0x0001
+	 * 										|									
+	 * 										|		arr[1] = 2			h_0x0002
+	 * 										|		arr[1] = 65538		h_0x0002
+	 * 										|									
+	 * 										|		arr[2] = 3			h_0x0003
+	 * 										|		arr[3] = 4			h_0x0004
+	 * int num = 2			s_0x0002		|									
+	 * int num = 65538		s_0x0002		|									
 	 * 
 	 * for int number in array
 	 * 		number <- number & HEX(FFFF)
