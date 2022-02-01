@@ -100,7 +100,8 @@ public class Lcp_1394_Find_Lucky_Integer_in_an_Array {
 	 * int num = 2			s_0x0002		|									
 	 * int num = 65538		s_0x0002		|									
 	 * 
-	 * for int number in array
+	 * for int i <- 0; if i is lower than array length; i++
+	 * 		int number <- array[i]
 	 * 		number <- number & HEX(FFFF)
 	 * 		
 	 * 		if number is lower than or equal to array length
