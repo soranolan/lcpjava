@@ -10,6 +10,9 @@ public class Lcp_496_Next_Greater_Element_I {
 	 * time  : O(m + n)
 	 * space : O(m)
 	 * 
+	 * Monotonic Stack
+	 * 
+	 * 
 	 * Stack<Integer> stack <- new Stack
 	 * Map<Integer, Integer> memo <- new HashMap
 	 * 
