@@ -113,7 +113,6 @@ public class Lcp_3_Longest_Substring_Without_Repeating_Characters {
 	 * 		int value <- s charAt(i)
 	 * 		
 	 * 		if value is greater than 64
-	 * 			value <- value minus 64
 	 * 			upper(s, i, value);
 	 * 		else
 	 * 			lower(s, i, value);
@@ -131,7 +130,6 @@ public class Lcp_3_Longest_Substring_Without_Repeating_Characters {
 			int value = s.charAt(i);																				// T : O(1)
 			
 			if (value > 64) {
-				value = value - 64;
 				upper(s, i, value);
 			} else {
 				lower(s, i, value);
