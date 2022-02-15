@@ -53,6 +53,8 @@ public class Lcp_28_Implement_strStr {
 	 * space : O(n)
 	 * 
 	 * KMP
+	 * https://www.youtube.com/watch?v=GTJr8OvyEVQ
+	 * https://www.youtube.com/watch?v=KG44VoDtsAA
 	 * 
 	 * int hIdx <- 0
 	 * int nIdx <- 0
