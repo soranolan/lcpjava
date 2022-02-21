@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class Lcp_496_Next_Greater_Element_ITest {
+class Lcp_496_Next_Greater_Element_ITest {
 	
 	@Test
 	void test_case_1() {

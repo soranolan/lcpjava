@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class Lcp_969_Pancake_SortingTest {
+class Lcp_969_Pancake_SortingTest {
 	
 	@Test
 	void test_case_1() {
