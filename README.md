@@ -1,4 +1,4 @@
-# LeetCode Practice Java
+# LeetCode Practice
  
 * IDE
    * Eclipse
