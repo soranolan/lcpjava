@@ -31,9 +31,9 @@ public class Lcp_119_Pascals_Triangle_II {
 			for (int j = inner.size() - 1; j > 0; j--) {															// T : O(m)
 				inner.set(j, inner.get(j) + inner.get(j - 1));														// T : O(1)
 			}
-			inner.add(1);																							// T : amortized O(1); S : O(n)
+			inner.add(1);																							// T : O(£\(n)); S : O(n)
 			List<Integer> clone = new ArrayList<>(inner);															// S : O(n)
-			outer.add(clone);																						// T : amortized O(1); S : O(n)
+			outer.add(clone);																						// T : O(£\(n)); S : O(n)
 		}
 		
 		return outer.get(rowIndex);
@@ -61,7 +61,7 @@ public class Lcp_119_Pascals_Triangle_II {
 			for (int j = result.size() - 1; j > 0; j--) {															// T : O(m)
 				result.set(j, result.get(j) + result.get(j - 1));													// T : O(1)
 			}
-			result.add(1);																							// T : amortized O(1); S : O(n)
+			result.add(1);																							// T : O(£\(n)); S : O(n)
 		}
 		
 		return result;

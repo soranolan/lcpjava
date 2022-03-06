@@ -31,9 +31,9 @@ public class Lcp_118_Pascals_Triangle {
 			for (int j = inner.size() - 1; j > 0; j--) {															// T : O(n)
 				inner.set(j, inner.get(j) + inner.get(j - 1));														// T : O(1)
 			}
-			inner.add(1);																							// T : amortized O(1); S : O(n)
+			inner.add(1);																							// T : O(£\(n)); S : O(n)
 			List<Integer> clone = new ArrayList<>(inner);															// S : O(n)
-			outer.add(clone);																						// T : amortized O(1); S : O(n)
+			outer.add(clone);																						// T : O(£\(n)); S : O(n)
 		}
 		
 		return outer;

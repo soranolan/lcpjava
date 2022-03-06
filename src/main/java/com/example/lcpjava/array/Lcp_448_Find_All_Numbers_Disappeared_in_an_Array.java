@@ -38,7 +38,7 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 		
 		for (int i = 1; i <= length; i++) {																			// T : O(n)
 			if (!container.contains(i)) {																			// T : O(1)
-				result.add(i);																						// T : amortized O(1)
+				result.add(i);																						// T : O(£\(n))
 			}
 		}
 		
@@ -90,7 +90,7 @@ public class Lcp_448_Find_All_Numbers_Disappeared_in_an_Array {
 		
 		for (int j = 0; j < length; j++) {																			// T : O(n)
 			if (nums[j] != (j + 1)) {
-				result.add(j + 1);																					// T : amortized O(1)
+				result.add(j + 1);																					// T : O(£\(n))
 			}
 		}
 		
