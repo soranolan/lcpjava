@@ -2,7 +2,7 @@ package com.example.lcpjava.graph;
 
 public class UF_1319 extends UnionFind {
 	
-	int groups;
+	public int groups;
 	
 	public UF_1319() {  }
 	
@@ -11,10 +11,6 @@ public class UF_1319 extends UnionFind {
 		groups = size;
 	}
 	
-	/**
-	 * time  : O(£\(n))
-	 * space : O(1)
-	 * */
 	@Override
 	public void union(int x, int y) {
 		int rootX = find(x);

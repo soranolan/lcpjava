@@ -2,7 +2,7 @@ package com.example.lcpjava.graph;
 
 public class UF_547 extends UnionFind {
 	
-	int provinces;
+	public int provinces;
 	
 	public UF_547() {  }
 	
@@ -11,10 +11,6 @@ public class UF_547 extends UnionFind {
 		provinces = size;
 	}
 	
-	/**
-	 * time  : O(£\(n))
-	 * space : O(1)
-	 * */
 	@Override
 	public void union(int x, int y) {
 		int rootX = find(x);

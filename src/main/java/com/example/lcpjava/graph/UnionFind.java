@@ -21,16 +21,19 @@ public class UnionFind {
 	/**
 	 * time  : O(£\(n))
 	 * space : O(1)
+	 * 
+	 * Path Compression
 	 * */
 	public int find(int x) {
 		if (x == root[x]) { return x; }
-		
 		return root[x] = find(root[x]);
 	}
 	
 	/**
 	 * time  : O(£\(n))
 	 * space : O(1)
+	 * 
+	 * Union by Rank
 	 * */
 	public void union(int x, int y) {
 		int rootX = find(x);
