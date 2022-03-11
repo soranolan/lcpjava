@@ -39,10 +39,13 @@ public class Lcp_684_Redundant_Connection {
 		for (int i = 0; i < length + 1; i++) { graph.add(new ArrayList<>()); }										// T : O(n + 1)
 		
 		for (int[] edge : edges) {																					// T : O(n)
+			// each time adding a new edge, we need to reset visited path
 			boolean[] visited = new boolean[length + 1];															// S : O(n + 1)
 			
+			// check if adding the edge would create a cycle
 			if (BFS(edge[0], edge[1], visited, graph)) { result = edge; }
 			
+			// remember the edge
 			graph.get(edge[0]).add(edge[1]);
 			graph.get(edge[1]).add(edge[0]);
 		}
