@@ -22,7 +22,7 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * 			continue
 	 * 		end if
 	 * 		if max is lower than num times two
-	 * 			return -1
+	 * 			return minus one
 	 * 		end if
 	 * end for
 	 * 
@@ -67,7 +67,7 @@ public class Lcp_747_Largest_Number_At_Least_Twice_of_Others {
 	 * 		end if
 	 * end for
 	 * 
-	 * return if max is greater than or equal to second times two then index else -1
+	 * return if max is greater than or equal to second times two then index else minus one
 	 * */
 	public int dominantIndex(int[] nums) {
 		int max = -1;

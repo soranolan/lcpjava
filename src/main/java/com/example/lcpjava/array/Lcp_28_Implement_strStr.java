@@ -24,7 +24,7 @@ public class Lcp_28_Implement_strStr {
 	 * 		end if
 	 * end while
 	 * 
-	 * return if nIdx is equal to nLen then pos else -1
+	 * return if nIdx is equal to nLen then pos else minus one
 	 * */
 	public int strStr_1(String haystack, String needle) {
 		int hLen = haystack.length();
@@ -73,7 +73,7 @@ public class Lcp_28_Implement_strStr {
 	 * 		end if
 	 * end while
 	 * 
-	 * return if nIdx is equal to nLen then hIdx minus nIdx else -1
+	 * return if nIdx is equal to nLen then hIdx minus nIdx else minus one
 	 * */
 	public int strStr(String haystack, String needle) {
 		int hIdx = 0;

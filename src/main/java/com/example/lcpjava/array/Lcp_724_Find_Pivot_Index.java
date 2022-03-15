@@ -21,7 +21,7 @@ public class Lcp_724_Find_Pivot_Index {
 	 * 		leftSum <- leftSum plus num
 	 * end for
 	 * 
-	 * return -1
+	 * return minus one
 	 * */
 	public int pivotIndex(int[] nums) {
 		int sum = 0;

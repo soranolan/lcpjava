@@ -55,7 +55,7 @@ public class Lcp_752_Open_the_Lock {
 	 * 		moves++
 	 * end while
 	 * 
-	 * return -1
+	 * return minus one
 	 * */
 	public int openLock_1(String[] deadends, String target) {
 		Queue<String> queue = new LinkedList<>();
@@ -148,7 +148,7 @@ public class Lcp_752_Open_the_Lock {
 	 * 		end for
 	 * end while
 	 * 
-	 * return -1
+	 * return minus one
 	 * */
 	public int openLock(String[] deadends, String target) {
 		Set<String> left = new HashSet<>();

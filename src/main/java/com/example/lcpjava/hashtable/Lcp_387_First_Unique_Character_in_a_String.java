@@ -42,7 +42,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		end if
 	 * end for
 	 * 
-	 * return if minIndex is equal to 100000 then -1 else minIndex
+	 * return if minIndex is equal to 100000 then minus one else minIndex
 	 * */
 	public int firstUniqChar_1(String s) {
 		int minIndex = 100000;
@@ -82,7 +82,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		char c <- s charAt(i)
 	 * 		
 	 * 		if memo containsKey(c)
-	 * 			memo put(c, -1)
+	 * 			memo put(c, minus one)
 	 * 		else
 	 * 			memo put(c, i)
 	 * 		end if

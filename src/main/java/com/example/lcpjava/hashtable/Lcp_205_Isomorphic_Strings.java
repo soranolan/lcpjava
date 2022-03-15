@@ -197,14 +197,14 @@ public class Lcp_205_Isomorphic_Strings {
 	 * int[] sArr <- new int[256]
 	 * int[] tArr <- new int[256]
 	 * 
-	 * Arrays fill(sArr, -1)
-	 * Arrays fill(tArr, -1)
+	 * Arrays fill(sArr, minus one)
+	 * Arrays fill(tArr, minus one)
 	 * 
 	 * for int i <- 0; if i is lower than s length; i++
 	 * 		char sChar <- s charAt(i)
 	 * 		char tChar <- t charAt(i)
 	 * 		
-	 * 		if sArr[sChar] is equal to -1 && tArr[tChar] is equal to -1
+	 * 		if sArr[sChar] is equal to minus one && tArr[tChar] is equal to minus one
 	 * 			sArr[sChar] <- tChar
 	 * 			tArr[tChar] <- sChar
 	 * 		end if
