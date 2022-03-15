@@ -92,7 +92,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		char c <- s charAt(i)
 	 * 		int index <- memo get(c)
 	 * 		
-	 * 		if index is equal to negative one
+	 * 		if index is equal to minus one
 	 * 			continue
 	 * 		end if
 	 * 		
@@ -101,7 +101,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		end if
 	 * end for
 	 * 
-	 * return if minIndex is equal to 100000 then negative one else minIndex
+	 * return if minIndex is equal to 100000 then minus one else minIndex
 	 * */
 	public int firstUniqChar_2(String s) {
 		int minIndex = 100000;
@@ -152,7 +152,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		end if
 	 * end for
 	 * 
-	 * return negative one
+	 * return minus one
 	 * */
 	public int firstUniqChar_3(String s) {
 		Map<Character, Integer> memo = new HashMap<>();																// S : O(n)
@@ -198,7 +198,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		end if
 	 * end for
 	 * 
-	 * return negative one
+	 * return minus one
 	 * */
 	public int firstUniqChar_4(String s) {
 		int[] memo = new int[26];																					// S : O(26)
@@ -228,16 +228,16 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 
 	 * int minIndex <- 100000
 	 * int[] memo <- new int[26]
-	 * Arrays fill(memo, negative two)
+	 * Arrays fill(memo, minus two)
 	 * 
 	 * for int i <- 0; if i is lower than s length; i++
 	 * 		char c <- s charAt(i)
 	 * 		int index <- c minus 'a'
 	 * 		
-	 * 		if memo[index] is equal to negative two
+	 * 		if memo[index] is equal to minus two
 	 * 			memo[index] <- i
 	 * 		else if memo[index] is greater than or equal to zero
-	 * 			memo[index] <- negative one
+	 * 			memo[index] <- minus one
 	 * 		end if
 	 * end for
 	 * 
@@ -251,7 +251,7 @@ public class Lcp_387_First_Unique_Character_in_a_String {
 	 * 		end if
 	 * end for
 	 * 
-	 * return if minIndex is equal to 100000 then negative one else minIndex
+	 * return if minIndex is equal to 100000 then minus one else minIndex
 	 * */
 	public int firstUniqChar(String s) {
 		int minIndex = 100000;

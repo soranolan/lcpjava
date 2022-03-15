@@ -91,7 +91,7 @@ public class Lcp_494_Target_Sum {
 	 * for number in array
 	 * 		total <- total plus number
 	 * end for
-	 * if target is greater than total || target is lower than negative total
+	 * if target is greater than total || target is lower than minus total
 	 * 		return 0
 	 * end if
 	 * 
@@ -165,7 +165,7 @@ public class Lcp_494_Target_Sum {
 	 * 		total <- total plus number
 	 * end for
 	 * 
-	 * if target is greater than total || target is lower than negative total
+	 * if target is greater than total || target is lower than minus total
 	 * 		return 0
 	 * end if
 	 * if (target plus total) modulo two is not equal to zero

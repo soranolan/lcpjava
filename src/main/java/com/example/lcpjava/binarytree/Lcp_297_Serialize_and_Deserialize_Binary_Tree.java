@@ -304,7 +304,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * index++
 	 * 
 	 * if isMinus
-	 * 		number <- negative number
+	 * 		number <- minus number
 	 * end if
 	 * 
 	 * TreeNode current <- new TreeNode(number)

@@ -16,7 +16,7 @@ public class Lcp_150_Evaluate_Reverse_Polish_Notation {
 	 * 				stack push(stack pop plus stack pop)
 	 * 				break
 	 * 			case "-"
-	 * 				stack push(negative one times stack pop plus stack pop)
+	 * 				stack push(minus one times stack pop plus stack pop)
 	 * 				break
 	 * 			case "*"
 	 * 				stack push(stack pop times stack pop)

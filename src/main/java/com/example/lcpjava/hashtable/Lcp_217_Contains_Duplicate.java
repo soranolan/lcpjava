@@ -107,7 +107,7 @@ public class Lcp_217_Contains_Duplicate {
 	 * 		boolean isNegative <- false
 	 * 		if number is lower than zero
 	 * 			isNegative <- true
-	 * 			number <- number times negative one
+	 * 			number <- number times minus one
 	 * 		end if
 	 * 		
 	 * 		int index <- number divide 32;

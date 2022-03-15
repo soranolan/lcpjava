@@ -95,7 +95,7 @@ public class Lcp_350_Intersection_of_Two_Arrays_II {
 	 * for int number in nums2
 	 * 		int index <- binarySearch(sorted, number)
 	 * 		
-	 * 		if index is not equal to negative one
+	 * 		if index is not equal to minus one
 	 * 			sorted remove(index)
 	 * 			intersection add(number)
 	 * 		end if
@@ -154,7 +154,7 @@ public class Lcp_350_Intersection_of_Two_Arrays_II {
 	 * 		end if
 	 * end while
 	 * 
-	 * return negative one
+	 * return minus one
 	 * */
 	public int binarySearch_1(List<Integer> sorted, int target) {
 		int start = 0;
