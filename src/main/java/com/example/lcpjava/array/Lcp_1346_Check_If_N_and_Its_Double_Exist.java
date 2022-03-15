@@ -64,7 +64,7 @@ public class Lcp_1346_Check_If_N_and_Its_Double_Exist {
 	 * Set<Integer> container
 	 * 
 	 * for int i <- 0 to array end
-	 * 		if container contains array[i] times two || array[i] modulo two is equal to zero and container contains array[i] divide two
+	 * 		if container contains array[i] times two || array[i] modulo two is equal to zero and container contains array[i] divided by two
 	 * 			return true
 	 * 		end if
 	 * 		container add array[i]

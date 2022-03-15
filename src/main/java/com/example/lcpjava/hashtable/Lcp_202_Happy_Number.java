@@ -41,7 +41,7 @@ public class Lcp_202_Happy_Number {
 	 * 		int digit <- target modulo ten
 	 * 		sum <- sum plus (digit power two)
 	 * 		
-	 * 		target <- target divide ten
+	 * 		target <- target divided by ten
 	 * end while
 	 * 
 	 * return false
@@ -161,7 +161,7 @@ public class Lcp_202_Happy_Number {
 	 * while number is greater than zero
 	 * 		int digit <- number modulo ten
 	 * 		sum <- sum plus digit times digit
-	 * 		number <- number divide ten
+	 * 		number <- number divided by ten
 	 * end while
 	 * 
 	 * return sum

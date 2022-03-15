@@ -149,7 +149,7 @@ public class Lcp_1337_The_K_Weakest_Rows_in_a_Matrix {
 	 * int end <- array length minus one
 	 * 
 	 * while start is lower than or equal to end
-	 * 		int mid <- start plus (end minus start) divide two
+	 * 		int mid <- start plus (end minus start) divided by two
 	 * 		
 	 * 		if array[mid] is equal to one
 	 * 			start <- mid plus one

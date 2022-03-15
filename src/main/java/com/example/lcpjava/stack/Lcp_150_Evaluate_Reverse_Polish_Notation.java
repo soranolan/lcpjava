@@ -24,7 +24,7 @@ public class Lcp_150_Evaluate_Reverse_Polish_Notation {
 	 * 			case "/"
 	 * 				int second <- stack pop
 	 * 				int first <- stack pop
-	 * 				stack push(first divide second)
+	 * 				stack push(first divided by second)
 	 * 				break
 	 * 			default
 	 * 				stack push(token to Integer)

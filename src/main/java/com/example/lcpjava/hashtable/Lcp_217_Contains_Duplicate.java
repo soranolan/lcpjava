@@ -100,8 +100,8 @@ public class Lcp_217_Contains_Duplicate {
 	 * 		min <- min times minus one
 	 * end if
 	 * 
-	 * int[] positive <- new int[max divide 32 plus one]
-	 * int[] negative <- new int[min divide 32 plus one]
+	 * int[] positive <- new int[max divided by 32 plus one]
+	 * int[] negative <- new int[min divided by 32 plus one]
 	 * 
 	 * for number in array
 	 * 		boolean isNegative <- false
@@ -110,7 +110,7 @@ public class Lcp_217_Contains_Duplicate {
 	 * 			number <- number times minus one
 	 * 		end if
 	 * 		
-	 * 		int index <- number divide 32;
+	 * 		int index <- number divided by 32;
 	 * 		int shift <- number modulo 32;
 	 * 		int bit <- 1 << shift;
 	 * 		

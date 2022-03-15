@@ -77,8 +77,8 @@ public class Lcp_48_Rotate_Image {
 	 * 
 	 * int length <- matrix length
 	 * int index <- length minus one
-	 * int rows <- (length plus one) divide two
-	 * int cols <- length divide two
+	 * int rows <- (length plus one) divided by two
+	 * int cols <- length divided by two
 	 * 
 	 * for int row <- 0; if row is lower than rows; row++
 	 * 		for int col <- row plus one; if col is lower than cols; col++

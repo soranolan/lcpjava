@@ -142,7 +142,7 @@ public class Lcp_350_Intersection_of_Two_Arrays_II {
 	 * int end <- 0
 	 * 
 	 * while start is lower than or equal to end
-	 * 		int mid <- start plus (end minus start) divide two
+	 * 		int mid <- start plus (end minus start) divided by two
 	 * 		int pivot <- sorted get(mid)
 	 * 		
 	 * 		if target is equal to pivot
@@ -239,7 +239,7 @@ public class Lcp_350_Intersection_of_Two_Arrays_II {
 	 * int end <- array length minus one
 	 * 
 	 * while start is lower than or equal to end
-	 * 		int mid <- start plus (end minus start) divide two
+	 * 		int mid <- start plus (end minus start) divided by two
 	 * 		int pivot <- array[mid]
 	 * 		
 	 * 		if target is greater than pivot

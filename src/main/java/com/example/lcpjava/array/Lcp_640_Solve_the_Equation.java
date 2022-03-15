@@ -66,9 +66,9 @@ public class Lcp_640_Solve_the_Equation {
 	 * sb append("x=")
 	 * 
 	 * if nSum modulo xSum is equal to zero
-	 * 		sb append(nSum divide xSum)
+	 * 		sb append(nSum divided by xSum)
 	 * else
-	 * 		sb append(double nSum divide double xSum)
+	 * 		sb append(double nSum divided by double xSum)
 	 * end if
 	 * 
 	 * return sb to string

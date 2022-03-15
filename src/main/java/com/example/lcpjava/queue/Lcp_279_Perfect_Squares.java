@@ -94,7 +94,7 @@ public class Lcp_279_Perfect_Squares {
 	 * end if
 	 * 
 	 * while n modulo four is equal to zero
-	 * 		n <- n divide four
+	 * 		n <- n divided by four
 	 * end while
 	 * 
 	 * if n modulo eight is equal to seven

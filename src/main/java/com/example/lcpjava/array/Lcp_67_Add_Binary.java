@@ -24,7 +24,7 @@ public class Lcp_67_Add_Binary {
 	 * 		end if
 	 * 		
 	 * 		sb append sum modulo two
-	 * 		carry <- sum divide two
+	 * 		carry <- sum divided by two
 	 * end while
 	 * 
 	 * if carry is greater than zero

@@ -129,7 +129,7 @@ public class Lcp_96_Unique_Binary_Search_Trees {
 	 * int result <- one
 	 * 
 	 * for int i <- 0; if i is lower than n; i++
-	 * 		result <- result times (four times i plus two) divide (i plus (double) 2)
+	 * 		result <- result times (four times i plus two) divided by (i plus (double) 2)
 	 * end for
 	 * 
 	 * return result

@@ -159,7 +159,7 @@ public class Lcp_406_Queue_Reconstruction_by_Height {
 	 * int end <- length
 	 * 
 	 * while start is lower than end
-	 * 		int mid <- start plus (end minus start) divide two
+	 * 		int mid <- start plus (end minus start) divided by two
 	 * 		
 	 * 		if getSum(mid) is lower than count
 	 * 			start <- mid plus one

@@ -69,7 +69,7 @@ public class Lcp_661_Image_Smoother {
 	 * 				count++
 	 * 			end if
 	 * 			
-	 * 			result[row][col] <- sum divide count
+	 * 			result[row][col] <- sum divided by count
 	 * 		end for
 	 * end for
 	 * 
@@ -247,7 +247,7 @@ public class Lcp_661_Image_Smoother {
 	 * 		count++
 	 * end if
 	 * 
-	 * return sum divide count
+	 * return sum divided by count
 	 * */
 	public int smoother_2(int[][] img, int row, int col) {
 		int rows = img.length;
@@ -355,7 +355,7 @@ public class Lcp_661_Image_Smoother {
 	 * 		end for
 	 * end for
 	 * 
-	 * return sum divide count
+	 * return sum divided by count
 	 * */
 	public int smoother_3(int[][] img, int row, int col) {
 		int rows = img.length;
@@ -444,7 +444,7 @@ public class Lcp_661_Image_Smoother {
 	 * 		end for
 	 * end for
 	 * 
-	 * return sum divide count
+	 * return sum divided by count
 	 * */
 	public int smoother(int[][] img, int row, int col) {
 		int rows = img.length;

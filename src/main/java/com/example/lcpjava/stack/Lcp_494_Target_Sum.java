@@ -172,7 +172,7 @@ public class Lcp_494_Target_Sum {
 	 * 		return 0
 	 * end if
 	 * 
-	 * int sumOfPositive <- (target plus total) divide two
+	 * int sumOfPositive <- (target plus total) divided by two
 	 * return subset(arrays, sumOfPositive)
 	 * */
 	public int findTargetSumWays(int[] nums, int target) {
