@@ -160,7 +160,7 @@ public class Lcp_202_Happy_Number {
 	 * 
 	 * while number is greater than zero
 	 * 		int digit <- number modulo ten
-	 * 		sum <- sum plus digit multiply digit
+	 * 		sum <- sum plus digit times digit
 	 * 		number <- number divide ten
 	 * end while
 	 * 

@@ -94,10 +94,10 @@ public class Lcp_217_Contains_Duplicate {
 	 * end for
 	 * 
 	 * if max is lower than zero
-	 * 		max <- max multiply negative one
+	 * 		max <- max times minus one
 	 * end if
 	 * if min is lower than zero
-	 * 		min <- min multiply negative one
+	 * 		min <- min times minus one
 	 * end if
 	 * 
 	 * int[] positive <- new int[max divide 32 plus one]
@@ -107,7 +107,7 @@ public class Lcp_217_Contains_Duplicate {
 	 * 		boolean isNegative <- false
 	 * 		if number is lower than zero
 	 * 			isNegative <- true
-	 * 			number <- number multiply negative one
+	 * 			number <- number times negative one
 	 * 		end if
 	 * 		
 	 * 		int index <- number divide 32;

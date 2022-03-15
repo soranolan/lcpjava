@@ -78,7 +78,7 @@ public class Lcp_394_Decode_String {
 	 * while queue is not empty
 	 * 		char character <- queue poll
 	 * 		if character is digit
-	 * 			times <- (times multiply ten) plus (character minus '0')
+	 * 			times <- (times times ten) plus (character minus '0')
 	 * 		else if character is equal to '['
 	 * 			String repeat <- recursion(queue)
 	 * 			for int i <- 0; i is lower than times; i++

@@ -16,33 +16,33 @@ public class Lcp_640_Solve_the_Equation {
 	 * 
 	 * for char c in equation to char array
 	 * 		if c is digit
-	 * 			number <- number multiply ten plus c minus char zero
+	 * 			number <- number times ten plus c minus char zero
 	 * 			isCharZero <- if c is equal to char zero then true else false
 	 * 		else if c is equal to char x
 	 * 			if number is equal to zero && c is not char zero
 	 * 				number <- 1
 	 * 			end if
 	 * 			
-	 * 			xSum <- xSum plus number multiply xSign
+	 * 			xSum <- xSum plus number times xSign
 	 * 			
 	 * 			number <- zero
 	 * 			isCharZero <- false
 	 * 		else if c is equal to char plus
-	 * 			nSum <- nSum plus number multiply nSign
+	 * 			nSum <- nSum plus number times nSign
 	 * 			
 	 * 			number <- zero
 	 * 			isCharZero <- false
 	 * 			xSign <- if is equation right side then minus one else one
 	 * 			nSign <- if is equation right side then one else minus one
 	 * 		else if c is equal to char minus
-	 * 			nSum <- nSum plus number multiply nSign
+	 * 			nSum <- nSum plus number times nSign
 	 * 			
 	 * 			number <- zero
 	 * 			isCharZero <- false
 	 * 			xSign <- if is equation right side then one else minus one
 	 * 			nSign <- if is equation right side then minus one else one
 	 * 		else if c is equal to char equal
-	 * 			nSum <- nSum plus number multiply nSign
+	 * 			nSum <- nSum plus number times nSign
 	 * 			
 	 * 			number <- zero
 	 * 			isCharZero <- false
@@ -52,7 +52,7 @@ public class Lcp_640_Solve_the_Equation {
 	 * 		end if
 	 * end for
 	 * 
-	 * nSum <- nSum plus number multiply nSign
+	 * nSum <- nSum plus number times nSign
 	 * 
 	 * if xSum is equal to zero && nSum is equal to zero
 	 * 		return "Infinite solutions"

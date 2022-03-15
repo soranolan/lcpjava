@@ -91,7 +91,7 @@ public class Lcp_96_Unique_Binary_Search_Trees {
 	 * 		for int left <- 0; if left is lower than total; left++
 	 * 			int leftSubTree <- dp[left]
 	 * 			int rightSubTree <- dp[total minus left minus one]
-	 * 			int structures <- leftSubTree multiply rightSubTree
+	 * 			int structures <- leftSubTree times rightSubTree
 	 * 			dp[total] <- dp[total] plus structures
 	 * 		end for
 	 * end for
@@ -129,7 +129,7 @@ public class Lcp_96_Unique_Binary_Search_Trees {
 	 * int result <- one
 	 * 
 	 * for int i <- 0; if i is lower than n; i++
-	 * 		result <- result multiply (four multiply i plus two) divide (i plus (double) 2)
+	 * 		result <- result times (four times i plus two) divide (i plus (double) 2)
 	 * end for
 	 * 
 	 * return result

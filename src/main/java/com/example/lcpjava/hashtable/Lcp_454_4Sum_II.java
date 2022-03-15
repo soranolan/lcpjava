@@ -61,7 +61,7 @@ public class Lcp_454_4Sum_II {
 	 * for int i in nums1
 	 * 		for int j in nums2
 	 * 			for int k in nums3
-	 * 				result <- result plus memo getOrDefault((i plus j plus k) multiply minus one, zero)
+	 * 				result <- result plus memo getOrDefault((i plus j plus k) times minus one, zero)
 	 * 			end for
 	 * 		end for
 	 * end for
@@ -103,7 +103,7 @@ public class Lcp_454_4Sum_II {
 	 * 
 	 * for int i in nums1
 	 * 		for int j in nums2
-	 * 			result <- result plus memo getOrDefault((i plus j) multiply minus one, zero)
+	 * 			result <- result plus memo getOrDefault((i plus j) times minus one, zero)
 	 * 		end for
 	 * end for
 	 * 
@@ -184,7 +184,7 @@ public class Lcp_454_4Sum_II {
 	 * 
 	 * for int i in nums1
 	 * 		for int j in nums2
-	 * 			result <- result plus bucket[(i plus j) multiply minus one minus min]
+	 * 			result <- result plus bucket[(i plus j) times minus one minus min]
 	 * 		end for
 	 * end for
 	 * 

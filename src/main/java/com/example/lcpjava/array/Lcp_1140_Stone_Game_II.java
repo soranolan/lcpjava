@@ -31,7 +31,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * if turn is true
 	 * 		stones <- Integer max value
 	 * 		
-	 * 		for int i <- 0; if i is lower than two multiply M; i++
+	 * 		for int i <- 0; if i is lower than two times M; i++
 	 * 			if index plus i is greater than or equal to length
 	 * 				break
 	 * 			end if
@@ -39,7 +39,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * 			stones <- Math min(stones, recursion(index plus i plus one, Math max(M, i plus one), piles, switch turn))
 	 * 		end for
 	 * else
-	 * 		for int i <- 0; if i is lower than two multiply M; i++
+	 * 		for int i <- 0; if i is lower than two times M; i++
 	 * 			if index plus i is greater than or equal to length
 	 * 				break
 	 * 			end if
@@ -83,8 +83,8 @@ public class Lcp_1140_Stone_Game_II {
 	 * 
 	 * int maxM <- 1
 	 * 
-	 * while maxM multiply two is lower than length
-	 * 		maxM <- maxM multiply two
+	 * while maxM times two is lower than length
+	 * 		maxM <- maxM times two
 	 * end while
 	 * 
 	 * int[][][] dp <- new int[length plus one][maxM plus one][2]
@@ -123,7 +123,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * if turn is equal to one
 	 * 		stones <- Integer max value
 	 * 		
-	 * 		for int i <- 0; if i is lower than two multiply M; i++
+	 * 		for int i <- 0; if i is lower than two times M; i++
 	 * 			if index plus i is greater than or equal to length
 	 * 				break
 	 * 			end if
@@ -131,7 +131,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * 			stones <- Math min(stones, recursion(index plus i plus one, Math max(M, i plus one), piles, zero, switch turn))
 	 * 		end for
 	 * else
-	 * 		for int i <- 0; if i is lower than two multiply M; i++
+	 * 		for int i <- 0; if i is lower than two times M; i++
 	 * 			if index plus i is greater than or equal to length
 	 * 				break
 	 * 			end if
@@ -188,8 +188,8 @@ public class Lcp_1140_Stone_Game_II {
 	 * 
 	 * int maxM <- 1
 	 * 
-	 * while maxM multiply two is lower than length
-	 * 		maxM <- maxM multiply two
+	 * while maxM times two is lower than length
+	 * 		maxM <- maxM times two
 	 * end while
 	 * 
 	 * int[][] dp <- new int[length plus one][maxM plus one]
@@ -217,7 +217,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * 
 	 * int thisTurnSum <- preSum[index]
 	 * 
-	 * if length minus index is lower than two multiply M
+	 * if length minus index is lower than two times M
 	 * 		return thisTurnSum
 	 * end if
 	 * 
@@ -228,7 +228,7 @@ public class Lcp_1140_Stone_Game_II {
 	 * int stones <- 0
 	 * int myStones <- 0
 	 * 
-	 * for int i <- 1; if i is lower than or equal to two multiply M; i++
+	 * for int i <- 1; if i is lower than or equal to two times M; i++
 	 * 		int nextTurnSum <- preSum[index plus i]
 	 * 		myStones <- thisTurnSum minus nextTurnSum
 	 * 		

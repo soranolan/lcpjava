@@ -29,8 +29,8 @@ public class Lcp_279_Perfect_Squares {
 	 * 			size--
 	 * 			int number <- queue poll
 	 * 			
-	 * 			for int i <- 1; if i multiply i is lower than or equal to n; i++
-	 * 				int sum <- number plus (i multiply i)
+	 * 			for int i <- 1; if i times i is lower than or equal to n; i++
+	 * 				int sum <- number plus (i times i)
 	 * 				if visited contains sum
 	 * 					continue
 	 * 				end if
@@ -193,8 +193,8 @@ public class Lcp_279_Perfect_Squares {
 	 * for int i <- 1; if i is lower than or equal to n; i++
 	 * 		int min <- Integer max value
 	 * 		int j <- 1
-	 * 		while i minus j multiply j is greater than or equal to zero
-	 * 			min <- Math min(min, dp[i minus j multiply j] plus one)
+	 * 		while i minus j times j is greater than or equal to zero
+	 * 			min <- Math min(min, dp[i minus j times j] plus one)
 	 * 			j++
 	 * 		end while
 	 * 		dp[i] <- min
@@ -232,8 +232,8 @@ public class Lcp_279_Perfect_Squares {
 	 * 		int size <- list size
 	 * 		int min <- Integer max value
 	 * 		
-	 * 		for int i <- 1; if i multiply i is lower than or equal to size; i++
-	 * 			min <- Math min(min, list get(size minus i multiply i) plus one
+	 * 		for int i <- 1; if i times i is lower than or equal to size; i++
+	 * 			min <- Math min(min, list get(size minus i times i) plus one
 	 * 		end for
 	 * 		
 	 * 		list add(min)

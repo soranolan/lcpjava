@@ -205,7 +205,7 @@ public class Lcp_36_Valid_Sudoku {
 	 * 				continue
 	 * 			end if
 	 * 			
-	 * 			int index <- ((i divide three) multiply three) plus j divide three
+	 * 			int index <- ((i divide three) times three) plus j divide three
 	 * 			int value <- c minus '1'
 	 * 			
 	 * 			if rows[i][value] is equal to one
@@ -276,7 +276,7 @@ public class Lcp_36_Valid_Sudoku {
 	 * 				continue
 	 * 			end if
 	 * 			
-	 * 			int index <- ((i divide three) multiply three) plus j divide three
+	 * 			int index <- ((i divide three) times three) plus j divide three
 	 * 			int value <- c minus '1'
 	 * 			
 	 * 			if rows[i][value] is true
@@ -347,7 +347,7 @@ public class Lcp_36_Valid_Sudoku {
 	 * 				continue
 	 * 			end if
 	 * 			
-	 * 			int index <- ((i divide three) multiply three) plus j divide three
+	 * 			int index <- ((i divide three) times three) plus j divide three
 	 * 			int value <- c minus '0'
 	 * 			int bits <- 1 << value
 	 * 			

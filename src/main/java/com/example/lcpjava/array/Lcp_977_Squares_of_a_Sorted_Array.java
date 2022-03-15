@@ -9,7 +9,7 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * space : O(1)
 	 * 
 	 * for number in array
-	 * 		number <- number multiply number
+	 * 		number <- number times number
 	 * end for
 	 * sort array
 	 * 
@@ -32,10 +32,10 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * 
 	 * for i <- right; if i is greater than or equal to zero; i--
 	 * 		if array[left] lower than array[right]
-	 * 			newArray[i] <- array[right] multiply array[right]
+	 * 			newArray[i] <- array[right] times array[right]
 	 * 			right--
 	 * 		else
-	 * 			newArray[i] <- array[left] multiply array[left]
+	 * 			newArray[i] <- array[left] times array[left]
 	 * 			left++
 	 * 		end if
 	 * end for
@@ -71,11 +71,11 @@ public class Lcp_977_Squares_of_a_Sorted_Array {
 	 * 
 	 * while left is lower than or equal to right
 	 * 		if array[left] lower than array[right]
-	 * 			newArray[i] <- array[right] multiply array[right]
+	 * 			newArray[i] <- array[right] times array[right]
 	 * 			i--
 	 * 			right--
 	 * 		else
-	 * 			newArray[i] <- array[left] multiply array[left]
+	 * 			newArray[i] <- array[left] times array[left]
 	 * 			i--
 	 * 			left++
 	 * 		end if

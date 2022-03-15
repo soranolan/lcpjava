@@ -15,7 +15,7 @@ public class Lcp_22_Generate_Parentheses {
 	 * 
 	 * List<String> result <- new ArrayList
 	 * 
-	 * generate(zero, new char[2 multiply n], result)
+	 * generate(zero, new char[2 times n], result)
 	 * 
 	 * return result
 	 * */
@@ -102,7 +102,7 @@ public class Lcp_22_Generate_Parentheses {
 	}
 	
 	/**
-	 * if sb length is equal to n multiply two
+	 * if sb length is equal to n times two
 	 * 		result add(sb to string)
 	 * 		return
 	 * end if

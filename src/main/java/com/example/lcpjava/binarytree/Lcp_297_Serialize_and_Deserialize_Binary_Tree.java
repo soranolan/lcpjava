@@ -298,7 +298,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * int number <- 0
 	 * while data charAt(index) is not equal to ','
-	 * 		number <- (number multiply ten) plus (data charAt(index) minus '0')
+	 * 		number <- (number times ten) plus (data charAt(index) minus '0')
 	 * 		index++
 	 * end while
 	 * index++

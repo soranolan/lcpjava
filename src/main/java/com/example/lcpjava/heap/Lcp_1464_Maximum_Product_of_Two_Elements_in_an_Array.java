@@ -21,7 +21,7 @@ public class Lcp_1464_Maximum_Product_of_Two_Elements_in_an_Array {
 	 * 
 	 * int first <- minHeap poll minus one
 	 * int second <- minHeap poll minus one
-	 * return first multiply second
+	 * return first times second
 	 * */
 	public int maxProduct_1(int[] nums) {
 		Queue<Integer> minHeap = new PriorityQueue<>();																// S : O(2)
@@ -48,7 +48,7 @@ public class Lcp_1464_Maximum_Product_of_Two_Elements_in_an_Array {
 	 * int right <- array length minus one
 	 * 
 	 * while left is lower than right
-	 * 		max <- Math max(max, (array[left] minus one) multiply (array[right] minus one))
+	 * 		max <- Math max(max, (array[left] minus one) times (array[right] minus one))
 	 * 		
 	 * 		if array[left] is lower than array[right]
 	 * 			left++
@@ -93,7 +93,7 @@ public class Lcp_1464_Maximum_Product_of_Two_Elements_in_an_Array {
 	 * 		end if
 	 * end for
 	 * 
-	 * return (first minus one) multiply (second minus one)
+	 * return (first minus one) times (second minus one)
 	 * */
 	public int maxProduct(int[] nums) {
 		int first = 0;
