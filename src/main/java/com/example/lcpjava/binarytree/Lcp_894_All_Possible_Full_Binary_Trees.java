@@ -211,7 +211,7 @@ public class Lcp_894_All_Possible_Full_Binary_Trees {
 	 * https://leetcode.com/problems/all-possible-full-binary-trees/discuss/167402/c%2B%2B-c-java-and-pything-recursive-and-iterative-solutions.-Doesn't-create-Frankenstein-trees
 	 * */
 	public List<TreeNode> allPossibleFBT_4(int n) {
-		List<TreeNode> result = new ArrayList<TreeNode>();
+		List<TreeNode> result = new ArrayList<>();
 		
 		if (n % 2 == 0) { return result; }
 		if (n == 1) {
@@ -249,7 +249,7 @@ public class Lcp_894_All_Possible_Full_Binary_Trees {
 	 * space : O(n * 2 ^ n)
 	 * */
 	public List<TreeNode> allPossibleFBT(int n) {
-		List<TreeNode> result = new ArrayList<TreeNode>();
+		List<TreeNode> result = new ArrayList<>();
 		if (n % 2 == 0) { return result; }
 		if (n == 1) {
 			result.add(new TreeNode(0));
@@ -257,13 +257,13 @@ public class Lcp_894_All_Possible_Full_Binary_Trees {
 		}
 		
 		List<List<TreeNode>> memo = new ArrayList<List<TreeNode>>();
-		memo.add(new ArrayList<TreeNode>());
+		memo.add(new ArrayList<>());
 		memo.get(0).add(new TreeNode(0));
 		
 		int childNodes = n / 2;
 		
 		for (int childNode = 1; childNode < childNodes; childNode++) {
-			List<TreeNode> temp = new ArrayList<TreeNode>();
+			List<TreeNode> temp = new ArrayList<>();
 			
 			for (int leftNodeIndex = 0; leftNodeIndex < childNode; leftNodeIndex++) {
 				for (TreeNode left : memo.get(leftNodeIndex)) {
