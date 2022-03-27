@@ -262,11 +262,11 @@ public class Lcp_406_Queue_Reconstruction_by_Height {
 	/**
 	 * int count <- 0
 	 * 
-	 * while length <- length right shift one is greater than zero
+	 * while length <- length right shift one bit is greater than zero
 	 * 		count++
 	 * end while
 	 * 
-	 * return count
+	 * return one left shift count bit
 	 * */
 	public int mostSignificantBit(int length) {																		// ideally, start from middle, or from right most
 		int count = 0;
