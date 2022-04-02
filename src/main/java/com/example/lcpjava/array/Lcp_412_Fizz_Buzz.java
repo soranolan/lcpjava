@@ -11,6 +11,106 @@ public class Lcp_412_Fizz_Buzz {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
+	 * https://leetcode.com/problems/fizz-buzz/discuss/89931/Java-4ms-solution-Not-using-%22%22-operation
+	 * 
+	 * 
+	 * List<String> result <- new ArrayList
+	 * int fizz <- 1
+	 * int buzz <- 1
+	 * 
+	 * for int i <- 1; if i is lower than or equal to n; i++
+	 * 		if fizz is equal to three && buzz is equal to five
+	 * 			result add("FizzBuzz")
+	 * 			fizz <- 0
+	 * 			buzz <- 0
+	 * 		else if fizz is equal to three
+	 * 			result add("Fizz")
+	 * 			fizz <- 0
+	 * 		else if buzz is equal to five
+	 * 			result add("Buzz")
+	 * 			buzz <- 0
+	 * 		else
+	 * 			result add(i to string)
+	 * 		end if
+	 * 		
+	 * 		fizz++
+	 * 		buzz++
+	 * end for
+	 * 
+	 * return result
+	 * */
+	public List<String> fizzBuzz_1(int n) {
+		List<String> result = new ArrayList<>();																	// S : O(n)
+		int fizz = 1;
+		int buzz = 1;
+		
+		for (int i = 1; i <= n; i++) {																				// T : O(n)
+			if (fizz == 3 && buzz == 5) {
+				result.add("FizzBuzz");
+				fizz = 0;
+				buzz = 0;
+			} else if (fizz == 3) {
+				result.add("Fizz");
+				fizz = 0;
+			} else if (buzz == 5) {
+				result.add("Buzz");
+				buzz = 0;
+			} else {
+				result.add(Integer.toString(i));
+			}
+			
+			fizz++;
+			buzz++;
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * 
+	 * https://leetcode.com/problems/fizz-buzz/discuss/149627/C%2B%2B-0ms-Solution-beats-100.00-without-if-else
+	 * 
+	 * 
+	 * List<String> result <- new ArrayList
+	 * 
+	 * for int i <- 1; if i is lower than or equal to n; i++
+	 * 		result add(i to string)
+	 * end for
+	 * 
+	 * for int i <- 2; if i is lower than n; i += 3
+	 * 		result set(i, "Fizz")
+	 * end for
+	 * 
+	 * for int i <- 4; if i is lower than n; i += 5
+	 * 		result set(i, "Buzz")
+	 * end for
+	 * 
+	 * for int i <- 14; if i is lower than n; i += 15
+	 * 		result set(i, "FizzBuzz")
+	 * end for
+	 * 
+	 * return result
+	 * */
+	public List<String> fizzBuzz_2(int n) {
+		List<String> result = new ArrayList<>();
+		
+		for (int i = 1; i <= n; i++) { result.add(Integer.toString(i)); }											// T : O(n)
+		
+		for (int i = 2; i < n; i += 3) { result.set(i, "Fizz"); }													// T : O(n / 3)
+		
+		for (int i = 4; i < n; i += 5) { result.set(i, "Buzz"); }													// T : O(n / 5)
+		
+		for (int i = 14; i < n; i += 15) { result.set(i, "FizzBuzz"); }												// T : O(n / 15)
+		
+		return result;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * 
 	 * String Concatenation
 	 * 
 	 * 
@@ -40,7 +140,7 @@ public class Lcp_412_Fizz_Buzz {
 	 * 
 	 * return result
 	 * */
-	public List<String> fizzBuzz_1(int n) {
+	public List<String> fizzBuzz_3(int n) {
 		List<String> result = new ArrayList<>();																	// S : O(n)
 		StringBuilder sb = new StringBuilder();																		// S : O(8)
 		
@@ -83,7 +183,7 @@ public class Lcp_412_Fizz_Buzz {
 	 * 
 	 * return result
 	 * */
-	public List<String> fizzBuzz_2(int n) {
+	public List<String> fizzBuzz_4(int n) {
 		List<String> result = new ArrayList<>();																	// S : O(n)
 		
 		for (int i = 1; i <= n; i++) {																				// T : O(n)
