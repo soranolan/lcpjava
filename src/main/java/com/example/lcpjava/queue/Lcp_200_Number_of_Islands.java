@@ -90,10 +90,10 @@ public class Lcp_200_Number_of_Islands {
 			
 			visited.add(coordinate);																				// T : O(1)
 			
-			queue.offer((row - 1) + "," + col);																		// °Ù
-			queue.offer((row + 1) + "," + col);																		// °ı
-			queue.offer(row + "," + (col - 1));																		// °ˆ
-			queue.offer(row + "," + (col + 1));																		// °˜
+			queue.offer((row - 1) + "," + col);																		// ‚Üë
+			queue.offer((row + 1) + "," + col);																		// ‚Üì
+			queue.offer(row + "," + (col - 1));																		// ‚Üê
+			queue.offer(row + "," + (col + 1));																		// ‚Üí
 		}
 	}
 	
@@ -175,10 +175,10 @@ public class Lcp_200_Number_of_Islands {
 			
 			grid[row][col] = '2';
 			
-			queue.offer(new int[] { row - 1, col });																// °Ù
-			queue.offer(new int[] { row + 1, col });																// °ı
-			queue.offer(new int[] { row, col - 1 });																// °ˆ
-			queue.offer(new int[] { row, col + 1 });																// °˜
+			queue.offer(new int[] { row - 1, col });																// ‚Üë
+			queue.offer(new int[] { row + 1, col });																// ‚Üì
+			queue.offer(new int[] { row, col - 1 });																// ‚Üê
+			queue.offer(new int[] { row, col + 1 });																// ‚Üí
 		}
 	}
 	
@@ -417,10 +417,10 @@ public class Lcp_200_Number_of_Islands {
 		
 		grid[row][col] = '0';
 		
-		DFS(row - 1, col, grid);																					// °Ù
-		DFS(row + 1, col, grid);																					// °ı
-		DFS(row, col - 1, grid);																					// °ˆ
-		DFS(row, col + 1, grid);																					// °˜
+		DFS(row - 1, col, grid);																					// ‚Üë
+		DFS(row + 1, col, grid);																					// ‚Üì
+		DFS(row, col - 1, grid);																					// ‚Üê
+		DFS(row, col + 1, grid);																					// ‚Üí
 	}
 	
 }

@@ -288,7 +288,7 @@ public class Lcp_684_Redundant_Connection {
 		UF_684 uf = new UF_684(edges.length + 1);																	// T : O(n)
 		
 		for (int[] edge : edges) {																					// T : O(n)
-			if (!uf.union(edge[0], edge[1])) { result = edge; }														// T : O(£\(n))
+			if (!uf.union(edge[0], edge[1])) { result = edge; }														// T : O(Î±(n))
 		}
 		
 		return result;

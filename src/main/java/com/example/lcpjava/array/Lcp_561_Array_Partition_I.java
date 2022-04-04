@@ -66,7 +66,7 @@ public class Lcp_561_Array_Partition_I {
 	}
 	
 	/**
-	 * time : O(m + n)
+	 * time  : O(m + n)
 	 * space : O(m + n)
 	 * 
 	 * int min <- array[0]

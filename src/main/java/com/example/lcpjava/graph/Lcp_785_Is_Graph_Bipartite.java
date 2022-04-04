@@ -156,8 +156,8 @@ public class Lcp_785_Is_Graph_Bipartite {
 			int[] next = graph[node];
 			
 			for (int i = 0; i < next.length; i++) {
-				if (uf.find(node) == uf.find(next[i])) { return false; }											// T : O(£\(n))
-				uf.union(next[0], next[i]);																			// T : O(£\(n))
+				if (uf.find(node) == uf.find(next[i])) { return false; }											// T : O(Î±(n))
+				uf.union(next[0], next[i]);																			// T : O(Î±(n))
 			}
 		}
 		

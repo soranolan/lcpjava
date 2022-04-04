@@ -24,7 +24,7 @@ public class RandomizedSet_1 {
 		if (map.containsKey(val)) { return false; }																	// T : O(1)
 		
 		map.put(val, list.size());																					// T : O(1)
-		list.add(val);																								// T : O(£\(n))
+		list.add(val);																								// T : O(Î±(n))
 		
 		return true;
 	}

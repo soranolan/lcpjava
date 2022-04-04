@@ -23,7 +23,7 @@ public class Lcp_1227_Airplane_Seat_Assignment_Probability {
 	 *      = 1 / n + ((n - 2) / n) * (1 / (n - 2)) * (f(n - 1) + f(n - 2) + ... + f(2))
 	 *      
 	 *      n - 2      1       1
-	 *      ¢w¢w¢w¢w¢w X ¢w¢w¢w¢w¢w¢w¢w = ¢w¢w¢w																					eq0
+	 *      â”€â”€â”€â”€â”€ X â”€â”€â”€â”€â”€â”€â”€ = â”€â”€â”€																					eq0
 	 *        n      n - 2     n
 	 *      
 	 *      = 1 / n + 1 / n * (f(n - 1) + f(n - 2) + ... + f(2))													eq1

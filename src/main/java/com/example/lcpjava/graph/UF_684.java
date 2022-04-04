@@ -19,7 +19,7 @@ public class UF_684 {
 	}
 	
 	/**
-	 * time  : O(£\(n))
+	 * time  : O(Î±(n))
 	 * space : O(1)
 	 * 
 	 * Path Compression
@@ -31,7 +31,7 @@ public class UF_684 {
 	}
 	
 	/**
-	 * time  : O(£\(n))
+	 * time  : O(Î±(n))
 	 * space : O(1)
 	 * 
 	 * Union by Rank

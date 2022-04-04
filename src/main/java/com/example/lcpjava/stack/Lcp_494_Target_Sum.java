@@ -73,9 +73,9 @@ public class Lcp_494_Target_Sum {
 	 * target  : 3
 	 * 
 	 * how many numbers to construct target
-	 * ¡õ
-	 * 				0	1	2	3	4	5	6	7	8	9	10	¡ö index
-	 * 				-5	-4	-3	-2	-1	0	1	2	3	4	5	¡ö target number
+	 * â†“
+	 * 				0	1	2	3	4	5	6	7	8	9	10	â† index
+	 * 				-5	-4	-3	-2	-1	0	1	2	3	4	5	â† target number
 	 * 0	*	1						1					
 	 * 1	*	1					1		1				
 	 * 2	*	1				1		2		1			
@@ -147,8 +147,8 @@ public class Lcp_494_Target_Sum {
 	 * target  : 3
 	 * 
 	 * how many numbers to construct target number
-	 * ¡õ
-	 * 				0	1	2	3	4	5	¡ö target number
+	 * â†“
+	 * 				0	1	2	3	4	5	â† target number
 	 * 0	*	1	1					
 	 * 1	*	1	1	1				
 	 * 2	*	1	1	2	1			

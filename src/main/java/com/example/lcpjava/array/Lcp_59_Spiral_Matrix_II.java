@@ -71,19 +71,19 @@ public class Lcp_59_Spiral_Matrix_II {
 		int cols = n;
 		
 		while (number <= max) {																						// T : O(n ^ 2)
-			// ¡÷
+			// â†’
 			for (int i = col; i < cols; i++) { matrix[row][i] = number++; }
 			if (number > max) { break; }
 			
-			// ¡õ
+			// â†“
 			for (int i = row + 1; i < rows - 1; i++) { matrix[i][cols - 1] = number++; }
 			if (number > max) { break; }
 			
-			// ¡ö
+			// â†
 			for (int i = cols - 1; i >= col; i--) { matrix[rows - 1][i] = number++; }
 			if (number > max) { break; }
 			
-			// ¡ô
+			// â†‘
 			for (int i = rows - 2; i > row; i--) { matrix[i][col] = number++; }
 			if (number > max) { break; }
 			

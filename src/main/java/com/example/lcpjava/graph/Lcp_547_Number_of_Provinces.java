@@ -142,7 +142,7 @@ public class Lcp_547_Number_of_Provinces {
 		for (int fromCity = 0; fromCity < length - 1; fromCity++) {													// T : O(n - 1)
 			for (int toCity = fromCity + 1; toCity < length; toCity++) {
 				if (isConnected[fromCity][toCity] == 1) {
-					uf.union(fromCity, toCity);																		// T : O(£\(n))
+					uf.union(fromCity, toCity);																		// T : O(Î±(n))
 				}
 			}
 		}

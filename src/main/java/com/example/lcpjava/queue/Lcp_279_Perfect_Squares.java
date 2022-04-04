@@ -11,7 +11,7 @@ import java.util.Set;
 public class Lcp_279_Perfect_Squares {
 	
 	/**
-	 * time  : O(n * sqrt(n))
+	 * time  : O(n * √n)
 	 * space : O(n)
 	 * 
 	 * Queue<Integer> queue <- new LinkedList
@@ -65,7 +65,7 @@ public class Lcp_279_Perfect_Squares {
 				size--;
 				int number = queue.poll();
 				
-				for (int i = 1; i * i <= n; i++) {																	// T : O(sqrt(n))
+				for (int i = 1; i * i <= n; i++) {																	// T : O(√n)
 					int sum = number + i * i;
 					if (visited.contains(sum)) { continue; }
 					if (sum == n) { return result; }
@@ -81,7 +81,7 @@ public class Lcp_279_Perfect_Squares {
 	}
 	
 	/**
-	 * time  : O(sqrt(n))
+	 * time  : O(√n)
 	 * space : O(1)
 	 * 
 	 * Math is the king!
@@ -119,7 +119,7 @@ public class Lcp_279_Perfect_Squares {
 		if ((n & 7) == 7) { return 4; }
 		
 		int sqrt = (int) Math.sqrt(n);
-		for (int i = 1; i <= sqrt; i++) {																			// T : O(sqrt(n))
+		for (int i = 1; i <= sqrt; i++) {																			// T : O(√n)
 			if (!isSqrt(n - i * i)) { continue; }
 			return 2;
 		}
@@ -183,7 +183,7 @@ public class Lcp_279_Perfect_Squares {
 	 * 				= 1 + dp[12] or 1 + dp[9] or 1 + dp[4]
 	 * */
 	/**
-	 * time  : O(n * sqrt(n))
+	 * time  : O(n * √n)
 	 * space : O(n)
 	 * 
 	 * int[] dp <- new int[n plus one]
@@ -210,7 +210,7 @@ public class Lcp_279_Perfect_Squares {
 		for (int i = 1; i <= n; i++) {																				// T : O(n)
 			int min = Integer.MAX_VALUE;
 			int j = 1;
-			while (i - j * j >= 0) {																				// T : O(sqrt(n))
+			while (i - j * j >= 0) {																				// T : O(√n)
 				min = Math.min(min, dp[i - j * j] + 1);
 				j++;
 			}
@@ -221,7 +221,7 @@ public class Lcp_279_Perfect_Squares {
 	}
 	
 	/**
-	 * time  : O(n * sqrt(n))
+	 * time  : O(n * √n)
 	 * space : O(n)
 	 * 
 	 * if list size is equal to zero
@@ -248,7 +248,7 @@ public class Lcp_279_Perfect_Squares {
 		while (static_dp.size() <= n) {																				// T : O(n)
 			int size = static_dp.size();
 			int min = Integer.MAX_VALUE;
-			for (int i = 1; i * i <= size; i++) { min = Math.min(min, static_dp.get(size - i * i) + 1); }			// T : O(sqrt(n))
+			for (int i = 1; i * i <= size; i++) { min = Math.min(min, static_dp.get(size - i * i) + 1); }			// T : O(√n)
 			static_dp.add(min);
 		}
 		

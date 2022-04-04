@@ -49,9 +49,9 @@ public class Lcp_1414_Find_the_Minimum_Number_of_Fibonacci_Numbers_Whose_Sum_Is_
 		dp[1] = 1;
 		
 		int length = dp.length;
-		for (int i = 2; i < length; i++) { dp[i] = dp[i - 1] + dp[i - 2]; }										// T : O(42)
+		for (int i = 2; i < length; i++) { dp[i] = dp[i - 1] + dp[i - 2]; }											// T : O(42)
 		
-		for (int i = length - 1; i >= 0; i--) {																	// T : O(44)
+		for (int i = length - 1; i >= 0; i--) {																		// T : O(44)
 			int num = dp[i];
 			if (num > k) { continue; }
 			

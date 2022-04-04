@@ -83,8 +83,8 @@ public class Lcp_22_Generate_Parentheses {
 	}
 	
 	/**
-	 * time  : O((4 ^ n) / ¡Ôn)
-	 * space : O((4 ^ n) / ¡Ôn)
+	 * time  : O((4 ^ n) / âˆšn)
+	 * space : O((4 ^ n) / âˆšn)
 	 * 
 	 * Backtracking
 	 * 
@@ -209,8 +209,8 @@ public class Lcp_22_Generate_Parentheses {
 	}
 	
 	/**
-	 * time  : O((4 ^ n) / ¡Ôn)
-	 * space : O((4 ^ n) / ¡Ôn)
+	 * time  : O((4 ^ n) / âˆšn)
+	 * space : O((4 ^ n) / âˆšn)
 	 * 
 	 * Closure Number
 	 * 

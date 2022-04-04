@@ -137,11 +137,11 @@ public class Lcp_647_Palindromic_Substrings {
 	 * acda : dp[1][4]
 	 * cd   : dp[2][3]
 	 *                 e
-	 *                 ¡õ
+	 *                 â†“
 	 *         a a c d a
 	 *         0 1 2 3 4
 	 *     a 0 t f f f f
-	 * s ¡÷ a 1 f t f f f
+	 * s â†’ a 1 f t f f f
 	 *     c 2 f f t f f
 	 *     d 3 f f f t f
 	 *     a 4 f f f f t

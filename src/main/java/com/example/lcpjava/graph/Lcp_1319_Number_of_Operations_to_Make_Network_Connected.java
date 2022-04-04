@@ -190,7 +190,7 @@ public class Lcp_1319_Number_of_Operations_to_Make_Network_Connected {
 		UF_1319 uf = new UF_1319(n);
 		
 		for (int[] connection : connections) {																		// T : O(connections length)
-			uf.union(connection[0], connection[1]);																	// T : O(£\(n))
+			uf.union(connection[0], connection[1]);																	// T : O(Î±(n))
 		}
 		
 		return uf.groups - 1;
