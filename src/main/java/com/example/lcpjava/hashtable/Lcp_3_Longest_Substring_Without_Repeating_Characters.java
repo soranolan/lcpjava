@@ -113,9 +113,9 @@ public class Lcp_3_Longest_Substring_Without_Repeating_Characters {
 	 * 		int value <- s charAt(i)
 	 * 		
 	 * 		if value is greater than 64
-	 * 			upper(s, i, value);
+	 * 			upper(s, i, value)
 	 * 		else
-	 * 			lower(s, i, value);
+	 * 			lower(s, i, value)
 	 * 		end if
 	 * end for
 	 * 

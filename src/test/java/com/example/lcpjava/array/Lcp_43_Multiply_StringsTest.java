@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class Lcp_43_Multiply_StringsTest {
+class Lcp_43_Multiply_StringsTest {
 	
 	@Test
 	void test_case_1() {

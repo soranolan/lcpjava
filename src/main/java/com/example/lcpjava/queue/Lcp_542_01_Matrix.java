@@ -59,7 +59,7 @@ public class Lcp_542_01_Matrix {
 	 * 		
 	 * 		for	int[] direction in directions
 	 * 			int nextRow <- row plus direction[0]
-	 * 			int nextCol <= col plus direction[1]
+	 * 			int nextCol <- col plus direction[1]
 	 * 			
 	 * 			if nextRow is lower than zero || nextCol is lower than zero || nextRow is greater than or equal to rows || nextCol is greater than or equal to cols || matrix[row][col] is not equal to minus one
 	 * 				continue

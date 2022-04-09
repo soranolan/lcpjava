@@ -110,9 +110,9 @@ public class Lcp_217_Contains_Duplicate {
 	 * 			number <- number times minus one
 	 * 		end if
 	 * 		
-	 * 		int index <- number divided by 32;
-	 * 		int shift <- number modulo 32;
-	 * 		int bit <- 1 << shift;
+	 * 		int index <- number divided by 32
+	 * 		int shift <- number modulo 32
+	 * 		int bit <- 1 << shift
 	 * 		
 	 * 		if number is not negative
 	 * 			if (positive[index] & bit) is not equal to zero

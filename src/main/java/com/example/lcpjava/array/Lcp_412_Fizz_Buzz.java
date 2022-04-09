@@ -214,8 +214,8 @@ public class Lcp_412_Fizz_Buzz {
 	 * StringBuilder sb <- new StringBuilder
 	 * Map<Integer, String> memo <- new LinkedHashMap
 	 * 
-	 * memo put(3, "Fizz");
-	 * memo put(5, "Buzz");
+	 * memo put(3, "Fizz")
+	 * memo put(5, "Buzz")
 	 * 
 	 * for int i <- 1; if i is lower than or equal to n; i++
 	 * 		for Integer key in memo keySet()

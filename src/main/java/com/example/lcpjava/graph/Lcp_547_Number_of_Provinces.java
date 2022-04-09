@@ -33,7 +33,7 @@ public class Lcp_547_Number_of_Provinces {
 	 * 			end for
 	 * 		end while
 	 * 		
-	 * 		provinces++;
+	 * 		provinces++
 	 * end for
 	 * 
 	 * return provinces

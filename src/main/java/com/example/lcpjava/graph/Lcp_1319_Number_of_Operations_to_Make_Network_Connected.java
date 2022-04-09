@@ -21,8 +21,8 @@ public class Lcp_1319_Number_of_Operations_to_Make_Network_Connected {
 	 * end for
 	 * 
 	 * for int[] connection in connections
-	 * 		graph get(connection[0]) add(connection[1]);
-	 * 		graph get(connection[1]) add(connection[0]);
+	 * 		graph get(connection[0]) add(connection[1])
+	 * 		graph get(connection[1]) add(connection[0])
 	 * end for
 	 * 
 	 * int groups <- 0
@@ -107,8 +107,8 @@ public class Lcp_1319_Number_of_Operations_to_Make_Network_Connected {
 	 * end for
 	 * 
 	 * for int[] connection in connections
-	 * 		graph get(connection[0]) add(connection[1]);
-	 * 		graph get(connection[1]) add(connection[0]);
+	 * 		graph get(connection[0]) add(connection[1])
+	 * 		graph get(connection[1]) add(connection[0])
 	 * end for
 	 * 
 	 * int groups <- 0

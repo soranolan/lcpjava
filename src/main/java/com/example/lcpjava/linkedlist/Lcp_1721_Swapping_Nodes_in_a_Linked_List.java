@@ -27,7 +27,7 @@ public class Lcp_1721_Swapping_Nodes_in_a_Linked_List {
 	 * int index <- 0
 	 * dummy <- head
 	 * while dummy is not equal to null
-	 * 		int number <= bucket get(index)
+	 * 		int number <- bucket get(index)
 	 * 		
 	 * 		if dummy val is not equal to number
 	 * 			dummy val <- number

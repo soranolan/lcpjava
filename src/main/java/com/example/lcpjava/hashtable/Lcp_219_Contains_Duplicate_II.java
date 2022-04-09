@@ -26,7 +26,7 @@ public class Lcp_219_Contains_Duplicate_II {
 	 * 			end if
 	 * 		end for
 	 * 		
-	 * 		k--;
+	 * 		k--
 	 * end while
 	 * 
 	 * return false

@@ -305,8 +305,8 @@ public class Lcp_347_Top_K_Frequent_Elements {
 	 * 		
 	 * 		Iterator<Integer> it <- group to iterator
 	 * 		while it has next && index is greater than or equal to zero
-	 * 			result[index] <- it next();
-	 * 			index--;
+	 * 			result[index] <- it next()
+	 * 			index--
 	 * 		end while
 	 * end for
 	 * 
