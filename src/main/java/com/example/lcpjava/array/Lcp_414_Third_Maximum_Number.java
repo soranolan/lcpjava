@@ -3,6 +3,7 @@ package com.example.lcpjava.array;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Set;
 
 public class Lcp_414_Third_Maximum_Number {
@@ -59,7 +60,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * PriorityQueue<Integer> pq <- empty PriorityQueue
+	 * Queue<Integer> pq <- empty PriorityQueue
 	 * Set<Integer> set <- empty HashSet
 	 * 
 	 * for number in array
@@ -79,7 +80,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * return pq peek
 	 * */
 	public int thirdMax_2(int[] nums) {
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		Queue<Integer> pq = new PriorityQueue<>();
 		Set<Integer> set = new HashSet<>();
 		
 		for (int num : nums) {																						// T : O(n)
@@ -99,7 +100,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * PriorityQueue<Integer> pq <- empty PriorityQueue
+	 * Queue<Integer> pq <- empty PriorityQueue
 	 * 
 	 * for number in array
 	 * 		if pq does not contain number
@@ -117,7 +118,7 @@ public class Lcp_414_Third_Maximum_Number {
 	 * return pq peek
 	 * */
 	public int thirdMax_3(int[] nums) {
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		Queue<Integer> pq = new PriorityQueue<>();
 		
 		for (int num : nums) {																						// T : O(n)
 			if (!pq.contains(num)) {																				// T : O(n)
