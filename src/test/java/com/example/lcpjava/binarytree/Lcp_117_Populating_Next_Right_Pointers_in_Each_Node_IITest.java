@@ -4,18 +4,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_117_Node;
+
 class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 	
 	@Test
 	void test_case_1() {
 		Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II lcp = new Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II();
 		
-		Node expect = new Node(1);
-		Node el1 = new Node(2);
-		Node el1l1 = new Node(4);
-		Node el1r1 = new Node(5);
-		Node er1 = new Node(3);
-		Node er1r1 = new Node(7);
+		Lcp_117_Node expect = new Lcp_117_Node(1);
+		Lcp_117_Node el1 = new Lcp_117_Node(2);
+		Lcp_117_Node el1l1 = new Lcp_117_Node(4);
+		Lcp_117_Node el1r1 = new Lcp_117_Node(5);
+		Lcp_117_Node er1 = new Lcp_117_Node(3);
+		Lcp_117_Node er1r1 = new Lcp_117_Node(7);
 		
 		expect.left = el1;
 		el1.left = el1l1;
@@ -27,12 +29,12 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 		el1l1.next = el1r1;
 		el1r1.next = er1r1;
 		
-		Node root = new Node(1);
-		Node l1 = new Node(2);
-		Node l1l1 = new Node(4);
-		Node l1r1 = new Node(5);
-		Node r1 = new Node(3);
-		Node r1r1 = new Node(7);
+		Lcp_117_Node root = new Lcp_117_Node(1);
+		Lcp_117_Node l1 = new Lcp_117_Node(2);
+		Lcp_117_Node l1l1 = new Lcp_117_Node(4);
+		Lcp_117_Node l1r1 = new Lcp_117_Node(5);
+		Lcp_117_Node r1 = new Lcp_117_Node(3);
+		Lcp_117_Node r1r1 = new Lcp_117_Node(7);
 		
 		root.left = l1;
 		l1.left = l1l1;
@@ -40,7 +42,7 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 		root.right = r1;
 		r1.right = r1r1;
 		
-		Node test = lcp.connect(root);
+		Lcp_117_Node test = lcp.connect(root);
 		
 		assertThat(test).isEqualTo(expect);
 	}
@@ -49,7 +51,7 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 	void test_case_2() {
 		Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II lcp = new Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II();
 		
-		Node test = lcp.connect(null);
+		Lcp_117_Node test = lcp.connect(null);
 		
 		assertThat(test).isNull();
 	}
@@ -58,15 +60,15 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 	void test_case_3() {
 		Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II lcp = new Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_II();
 		
-		Node expect = new Node(1);
-		Node el1 = new Node(2);
-		Node el1l1 = new Node(4);
-		Node el1r1 = new Node(5);
-		Node el1l1l1 = new Node(8);
-		Node er1 = new Node(3);
-		Node er1l1 = new Node(6);
-		Node er1r1 = new Node(7);
-		Node er1r1r1 = new Node(9);
+		Lcp_117_Node expect = new Lcp_117_Node(1);
+		Lcp_117_Node el1 = new Lcp_117_Node(2);
+		Lcp_117_Node el1l1 = new Lcp_117_Node(4);
+		Lcp_117_Node el1r1 = new Lcp_117_Node(5);
+		Lcp_117_Node el1l1l1 = new Lcp_117_Node(8);
+		Lcp_117_Node er1 = new Lcp_117_Node(3);
+		Lcp_117_Node er1l1 = new Lcp_117_Node(6);
+		Lcp_117_Node er1r1 = new Lcp_117_Node(7);
+		Lcp_117_Node er1r1r1 = new Lcp_117_Node(9);
 		
 		expect.left = el1;
 		el1.left = el1l1;
@@ -83,15 +85,15 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 		er1l1.next = er1r1;
 		el1l1l1.next = er1r1r1;
 		
-		Node root = new Node(1);
-		Node l1 = new Node(2);
-		Node l1l1 = new Node(4);
-		Node l1r1 = new Node(5);
-		Node l1l1l1 = new Node(8);
-		Node r1 = new Node(3);
-		Node r1l1 = new Node(6);
-		Node r1r1 = new Node(7);
-		Node r1r1r1 = new Node(9);
+		Lcp_117_Node root = new Lcp_117_Node(1);
+		Lcp_117_Node l1 = new Lcp_117_Node(2);
+		Lcp_117_Node l1l1 = new Lcp_117_Node(4);
+		Lcp_117_Node l1r1 = new Lcp_117_Node(5);
+		Lcp_117_Node l1l1l1 = new Lcp_117_Node(8);
+		Lcp_117_Node r1 = new Lcp_117_Node(3);
+		Lcp_117_Node r1l1 = new Lcp_117_Node(6);
+		Lcp_117_Node r1r1 = new Lcp_117_Node(7);
+		Lcp_117_Node r1r1r1 = new Lcp_117_Node(9);
 		
 		root.left = l1;
 		l1.left = l1l1;
@@ -102,7 +104,7 @@ class Lcp_117_Populating_Next_Right_Pointers_in_Each_Node_IITest {
 		r1.right = r1r1;
 		r1r1.right = r1r1r1;
 		
-		Node test = lcp.connect(root);
+		Lcp_117_Node test = lcp.connect(root);
 		
 		assertThat(test).isEqualTo(expect);
 	}

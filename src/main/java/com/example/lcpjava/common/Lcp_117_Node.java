@@ -1,24 +1,24 @@
-package com.example.lcpjava.binarytree;
+package com.example.lcpjava.common;
 
-public class Node {
+public class Lcp_117_Node {
 	
 	public int val;
 	
-	public Node left;
+	public Lcp_117_Node left;
 	
-	public Node right;
+	public Lcp_117_Node right;
 	
-	public Node next;
+	public Lcp_117_Node next;
 	
-	public Node() {
+	public Lcp_117_Node() {
 		
 	}
 	
-	public Node(int val) {
+	public Lcp_117_Node(int val) {
 		this.val = val;
 	}
 	
-	public Node(int val, Node left, Node right, Node next) {
+	public Lcp_117_Node(int val, Lcp_117_Node left, Lcp_117_Node right, Lcp_117_Node next) {
 		this.val = val;
 		this.left = left;
 		this.right = right;
@@ -44,7 +44,7 @@ public class Node {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Node other = (Node) obj;
+		Lcp_117_Node other = (Lcp_117_Node) obj;
 		if (left == null) {
 			if (other.left != null)
 				return false;
@@ -67,7 +67,7 @@ public class Node {
 	
 	@Override
 	public String toString() {
-		return "Node [val=" + val + ", left=" + left + ", right=" + right + ", next=" + next + "]";
+		return "Lcp_117_Node [val=" + val + ", left=" + left + ", right=" + right + ", next=" + next + "]";
 	}
 	
 }

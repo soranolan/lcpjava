@@ -3,6 +3,8 @@ package com.example.lcpjava.binarytree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.example.lcpjava.common.Lcp_116_Node;
+
 public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	
 	/**
@@ -46,19 +48,19 @@ public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	 * 
 	 * return root
 	 * */
-	public Node connect_1(Node root) {
+	public Lcp_116_Node connect_1(Lcp_116_Node root) {
 		if (root == null) { return null; }
 		
-		Queue<Node> queue = new LinkedList<>();																		// S : O(n)
+		Queue<Lcp_116_Node> queue = new LinkedList<>();																// S : O(n)
 		queue.offer(root.left);																						// T : O(1)
 		queue.offer(root.right);																					// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
-			Node previous = null;
+			Lcp_116_Node previous = null;
 			int size = queue.size();																				// T : O(1)
 			while (size > 0) {
 				size--;
-				Node current = queue.poll();																		// T : O(1)
+				Lcp_116_Node current = queue.poll();																// T : O(1)
 				if (current == null) { continue; }
 				
 				if (previous != null) { previous.next = current; }
@@ -84,7 +86,7 @@ public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	 * 
 	 * return root
 	 * */
-	public Node connect_2(Node root) {
+	public Lcp_116_Node connect_2(Lcp_116_Node root) {
 		if (root == null) { return null; }
 		DFS_1(root.left, root.right);
 		return root;
@@ -105,7 +107,7 @@ public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	 * DFS(left right, right left)
 	 * DFS(right left, right right)
 	 * */
-	public void DFS_1(Node left, Node right) {
+	public void DFS_1(Lcp_116_Node left, Lcp_116_Node right) {
 		if (left == null || right == null) { return; }
 		if (left.next != null) { return; }
 		left.next = right;
@@ -122,7 +124,7 @@ public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	 * 
 	 * return root
 	 * */
-	public Node connect(Node root) {
+	public Lcp_116_Node connect(Lcp_116_Node root) {
 		DFS(root, null);
 		return root;
 	}
@@ -137,7 +139,7 @@ public class Lcp_116_Populating_Next_Right_Pointers_in_Each_Node {
 	 * DFS(current left, current right)
 	 * DFS(current right, if current next is equal to null then null else current next left)
 	 * */
-	public void DFS(Node current, Node nextNode) {
+	public void DFS(Lcp_116_Node current, Lcp_116_Node nextNode) {
 		if (current == null) { return; }
 		current.next = nextNode;
 		DFS(current.left, current.right);
