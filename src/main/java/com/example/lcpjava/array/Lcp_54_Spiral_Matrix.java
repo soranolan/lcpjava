@@ -74,19 +74,19 @@ public class Lcp_54_Spiral_Matrix {
 		List<Integer> result = new ArrayList<>();																	// S : O(m * n)
 		
 		while (result.size() < m * n) {																				// T : O(m * n)
-			// ¡÷
+			// â†’
 			for (int i = col; i < cols; i++) { result.add(matrix[row][i]); }										// T : O(n)
 			if (result.size() >= m * n) { break; }
 			
-			// ¡õ
+			// â†“
 			for (int i = row + 1; i < rows - 1; i++) { result.add(matrix[i][cols - 1]); }							// T : O(m)
 			if (result.size() >= m * n) { break; }
 			
-			// ¡ö
+			// â†
 			for (int i = cols - 1; i >= col; i--) { result.add(matrix[rows - 1][i]); }								// T : O(n)
 			if (result.size() >= m * n) { break; }
 			
-			// ¡ô
+			// â†‘
 			for (int i = rows - 2; i > row; i--) { result.add(matrix[i][col]); }									// T : O(m)
 			if (result.size() >= m * n) { break; }
 			
