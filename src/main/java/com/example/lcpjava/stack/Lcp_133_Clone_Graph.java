@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+import com.example.lcpjava.common.Lcp_133_Node;
+
 public class Lcp_133_Clone_Graph {
 	
 	/**
@@ -33,21 +35,21 @@ public class Lcp_133_Clone_Graph {
 	 * 
 	 * return visited get(node)
 	 * */
-	public Node cloneGraph_1(Node node) {
+	public Lcp_133_Node cloneGraph_1(Lcp_133_Node node) {
 		if (node == null) { return node; }
 		
-		Stack<Node> stack = new Stack<Node>();
-		Map<Node, Node> visited = new HashMap<Node, Node>();														// S : O(n)
+		Stack<Lcp_133_Node> stack = new Stack<Lcp_133_Node>();
+		Map<Lcp_133_Node, Lcp_133_Node> visited = new HashMap<Lcp_133_Node, Lcp_133_Node>();						// S : O(n)
 		
 		stack.push(node);
-		visited.put(node, new Node(node.val));
+		visited.put(node, new Lcp_133_Node(node.val));
 		
 		while (!stack.isEmpty()) {																					// T : O(n)
-			Node top = stack.pop();
-			for (Node neighbor : top.neighbors) {																	// T : O(m)
+			Lcp_133_Node top = stack.pop();
+			for (Lcp_133_Node neighbor : top.neighbors) {															// T : O(m)
 				if (!visited.containsKey(neighbor)) {
 					stack.push(neighbor);
-					visited.put(neighbor, new Node(neighbor.val));
+					visited.put(neighbor, new Lcp_133_Node(neighbor.val));
 				}
 				visited.get(top).neighbors.add(visited.get(neighbor));
 			}
@@ -64,8 +66,8 @@ public class Lcp_133_Clone_Graph {
 	 * Map<Integer, Node> memo <- new HashMap<>()
 	 * return DFS(node, memo)
 	 * */
-	public Node cloneGraph(Node node) {
-		Map<Integer, Node> memo = new HashMap<>();
+	public Lcp_133_Node cloneGraph(Lcp_133_Node node) {
+		Map<Integer, Lcp_133_Node> memo = new HashMap<>();
 		return DFS(node, memo);
 	}
 	
@@ -88,16 +90,16 @@ public class Lcp_133_Clone_Graph {
 	 * 
 	 * return newNode
 	 * */
-	public Node DFS(Node node, Map<Integer, Node> memo) {
+	public Lcp_133_Node DFS(Lcp_133_Node node, Map<Integer, Lcp_133_Node> memo) {
 		if (node == null) { return node; }
 		
 		int val = node.val;
 		if (memo.containsKey(val)) { return memo.get(val); }
 		
-		Node newNode = new Node(val);
+		Lcp_133_Node newNode = new Lcp_133_Node(val);
 		memo.put(val, newNode);
 		
-		for (Node neighbor : node.neighbors) { newNode.neighbors.add(DFS(neighbor, memo)); }
+		for (Lcp_133_Node neighbor : node.neighbors) { newNode.neighbors.add(DFS(neighbor, memo)); }
 		
 		return newNode;
 	}
