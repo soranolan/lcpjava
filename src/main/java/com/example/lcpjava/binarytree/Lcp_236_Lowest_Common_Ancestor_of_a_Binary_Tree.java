@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
+import com.example.lcpjava.common.Lcp_236_TreeNode;
+import com.example.lcpjava.common.Pair;
+
 public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	
 	/**
@@ -47,18 +50,18 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * return q
 	 * */
-	public TreeNode lowestCommonAncestor_1(TreeNode root, TreeNode p, TreeNode q) {
+	public Lcp_236_TreeNode lowestCommonAncestor_1(Lcp_236_TreeNode root, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		if (root == null) { return null; }
 		
-		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
-		Map<TreeNode, TreeNode> parent = new HashMap<>();															// S : O(n)
-		Set<TreeNode> ancestor = new HashSet<>();																	// S : O(n)
+		Stack<Lcp_236_TreeNode> stack = new Stack<>();																// S : O(n)
+		Map<Lcp_236_TreeNode, Lcp_236_TreeNode> parent = new HashMap<>();											// S : O(n)
+		Set<Lcp_236_TreeNode> ancestor = new HashSet<>();															// S : O(n)
 		
 		stack.push(root);																							// T : O(1)
 		parent.put(root, null);																						// T : O(1)
 		
 		while (!parent.containsKey(p) || !parent.containsKey(q)) {
-			TreeNode current = stack.pop();																			// T : O(1)
+			Lcp_236_TreeNode current = stack.pop();																	// T : O(1)
 			if (current.left != null) {
 				stack.push(current.left);																			// T : O(1)
 				parent.put(current.left, current);																	// T : O(1)
@@ -134,19 +137,19 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	private static int BOTH_PENDING = 2;
 	private static int LEFT_DONE = 1;
 	private static int BOTH_DONE = 0;
-	public TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
+	public Lcp_236_TreeNode lowestCommonAncestor_2(Lcp_236_TreeNode root, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		if (root == null) { return null; }
 		
 		Stack<Pair> stack = new Stack<Pair>();																		// S : O(n)
 		stack.push(new Pair(root, BOTH_PENDING));																	// T : O(1)
 		
 		boolean foundOne = false;
-		TreeNode lca = null;
-		TreeNode child = null;
+		Lcp_236_TreeNode lca = null;
+		Lcp_236_TreeNode child = null;
 		
 		while (!stack.isEmpty()) {
 			Pair top = stack.pop();																					// T : O(1)
-			TreeNode current = top.getNode();
+			Lcp_236_TreeNode current = top.getNode();
 			int state = top.getState();
 			
 			if (state == BOTH_PENDING && (current == p || current == q)) {
@@ -176,7 +179,7 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * DFS(root, p, q)
 	 * */
-	public TreeNode lowestCommonAncestor_3(TreeNode root, TreeNode p, TreeNode q) {
+	public Lcp_236_TreeNode lowestCommonAncestor_3(Lcp_236_TreeNode root, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		return DFS_1(root, p, q);
 	}
 	
@@ -199,10 +202,10 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * return current
 	 * */
-	public TreeNode DFS_1(TreeNode current, TreeNode p, TreeNode q) {
+	public Lcp_236_TreeNode DFS_1(Lcp_236_TreeNode current, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		if (current == null || current == p || current == q) { return current; }
-		TreeNode left = DFS_1(current.left, p, q);
-		TreeNode right = DFS_1(current.right, p, q);
+		Lcp_236_TreeNode left = DFS_1(current.left, p, q);
+		Lcp_236_TreeNode right = DFS_1(current.right, p, q);
 		if (left == null) { return right; }
 		if (right == null) { return left; }
 		return current;
@@ -218,8 +221,8 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * DFS(root, p, q)
 	 * return lca
 	 * */
-	TreeNode lca_1;
-	public TreeNode lowestCommonAncestor_4(TreeNode root, TreeNode p, TreeNode q) {
+	Lcp_236_TreeNode lca_1;
+	public Lcp_236_TreeNode lowestCommonAncestor_4(Lcp_236_TreeNode root, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		lca_1 = null;
 		DFS_1(root, p, q);
 		return lca_1;
@@ -241,7 +244,7 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * return if sum is greater than zero
 	 * */
-	public boolean DFS_2(TreeNode current, TreeNode p, TreeNode q) {
+	public boolean DFS_2(Lcp_236_TreeNode current, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		if (current == null || lca_1 != null) { return false; }
 		int left = DFS_2(current.left, p, q) ? 1 : 0;
 		int right = DFS_2(current.right, p, q) ? 1 : 0;
@@ -257,8 +260,8 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * DFS(root, p, q)
 	 * */
-	TreeNode lca = null;
-	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	Lcp_236_TreeNode lca = null;
+	public Lcp_236_TreeNode lowestCommonAncestor(Lcp_236_TreeNode root, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		DFS(root, p, q);
 		return lca;
 	}
@@ -280,7 +283,7 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	 * 
 	 * return mid || left || right
 	 * */
-	public boolean DFS(TreeNode current, TreeNode p, TreeNode q) {
+	public boolean DFS(Lcp_236_TreeNode current, Lcp_236_TreeNode p, Lcp_236_TreeNode q) {
 		if (current == null) { return false; }
 		boolean mid = (current == p || current == q);
 		boolean left = DFS(current.left, p, q);
