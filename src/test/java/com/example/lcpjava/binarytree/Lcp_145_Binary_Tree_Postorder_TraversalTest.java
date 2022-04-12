@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_145_TreeNode;
+
 class Lcp_145_Binary_Tree_Postorder_TraversalTest {
 	
 	@Test
@@ -16,9 +18,9 @@ class Lcp_145_Binary_Tree_Postorder_TraversalTest {
 		
 		List<Integer> expected = Arrays.stream(new Integer[] { 3, 2, 1 }).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode r1 = new TreeNode(2);
-		TreeNode r1l1 = new TreeNode(3);
+		Lcp_145_TreeNode root = new Lcp_145_TreeNode(1);
+		Lcp_145_TreeNode r1 = new Lcp_145_TreeNode(2);
+		Lcp_145_TreeNode r1l1 = new Lcp_145_TreeNode(3);
 		
 		root.right = r1;
 		r1.left = r1l1;
@@ -45,7 +47,7 @@ class Lcp_145_Binary_Tree_Postorder_TraversalTest {
 		
 		List<Integer> expected = Arrays.stream(new Integer[] { 1 }).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
+		Lcp_145_TreeNode root = new Lcp_145_TreeNode(1);
 		
 		List<Integer> test = lcp.postorderTraversal(root);
 		
@@ -58,8 +60,8 @@ class Lcp_145_Binary_Tree_Postorder_TraversalTest {
 		
 		List<Integer> expected = Arrays.stream(new Integer[] { 2, 1 }).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode l1 = new TreeNode(2);
+		Lcp_145_TreeNode root = new Lcp_145_TreeNode(1);
+		Lcp_145_TreeNode l1 = new Lcp_145_TreeNode(2);
 		
 		root.left = l1;
 		
@@ -74,8 +76,8 @@ class Lcp_145_Binary_Tree_Postorder_TraversalTest {
 		
 		List<Integer> expected = Arrays.stream(new Integer[] { 2, 1 }).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode r1 = new TreeNode(2);
+		Lcp_145_TreeNode root = new Lcp_145_TreeNode(1);
+		Lcp_145_TreeNode r1 = new Lcp_145_TreeNode(2);
 		
 		root.right = r1;
 		

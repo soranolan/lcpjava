@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import com.example.lcpjava.common.Lcp_145_TreeNode;
+
 public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	
 	/**
@@ -14,7 +16,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * traversal(root, result)
 	 * return result
 	 * */
-	public List<Integer> postorderTraversal_1(TreeNode root) {
+	public List<Integer> postorderTraversal_1(Lcp_145_TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		traversal(root, result);
 		return result;
@@ -29,7 +31,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * traversal(current right, result)
 	 * result add(current val)
 	 * */
-	public void traversal(TreeNode current, List<Integer> result) {
+	public void traversal(Lcp_145_TreeNode current, List<Integer> result) {
 		if (current == null) { return; }
 		traversal(current.left, result);
 		traversal(current.right, result);
@@ -59,10 +61,10 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> postorderTraversal_2(TreeNode root) {
+	public List<Integer> postorderTraversal_2(Lcp_145_TreeNode root) {
 		List<Integer> result = new ArrayList<>();
-		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
-		TreeNode current = root;
+		Stack<Lcp_145_TreeNode> stack = new Stack<>();																// S : O(n)
+		Lcp_145_TreeNode current = root;
 		
 		while (current != null || !stack.isEmpty()) {																// T : O(n)
 			while (current != null) {
@@ -70,7 +72,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 				current = (current.left != null) ? current.left : current.right;
 			}
 			
-			TreeNode temp = stack.pop();																			// T : O(1)
+			Lcp_145_TreeNode temp = stack.pop();																	// T : O(1)
 			result.add(temp.val);																					// T : O(1)
 			if (!stack.isEmpty() && temp == stack.peek().left) { current = stack.peek().right; }					// T : O(1)
 		}
@@ -110,10 +112,10 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> postorderTraversal_3(TreeNode root) {
+	public List<Integer> postorderTraversal_3(Lcp_145_TreeNode root) {
 		List<Integer> result = new ArrayList<>();
-		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
-		TreeNode current = root;
+		Stack<Lcp_145_TreeNode> stack = new Stack<>();																// S : O(n)
+		Lcp_145_TreeNode current = root;
 		
 		while (current != null || !stack.isEmpty()) {																// T : O(n)
 			while (!isLeaf(current)) {
@@ -145,7 +147,7 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * 
 	 * return if current left is equal to null && current right is equal to null then true else false
 	 * */
-	public boolean isLeaf(TreeNode current) {
+	public boolean isLeaf(Lcp_145_TreeNode current) {
 		if (current == null) { return true; }
 		return current.left == null && current.right == null;
 	}
@@ -184,12 +186,12 @@ public class Lcp_145_Binary_Tree_Postorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> postorderTraversal(TreeNode root) {
+	public List<Integer> postorderTraversal(Lcp_145_TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		if (root == null) { return result; }
 		
-		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
-		TreeNode current = root;
+		Stack<Lcp_145_TreeNode> stack = new Stack<>();																// S : O(n)
+		Lcp_145_TreeNode current = root;
 		stack.push(current);																						// T : O(1)
 		stack.push(current);																						// T : O(1)
 		
