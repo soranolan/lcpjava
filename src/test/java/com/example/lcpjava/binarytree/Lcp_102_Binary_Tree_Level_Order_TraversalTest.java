@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_102_TreeNode;
+
 class Lcp_102_Binary_Tree_Level_Order_TraversalTest {
 	
 	@Test
@@ -16,11 +18,11 @@ class Lcp_102_Binary_Tree_Level_Order_TraversalTest {
 		
 		List<List<Integer>> expected = Arrays.stream(new Integer[][] { { 3 }, { 9, 20 }, { 15, 7 } }).map(Arrays::asList).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(3);
-		TreeNode l1 = new TreeNode(9);
-		TreeNode r1 = new TreeNode(20);
-		TreeNode r1l1 = new TreeNode(15);
-		TreeNode r1r1 = new TreeNode(7);
+		Lcp_102_TreeNode root = new Lcp_102_TreeNode(3);
+		Lcp_102_TreeNode l1 = new Lcp_102_TreeNode(9);
+		Lcp_102_TreeNode r1 = new Lcp_102_TreeNode(20);
+		Lcp_102_TreeNode r1l1 = new Lcp_102_TreeNode(15);
+		Lcp_102_TreeNode r1r1 = new Lcp_102_TreeNode(7);
 		
 		root.left = l1;
 		root.right = r1;
@@ -38,7 +40,7 @@ class Lcp_102_Binary_Tree_Level_Order_TraversalTest {
 		
 		List<List<Integer>> expected = Arrays.stream(new Integer[][] { { 1 } }).map(Arrays::asList).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
+		Lcp_102_TreeNode root = new Lcp_102_TreeNode(1);
 		
 		List<List<Integer>> test = lcp.levelOrder(root);
 		
@@ -62,8 +64,8 @@ class Lcp_102_Binary_Tree_Level_Order_TraversalTest {
 		
 		List<List<Integer>> expected = Arrays.stream(new Integer[][] { { 1 }, { 2 } }).map(Arrays::asList).collect(Collectors.toList());
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode l1 = new TreeNode(2);
+		Lcp_102_TreeNode root = new Lcp_102_TreeNode(1);
+		Lcp_102_TreeNode l1 = new Lcp_102_TreeNode(2);
 		
 		root.left = l1;
 		
