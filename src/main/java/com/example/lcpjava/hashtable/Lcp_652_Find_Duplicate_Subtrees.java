@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.example.lcpjava.common.TreeNode;
+
 public class Lcp_652_Find_Duplicate_Subtrees {
 	
 	/**

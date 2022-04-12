@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.TreeNode;
+
 class Lcp_652_Find_Duplicate_SubtreesTest {
 	
 	@Test
