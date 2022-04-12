@@ -3,6 +3,8 @@ package com.example.lcpjava.binarytree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.example.lcpjava.common.Lcp_101_TreeNode;
+
 public class Lcp_101_Symmetric_Tree {
 	
 	/**
@@ -15,7 +17,7 @@ public class Lcp_101_Symmetric_Tree {
 	 * 
 	 * return isEqual(root left, root right)
 	 * */
-	public boolean isSymmetric_1(TreeNode root) {
+	public boolean isSymmetric_1(Lcp_101_TreeNode root) {
 		if (root == null) { return true; }
 		return isEqual(root.left, root.right);
 	}
@@ -31,7 +33,7 @@ public class Lcp_101_Symmetric_Tree {
 	 * 
 	 * return isEqual(left left, right right) && isEqual(left right, right left)
 	 * */
-	public boolean isEqual(TreeNode left, TreeNode right) {
+	public boolean isEqual(Lcp_101_TreeNode left, Lcp_101_TreeNode right) {
 		if (left == null || right == null) { return left == right; }
 		if (left.val != right.val) { return false; }
 		return isEqual(left.left, right.right) && isEqual(left.right, right.left);
@@ -73,16 +75,16 @@ public class Lcp_101_Symmetric_Tree {
 	 * 
 	 * return true
 	 * */
-	public boolean isSymmetric(TreeNode root) {
+	public boolean isSymmetric(Lcp_101_TreeNode root) {
 		if (root == null) { return true; }
 		
-		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
+		Queue<Lcp_101_TreeNode> queue = new LinkedList<>();															// S : O(n)
 		queue.offer(root.left);																						// T : O(1)
 		queue.offer(root.right);																					// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
-			TreeNode left = queue.poll();																			// T : O(1)
-			TreeNode right = queue.poll();																			// T : O(1)
+			Lcp_101_TreeNode left = queue.poll();																	// T : O(1)
+			Lcp_101_TreeNode right = queue.poll();																	// T : O(1)
 			
 			if (left == null && right == null) { continue; }
 			if (left == null || right == null) { return false; }
