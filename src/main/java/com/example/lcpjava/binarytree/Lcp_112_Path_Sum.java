@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+import com.example.lcpjava.common.Lcp_112_TreeNode;
+
 public class Lcp_112_Path_Sum {
 	
 	/**
@@ -42,17 +44,17 @@ public class Lcp_112_Path_Sum {
 	 * 
 	 * return false
 	 * */
-	public boolean hasPathSum_1(TreeNode root, int targetSum) {
+	public boolean hasPathSum_1(Lcp_112_TreeNode root, int targetSum) {
 		if (root == null) { return false; }
 		
-		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
+		Queue<Lcp_112_TreeNode> queue = new LinkedList<>();															// S : O(n)
 		queue.offer(root);																							// T : O(1)
 		
-		Map<TreeNode, Integer> memo = new HashMap<>();																// S : O(n)
+		Map<Lcp_112_TreeNode, Integer> memo = new HashMap<>();														// S : O(n)
 		memo.put(root, 0);																							// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
-			TreeNode current = queue.poll();																		// T : O(1)
+			Lcp_112_TreeNode current = queue.poll();																// T : O(1)
 			int sum = memo.get(current) + current.val;																// T : O(1)
 			
 			if (current.left == null && current.right == null && sum == targetSum) { return true; }
@@ -77,7 +79,7 @@ public class Lcp_112_Path_Sum {
 	 * 
 	 * DFS(root, zero, targetSum)
 	 * */
-	public boolean hasPathSum(TreeNode root, int targetSum) {
+	public boolean hasPathSum(Lcp_112_TreeNode root, int targetSum) {
 		return DFS(root, 0, targetSum);
 	}
 	
@@ -94,7 +96,7 @@ public class Lcp_112_Path_Sum {
 	 * 
 	 * return DFS(current left, sum, targetSum) || DFS(current right, sum, targetSum)
 	 * */
-	public boolean DFS(TreeNode current, int sum, int targetSum) {
+	public boolean DFS(Lcp_112_TreeNode current, int sum, int targetSum) {
 		if (current == null) { return false; }
 		sum = sum + current.val;
 		if (current.left == null && current.right == null) { return sum == targetSum; }

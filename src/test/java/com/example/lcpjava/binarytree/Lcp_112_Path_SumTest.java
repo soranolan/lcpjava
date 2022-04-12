@@ -4,21 +4,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_112_TreeNode;
+
 class Lcp_112_Path_SumTest {
 	
 	@Test
 	void test_case_1() {
 		Lcp_112_Path_Sum lcp = new Lcp_112_Path_Sum();
 		
-		TreeNode root = new TreeNode(5);
-		TreeNode l1 = new TreeNode(4);
-		TreeNode l1l1 = new TreeNode(11);
-		TreeNode l1l1l1 = new TreeNode(7);
-		TreeNode l1l1r1 = new TreeNode(2);
-		TreeNode r1 = new TreeNode(8);
-		TreeNode r1l1 = new TreeNode(13);
-		TreeNode r1r1 = new TreeNode(4);
-		TreeNode r1r1r1 = new TreeNode(1);
+		Lcp_112_TreeNode root = new Lcp_112_TreeNode(5);
+		Lcp_112_TreeNode l1 = new Lcp_112_TreeNode(4);
+		Lcp_112_TreeNode l1l1 = new Lcp_112_TreeNode(11);
+		Lcp_112_TreeNode l1l1l1 = new Lcp_112_TreeNode(7);
+		Lcp_112_TreeNode l1l1r1 = new Lcp_112_TreeNode(2);
+		Lcp_112_TreeNode r1 = new Lcp_112_TreeNode(8);
+		Lcp_112_TreeNode r1l1 = new Lcp_112_TreeNode(13);
+		Lcp_112_TreeNode r1r1 = new Lcp_112_TreeNode(4);
+		Lcp_112_TreeNode r1r1r1 = new Lcp_112_TreeNode(1);
 		
 		root.left = l1;
 		root.right = r1;
@@ -38,9 +40,9 @@ class Lcp_112_Path_SumTest {
 	void test_case_2() {
 		Lcp_112_Path_Sum lcp = new Lcp_112_Path_Sum();
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode l1 = new TreeNode(2);
-		TreeNode r1 = new TreeNode(3);
+		Lcp_112_TreeNode root = new Lcp_112_TreeNode(1);
+		Lcp_112_TreeNode l1 = new Lcp_112_TreeNode(2);
+		Lcp_112_TreeNode r1 = new Lcp_112_TreeNode(3);
 		
 		root.left = l1;
 		root.right = r1;
