@@ -56,7 +56,7 @@ public class Lcp_669_Trim_a_Binary_Search_Tree {
 	 * 		end if
 	 * end while
 	 * 
-	 * Lcp_669_TreeNode current <- root
+	 * TreeNode current <- root
 	 * while current is not equal to null
 	 * 		while current left is not equal to null && current left val is lower than low
 	 * 			current left <- current left right
