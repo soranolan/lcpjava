@@ -3,6 +3,8 @@ package com.example.lcpjava.binarytree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.example.lcpjava.common.Lcp_513_TreeNode;
+
 public class Lcp_513_Find_Bottom_Left_Tree_Value {
 	
 	/**
@@ -27,9 +29,9 @@ public class Lcp_513_Find_Bottom_Left_Tree_Value {
 	 * 
 	 * return current val
 	 * */
-	public int findBottomLeftValue_1(TreeNode root) {
-		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
-		TreeNode current = root;
+	public int findBottomLeftValue_1(Lcp_513_TreeNode root) {
+		Queue<Lcp_513_TreeNode> queue = new LinkedList<>();															// S : O(n)
+		Lcp_513_TreeNode current = root;
 		queue.offer(current);																						// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
@@ -54,7 +56,7 @@ public class Lcp_513_Find_Bottom_Left_Tree_Value {
 	 * */
 	int max;
 	int result;
-	public int findBottomLeftValue(TreeNode root) {
+	public int findBottomLeftValue(Lcp_513_TreeNode root) {
 		max = 0;
 		result = 0;
 		
@@ -76,7 +78,7 @@ public class Lcp_513_Find_Bottom_Left_Tree_Value {
 	 * postorder(current left, depth plus one)
 	 * postorder(current right, depth plus one)
 	 * */
-	public void postorder(TreeNode current, int depth) {
+	public void postorder(Lcp_513_TreeNode current, int depth) {
 		if (current == null) { return; }
 		
 		if (depth > max) {
