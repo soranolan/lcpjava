@@ -1,4 +1,4 @@
-package com.example.lcpjava.common.node;
+package com.example.lcpjava.common;
 
 public class Lcp_1823_Node {
 	

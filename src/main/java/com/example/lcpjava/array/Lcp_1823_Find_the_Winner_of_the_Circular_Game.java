@@ -3,7 +3,7 @@ package com.example.lcpjava.array;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.example.lcpjava.common.node.Lcp_1823_Node;
+import com.example.lcpjava.common.Lcp_1823_Node;
 
 public class Lcp_1823_Find_the_Winner_of_the_Circular_Game {
 	
