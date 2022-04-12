@@ -4,15 +4,17 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import com.example.lcpjava.common.MyHashTreeNode;
+
 public class MyHashMap_5_Helper {
 	
-	public static List<TreeNode> treeToList(TreeNode current) {
-		List<TreeNode> list = new LinkedList<>();
-		Queue<TreeNode> queue = new LinkedList<>();
+	public static List<MyHashTreeNode> treeToList(MyHashTreeNode current) {
+		List<MyHashTreeNode> list = new LinkedList<>();
+		Queue<MyHashTreeNode> queue = new LinkedList<>();
 		queue.add(current);
 		
 		while (!queue.isEmpty()) {
-			TreeNode node = queue.poll();
+			MyHashTreeNode node = queue.poll();
 			list.add(node);
 			if (node.right != null) { queue.add(node.right); }
 			if (node.left != null) { queue.add(node.left); }
@@ -21,7 +23,7 @@ public class MyHashMap_5_Helper {
 		return list;
 	}
 	
-	public static void addNode(TreeNode oldNode, TreeNode newNode) {
+	public static void addNode(MyHashTreeNode oldNode, MyHashTreeNode newNode) {
 		if (newNode.key > oldNode.key) {
 			if (oldNode.right == null) {
 				oldNode.right = newNode;
@@ -37,19 +39,19 @@ public class MyHashMap_5_Helper {
 		}
 	}
 	
-	public static TreeNode getNode(TreeNode current, int target) {
+	public static MyHashTreeNode getNode(MyHashTreeNode current, int target) {
 		if (target == current.key) { return current; }
 		if (target > current.key && current.right != null) { return getNode(current.right, target); }
 		if (target < current.key && current.left != null) { return getNode(current.left, target); }
 		return null;
 	}
 	
-	public static TreeNode removeNode(TreeNode current, int target) {
+	public static MyHashTreeNode removeNode(MyHashTreeNode current, int target) {
 		if (target == current.key) {
 			if (current.right == null && current.left == null) { return null; }
 			if (current.right == null || current.left == null) { return (current.left != null) ? current.left : current.right; }
 			
-			TreeNode leftMax = findMax(current.left);
+			MyHashTreeNode leftMax = findMax(current.left);
 			current.key = leftMax.key;
 			current.val = leftMax.val;
 			removeNode(current.left, current.key);
@@ -60,8 +62,8 @@ public class MyHashMap_5_Helper {
 		return current;
 	}
 	
-	public static TreeNode findMax(TreeNode current) {
-		TreeNode temp = current;
+	public static MyHashTreeNode findMax(MyHashTreeNode current) {
+		MyHashTreeNode temp = current;
 		while (temp.right != null) { temp = temp.right; }
 		return temp;
 	}

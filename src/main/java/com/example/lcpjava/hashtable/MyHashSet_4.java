@@ -3,10 +3,12 @@ package com.example.lcpjava.hashtable;
 import java.util.Iterator;
 import java.util.List;
 
+import com.example.lcpjava.common.MyHashTreeNode;
+
 /** Binary Search Tree */
 public class MyHashSet_4 {
 	
-	public Node[] bucket;
+	public MyHashTreeNode[] bucket;
 	
 	public static final int INITIAL_SIZE = 1;
 	
@@ -15,14 +17,14 @@ public class MyHashSet_4 {
 	public int size;
 	
 	public MyHashSet_4() {
-		bucket = new Node[INITIAL_SIZE];
+		bucket = new MyHashTreeNode[INITIAL_SIZE];
 		size = 0;
 	}
 	
 	public void add(int key) {
 		int index = hash(key);
-		Node newNode = new Node(key);
-		Node oldNode = bucket[index];
+		MyHashTreeNode newNode = new MyHashTreeNode(key);
+		MyHashTreeNode oldNode = bucket[index];
 		if (oldNode == null) {
 			bucket[index] = newNode;
 		} else {
@@ -34,7 +36,7 @@ public class MyHashSet_4 {
 	
 	public void remove(int key) {
 		int index = hash(key);
-		Node current = bucket[index];
+		MyHashTreeNode current = bucket[index];
 		if (current == null) { return; }
 		bucket[index] = MyHashSet_4_Helper.removeNode(current, key);
 		size--;
@@ -42,7 +44,7 @@ public class MyHashSet_4 {
 	
 	public boolean contains(int key) {
 		int index = hash(key);
-		Node current = bucket[index];
+		MyHashTreeNode current = bucket[index];
 		if (current == null) { return false; }
 		return MyHashSet_4_Helper.containNode(current, key);
 	}
@@ -53,13 +55,13 @@ public class MyHashSet_4 {
 	
 	public void rehash() {
 		size = 0;
-		Node[] newBucket = new Node[bucket.length * 2];
-		Node[] oldBucket = bucket;
+		MyHashTreeNode[] newBucket = new MyHashTreeNode[bucket.length * 2];
+		MyHashTreeNode[] oldBucket = bucket;
 		bucket = newBucket;
-		for (Node oldNode : oldBucket) {
+		for (MyHashTreeNode oldNode : oldBucket) {
 			if (oldNode == null) { continue; }
-			List<Node> list = MyHashSet_4_Helper.treeToList(oldNode);
-			Iterator<Node> it = list.iterator();
+			List<MyHashTreeNode> list = MyHashSet_4_Helper.treeToList(oldNode);
+			Iterator<MyHashTreeNode> it = list.iterator();
 			while (it.hasNext()) { add(it.next().val); }
 		}
 	}
