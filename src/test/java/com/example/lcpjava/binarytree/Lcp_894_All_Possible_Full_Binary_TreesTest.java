@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_894_TreeNode;
+
 class Lcp_894_All_Possible_Full_Binary_TreesTest {
 	
 	@Test
@@ -13,7 +15,7 @@ class Lcp_894_All_Possible_Full_Binary_TreesTest {
 		Lcp_894_All_Possible_Full_Binary_Trees lcp = new Lcp_894_All_Possible_Full_Binary_Trees();
 		
 		int input = 7;
-		List<TreeNode> test = lcp.allPossibleFBT(input);
+		List<Lcp_894_TreeNode> test = lcp.allPossibleFBT(input);
 		
 		assertThat(test).hasSize(5);
 	}
@@ -23,7 +25,7 @@ class Lcp_894_All_Possible_Full_Binary_TreesTest {
 		Lcp_894_All_Possible_Full_Binary_Trees lcp = new Lcp_894_All_Possible_Full_Binary_Trees();
 		
 		int input = 3;
-		List<TreeNode> test = lcp.allPossibleFBT(input);
+		List<Lcp_894_TreeNode> test = lcp.allPossibleFBT(input);
 		
 		assertThat(test).hasSize(1);
 	}
