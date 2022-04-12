@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import com.example.lcpjava.common.Lcp_230_TreeNode;
+
 public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	
 	/**
@@ -12,7 +14,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return traversal(root, k)
 	 * */
-	public int kthSmallest_1(TreeNode root, int k) {
+	public int kthSmallest_1(Lcp_230_TreeNode root, int k) {
 		return traversal(root, k);
 	}
 	
@@ -29,7 +31,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return traversal(current right, k minus one minus leftCount)
 	 * */
-	public int traversal(TreeNode current, int k) {
+	public int traversal(Lcp_230_TreeNode current, int k) {
 		int leftCount = count(current.left);
 		if (leftCount == k - 1) { return current.val; }																// mid
 		if (leftCount >= k) { return traversal(current.left, k); }													// left subtree
@@ -43,7 +45,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return one plus count(current left) plus count(current right)
 	 * */
-	public int count(TreeNode current) {
+	public int count(Lcp_230_TreeNode current) {
 		if (current == null) { return 0; }
 		return 1 + count(current.left) + count(current.right);
 	}
@@ -58,7 +60,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return bucket get(k minus one)
 	 * */
-	public int kthSmallest_2(TreeNode root, int k) {
+	public int kthSmallest_2(Lcp_230_TreeNode root, int k) {
 		List<Integer> bucket = new ArrayList<>();																	// S : O(n)
 		inorder_1(root, bucket);
 		return bucket.get(k - 1);																					// T : O(1)
@@ -75,7 +77,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * inorder(current right, bucket)
 	 * */
-	public void inorder_1(TreeNode current, List<Integer> bucket) {
+	public void inorder_1(Lcp_230_TreeNode current, List<Integer> bucket) {
 		if (current == null) { return; }
 		inorder_1(current.left, bucket);
 		bucket.add(current.val);																					// T : O(1)
@@ -108,9 +110,9 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return minus one
 	 * */
-	public int kthSmallest_3(TreeNode root, int k) {
-		Stack<TreeNode> stack = new Stack<>();
-		TreeNode current = root;
+	public int kthSmallest_3(Lcp_230_TreeNode root, int k) {
+		Stack<Lcp_230_TreeNode> stack = new Stack<>();
+		Lcp_230_TreeNode current = root;
 		int count = k;
 		
 		while (current != null || !stack.isEmpty()) {
@@ -141,8 +143,8 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return find(newRoot, k)
 	 * */
-	public int kthSmallest(TreeNode root, int k) {
-		TreeNode newRoot = fillCount(root);
+	public int kthSmallest(Lcp_230_TreeNode root, int k) {
+		Lcp_230_TreeNode newRoot = fillCount(root);
 		return find(newRoot, k);
 	}
 	
@@ -166,10 +168,10 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 
 	 * return newRoot
 	 * */
-	public TreeNode fillCount(TreeNode current) {
+	public Lcp_230_TreeNode fillCount(Lcp_230_TreeNode current) {
 		if (current == null) { return null; }
 		
-		TreeNode newRoot = new TreeNode(current.val);
+		Lcp_230_TreeNode newRoot = new Lcp_230_TreeNode(current.val);
 		
 		newRoot.left = fillCount(current.left);
 		newRoot.right = fillCount(current.right);
@@ -205,7 +207,7 @@ public class Lcp_230_Kth_Smallest_Element_in_a_BST {
 	 * 		return find(current right, k minus one)
 	 * end if
 	 * */
-	public int find(TreeNode current, int k) {
+	public int find(Lcp_230_TreeNode current, int k) {
 		if (k <= 0 || k > current.count) { return -1; }
 		if (current.left != null) {
 			int leftCount = current.left.count;

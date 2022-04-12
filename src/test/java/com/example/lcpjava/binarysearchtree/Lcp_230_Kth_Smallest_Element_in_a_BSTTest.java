@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.Lcp_230_TreeNode;
+
 class Lcp_230_Kth_Smallest_Element_in_a_BSTTest {
 	
 	@Test
@@ -12,10 +14,10 @@ class Lcp_230_Kth_Smallest_Element_in_a_BSTTest {
 		
 		int expected = 1;
 		
-		TreeNode root = new TreeNode(3);
-		TreeNode l1 = new TreeNode(1);
-		TreeNode l1r1 = new TreeNode(2);
-		TreeNode r1 = new TreeNode(4);
+		Lcp_230_TreeNode root = new Lcp_230_TreeNode(3);
+		Lcp_230_TreeNode l1 = new Lcp_230_TreeNode(1);
+		Lcp_230_TreeNode l1r1 = new Lcp_230_TreeNode(2);
+		Lcp_230_TreeNode r1 = new Lcp_230_TreeNode(4);
 		
 		root.left = l1;
 		root.right = r1;
@@ -34,12 +36,12 @@ class Lcp_230_Kth_Smallest_Element_in_a_BSTTest {
 		
 		int expected = 3;
 		
-		TreeNode root = new TreeNode(5);
-		TreeNode l1 = new TreeNode(3);
-		TreeNode l1l1 = new TreeNode(2);
-		TreeNode l1l1l1 = new TreeNode(1);
-		TreeNode l1r1 = new TreeNode(4);
-		TreeNode r1 = new TreeNode(6);
+		Lcp_230_TreeNode root = new Lcp_230_TreeNode(5);
+		Lcp_230_TreeNode l1 = new Lcp_230_TreeNode(3);
+		Lcp_230_TreeNode l1l1 = new Lcp_230_TreeNode(2);
+		Lcp_230_TreeNode l1l1l1 = new Lcp_230_TreeNode(1);
+		Lcp_230_TreeNode l1r1 = new Lcp_230_TreeNode(4);
+		Lcp_230_TreeNode r1 = new Lcp_230_TreeNode(6);
 		
 		root.left = l1;
 		root.right = r1;
