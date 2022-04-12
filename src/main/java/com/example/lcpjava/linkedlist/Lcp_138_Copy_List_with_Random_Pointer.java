@@ -3,6 +3,8 @@ package com.example.lcpjava.linkedlist;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.lcpjava.common.Lcp_138_Node;
+
 public class Lcp_138_Copy_List_with_Random_Pointer {
 	
 	/**
@@ -47,14 +49,14 @@ public class Lcp_138_Copy_List_with_Random_Pointer {
 	 * 
 	 * return newHead next
 	 * */
-	public Node copyRandomList_1(Node head) {
-		Node original = head;
-		Node temp = null;
+	public Lcp_138_Node copyRandomList_1(Lcp_138_Node head) {
+		Lcp_138_Node original = head;
+		Lcp_138_Node temp = null;
 		
 		while (original != null) {																					// T : O(n)
 			temp = original.next;
 			
-			Node newNode = new Node(original.val);																	// S : O(n)
+			Lcp_138_Node newNode = new Lcp_138_Node(original.val);													// S : O(n)
 			original.next = newNode;
 			newNode.next = temp;
 			
@@ -68,8 +70,8 @@ public class Lcp_138_Copy_List_with_Random_Pointer {
 		}
 		
 		original = head;
-		Node newHead = new Node(0);
-		Node newTail = newHead;
+		Lcp_138_Node newHead = new Lcp_138_Node(0);
+		Lcp_138_Node newTail = newHead;
 		
 		while (original != null) {																					// T : O(n)
 			temp = original.next;
@@ -84,7 +86,7 @@ public class Lcp_138_Copy_List_with_Random_Pointer {
 		return newHead.next;
 	}
 	
-	Map<Node, Node> memo = new HashMap<>();
+	Map<Lcp_138_Node, Lcp_138_Node> memo = new HashMap<>();
 	
 	/**
 	 * time  : O(n)
@@ -108,11 +110,11 @@ public class Lcp_138_Copy_List_with_Random_Pointer {
 	 * 
 	 * return newNode
 	 * */
-	public Node copyRandomList(Node head) {
+	public Lcp_138_Node copyRandomList(Lcp_138_Node head) {
 		if (head == null) { return head; }
 		if (memo.containsKey(head)) { return memo.get(head); }
 		
-		Node newNode = new Node(head.val);
+		Lcp_138_Node newNode = new Lcp_138_Node(head.val);
 		memo.put(head, newNode);
 		
 		newNode.next = copyRandomList(head.next);

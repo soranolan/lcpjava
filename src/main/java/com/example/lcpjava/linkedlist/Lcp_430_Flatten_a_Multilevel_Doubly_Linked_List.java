@@ -1,5 +1,7 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.Lcp_430_Node;
+
 public class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List {
 	
 	/**
@@ -31,8 +33,8 @@ public class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List {
 	 * 
 	 * return head
 	 * */
-	public Node flatten(Node head) {
-		Node parent = head;
+	public Lcp_430_Node flatten(Lcp_430_Node head) {
+		Lcp_430_Node parent = head;
 		
 		while (parent != null) {																					// T : O(n)
 			if (parent.child == null) {
@@ -40,7 +42,7 @@ public class Lcp_430_Flatten_a_Multilevel_Doubly_Linked_List {
 				continue;
 			}
 			
-			Node child = parent.child;
+			Lcp_430_Node child = parent.child;
 			while (child.next != null) { child = child.next; }														// T : O(n)
 			
 			child.next = parent.next;
