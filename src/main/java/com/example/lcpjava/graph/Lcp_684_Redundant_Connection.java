@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
+import com.example.lcpjava.common.UF_684;
+
 public class Lcp_684_Redundant_Connection {
 	
 	/**

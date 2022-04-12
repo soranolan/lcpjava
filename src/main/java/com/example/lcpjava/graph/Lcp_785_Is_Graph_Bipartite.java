@@ -3,6 +3,8 @@ package com.example.lcpjava.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.example.lcpjava.common.UnionFind;
+
 public class Lcp_785_Is_Graph_Bipartite {
 	
 	/**

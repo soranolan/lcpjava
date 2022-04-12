@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import com.example.lcpjava.common.UF_1319;
+
 public class Lcp_1319_Number_of_Operations_to_Make_Network_Connected {
 	
 	/**

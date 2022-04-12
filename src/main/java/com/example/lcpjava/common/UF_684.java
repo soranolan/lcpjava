@@ -1,4 +1,4 @@
-package com.example.lcpjava.graph;
+package com.example.lcpjava.common;
 
 public class UF_684 {
 	

@@ -3,6 +3,8 @@ package com.example.lcpjava.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.example.lcpjava.common.UF_547;
+
 public class Lcp_547_Number_of_Provinces {
 	
 	/**
