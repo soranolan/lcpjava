@@ -1,17 +1,13 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.Lcp_707_Node;
+
 /** Singly */
 public class MyLinkedList_1 {
 	
-	class Node {
-		public int val;
-		public Node next;
-		Node(int val) { this.val = val; }
-	}
+	public Lcp_707_Node head;
 	
-	public Node head;
-	
-	public Node tail;
+	public Lcp_707_Node tail;
 	
 	public MyLinkedList_1() { }
 	
@@ -49,7 +45,7 @@ public class MyLinkedList_1 {
 		int size = size();																							// T : O(n)
 		if (index < 0 || index > size) { return; }
 		
-		Node current = new Node(val);
+		Lcp_707_Node current = new Lcp_707_Node(val);
 		if (head == null && tail == null) {
 			head = current;
 			tail = current;
@@ -68,8 +64,8 @@ public class MyLinkedList_1 {
 			return;
 		}
 		
-		Node previous = getNode(index - 1);																			// T : O(n)
-		Node next = previous.next;
+		Lcp_707_Node previous = getNode(index - 1);																	// T : O(n)
+		Lcp_707_Node next = previous.next;
 		previous.next = current;
 		current.next = next;
 	}
@@ -88,14 +84,14 @@ public class MyLinkedList_1 {
 		}
 		
 		if (index == (size - 1)) {
-			Node previous = getNode(index - 1);																		// T : O(n)
+			Lcp_707_Node previous = getNode(index - 1);																// T : O(n)
 			previous.next = null;
 			tail = previous;
 			return;
 		}
 		
-		Node target = getNode(index);;																				// T : O(n)
-		Node previous = getNode(index - 1);																			// T : O(n)
+		Lcp_707_Node target = getNode(index);;																		// T : O(n)
+		Lcp_707_Node previous = getNode(index - 1);																	// T : O(n)
 		previous.next = target.next;
 	}
 	
@@ -107,7 +103,7 @@ public class MyLinkedList_1 {
 	 * */
 	public int size() {
 		int size = 0;
-		Node temp = head;
+		Lcp_707_Node temp = head;
 		
 		while (temp != null) {																						// T : O(n)
 			size++;
@@ -121,8 +117,8 @@ public class MyLinkedList_1 {
 	 * time  : O(n)
 	 * space : O(1)
 	 * */
-	private Node getNode(int index) {
-		Node temp = head;
+	private Lcp_707_Node getNode(int index) {
+		Lcp_707_Node temp = head;
 		for (int i = 0; i < index; i++) { temp = temp.next; }														// T : O(n)
 		return temp;
 	}

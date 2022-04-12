@@ -8,7 +8,7 @@ import java.util.List;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
-import com.example.lcpjava.linkedlist.MyLinkedList.Node;
+import com.example.lcpjava.common.Lcp_707_Node;
 
 class Lcp_707_Design_Linked_ListTest {
 	
@@ -32,7 +32,8 @@ class Lcp_707_Design_Linked_ListTest {
 		
 		Integer[] expected = { 5, 2, 3, 7, 2 };
 		List<Integer> test = new ArrayList<>();
-		Node current = obj.head;
+		
+		Lcp_707_Node current = obj.head;
 		while (current != null) {
 			test.add(current.val);
 			current = current.next;
@@ -47,7 +48,7 @@ class Lcp_707_Design_Linked_ListTest {
 		obj.addAtHead(1);
 		obj.deleteAtIndex(0);
 		
-		Node test = obj.head;
+		Lcp_707_Node test = obj.head;
 		assertThat(test).isNull();
 	}
 	

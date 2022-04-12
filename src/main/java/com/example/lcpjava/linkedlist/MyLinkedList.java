@@ -1,17 +1,10 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.Lcp_707_Node;
+
 public class MyLinkedList {
 	
-	class Node {
-		public int val;
-		public Node prev;
-		public Node next;
-		Node(int val) { this.val = val; }
-	}
-	
-	public Node head;
-	
-	public Node tail;
+	Lcp_707_Node head;
 	
 	public MyLinkedList() { }
 	

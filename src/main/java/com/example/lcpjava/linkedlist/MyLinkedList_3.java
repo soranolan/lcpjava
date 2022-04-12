@@ -1,18 +1,13 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.Lcp_707_Node;
+
 /** Doubly */
 public class MyLinkedList_3 {
 	
-	class Node {
-		public int val;
-		public Node prev;
-		public Node next;
-		Node(int val) { this.val = val; }
-	}
+	public Lcp_707_Node head;
 	
-	public Node head;
-	
-	public Node tail;
+	public Lcp_707_Node tail;
 	
 	public MyLinkedList_3() { }
 	
@@ -22,7 +17,7 @@ public class MyLinkedList_3 {
 	 * */
 	public int get(int index) {
 		int count = 0;
-		Node current = head;
+		Lcp_707_Node current = head;
 		
 		while (current != null) {																					// T : O(n)
 			if (count == index) { return current.val; }
@@ -38,7 +33,7 @@ public class MyLinkedList_3 {
 	 * space : O(1)
 	 * */
 	public void addAtHead(int val) {
-		Node current = new Node(val);
+		Lcp_707_Node current = new Lcp_707_Node(val);
 		
 		if (head == null) {
 			head = current;
@@ -56,7 +51,7 @@ public class MyLinkedList_3 {
 	 * space : O(1)
 	 * */
 	public void addAtTail(int val) {
-		Node current = new Node(val);
+		Lcp_707_Node current = new Lcp_707_Node(val);
 		
 		if (tail == null) {
 			head = current;
@@ -80,11 +75,11 @@ public class MyLinkedList_3 {
 		}
 		
 		int count = 0;
-		Node temp = head;
+		Lcp_707_Node temp = head;
 		
 		while (temp != null) {																						// T : O(n)
 			if (count == index) {
-				Node current = new Node(val);
+				Lcp_707_Node current = new Lcp_707_Node(val);
 				current.next = temp;
 				current.prev = temp.prev;
 				temp.prev.next = current;
@@ -114,7 +109,7 @@ public class MyLinkedList_3 {
 		}
 		
 		int count = 1;
-		Node temp = head.next;
+		Lcp_707_Node temp = head.next;
 		
 		while (temp != null) {																						// T : O(n)
 			if (count != index) {
