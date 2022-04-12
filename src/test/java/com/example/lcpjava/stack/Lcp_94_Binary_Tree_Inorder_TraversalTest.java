@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.TreeNode;
+
 class Lcp_94_Binary_Tree_Inorder_TraversalTest {
 	
 	@Test

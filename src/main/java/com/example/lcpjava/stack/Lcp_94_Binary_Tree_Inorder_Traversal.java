@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import com.example.lcpjava.common.TreeNode;
+
 public class Lcp_94_Binary_Tree_Inorder_Traversal {
 	
 	/**
