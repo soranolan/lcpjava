@@ -1,6 +1,6 @@
 package com.example.lcpjava.binarysearchtree;
 
-import com.example.lcpjava.common.Lcp_669_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_669_Trim_a_Binary_Search_Tree {
 	
@@ -10,7 +10,7 @@ public class Lcp_669_Trim_a_Binary_Search_Tree {
 	 * 
 	 * return trim(root, low, high)
 	 * */
-	public Lcp_669_TreeNode trimBST_1(Lcp_669_TreeNode root, int low, int high) {
+	public TreeNode trimBST_1(TreeNode root, int low, int high) {
 		return trim(root, low, high);
 	}
 	
@@ -32,7 +32,7 @@ public class Lcp_669_Trim_a_Binary_Search_Tree {
 	 * 
 	 * return current
 	 * */
-	public Lcp_669_TreeNode trim(Lcp_669_TreeNode current, int low, int high) {
+	public TreeNode trim(TreeNode current, int low, int high) {
 		if (current == null) { return current; }
 		
 		if (current.val > high) { return trim(current.left, low, high); }
@@ -76,7 +76,7 @@ public class Lcp_669_Trim_a_Binary_Search_Tree {
 	 * 
 	 * return root
 	 * */
-	public Lcp_669_TreeNode trimBST(Lcp_669_TreeNode root, int low, int high) {
+	public TreeNode trimBST(TreeNode root, int low, int high) {
 		while (root != null && (root.val > high || root.val < low)) {
 			if (root.val > high) {
 				root = root.left;
@@ -85,7 +85,7 @@ public class Lcp_669_Trim_a_Binary_Search_Tree {
 			}
 		}
 		
-		Lcp_669_TreeNode current = root;
+		TreeNode current = root;
 		while (current != null) {
 			while (current.left != null && current.left.val < low) {
 				current.left = current.left.right;

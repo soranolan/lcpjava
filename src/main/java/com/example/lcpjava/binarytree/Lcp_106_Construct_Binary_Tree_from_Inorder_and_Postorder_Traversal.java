@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-import com.example.lcpjava.common.Lcp_106_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
 	
@@ -47,22 +47,22 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 
 	 * return root
 	 * */
-	public Lcp_106_TreeNode buildTree_1(int[] inorder, int[] postorder) {
+	public TreeNode buildTree_1(int[] inorder, int[] postorder) {
 		if (inorder == null || postorder == null || inorder.length != postorder.length) { return null; }
 		
 		int inIdx = inorder.length - 1;
 		int postIdx = postorder.length - 1;
 		
-		Lcp_106_TreeNode root = new Lcp_106_TreeNode(postorder[postIdx]);
+		TreeNode root = new TreeNode(postorder[postIdx]);
 		postIdx--;
 		
-		Stack<Lcp_106_TreeNode> stack = new Stack<>();																// S : O(n)
+		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
 		stack.push(root);
 		
 		while (postIdx >= 0) {
-			Lcp_106_TreeNode current = stack.peek();
+			TreeNode current = stack.peek();
 			if (current.val != inorder[inIdx]) {
-				Lcp_106_TreeNode right = new Lcp_106_TreeNode(postorder[postIdx]);
+				TreeNode right = new TreeNode(postorder[postIdx]);
 				current.right = right;
 				stack.push(right);
 				postIdx--;
@@ -72,7 +72,7 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 					inIdx--;
 				}
 				
-				Lcp_106_TreeNode left = new Lcp_106_TreeNode(postorder[postIdx]);
+				TreeNode left = new TreeNode(postorder[postIdx]);
 				current.left = left;
 				stack.push(left);
 				postIdx--;
@@ -97,7 +97,7 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 
 	 * return build(0, inorder length minus one, postorder, 0, postorder length minus one, memo)
 	 * */
-	public Lcp_106_TreeNode buildTree_2(int[] inorder, int[] postorder) {
+	public TreeNode buildTree_2(int[] inorder, int[] postorder) {
 		if (inorder == null || postorder == null || inorder.length != postorder.length) { return null; }
 		
 		Map<Integer, Integer> memo = new HashMap<Integer, Integer>();												// S : O(n)
@@ -120,10 +120,10 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 
 	 * return current
 	 * */
-	public Lcp_106_TreeNode build_2(int inStart, int inEnd, int[] postorder, int postStart, int postEnd, Map<Integer, Integer> memo) {
+	public TreeNode build_2(int inStart, int inEnd, int[] postorder, int postStart, int postEnd, Map<Integer, Integer> memo) {
 		if (inStart > inEnd || postStart > postEnd) { return null; }
 		
-		Lcp_106_TreeNode current = new Lcp_106_TreeNode(postorder[postEnd]);
+		TreeNode current = new TreeNode(postorder[postEnd]);
 		int rootIndex = memo.get(current.val);
 		int leftNodeNum = rootIndex - inStart;
 		
@@ -144,7 +144,7 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * */
 	int inIndex;
 	int postIndex;
-	public Lcp_106_TreeNode buildTree(int[] inorder, int[] postorder) {
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
 		inIndex = inorder.length - 1;
 		postIndex = postorder.length - 1;
 		return build(inorder, postorder, -3001);
@@ -168,7 +168,7 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 	 * 
 	 * return current
 	 * */
-	public Lcp_106_TreeNode build(int[] inorder, int[] postorder, int rootValue) {
+	public TreeNode build(int[] inorder, int[] postorder, int rootValue) {
 		if (postIndex < 0) { return null; }
 		
 		if (inorder[inIndex] == rootValue) {
@@ -176,7 +176,7 @@ public class Lcp_106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal 
 			return null;
 		}
 		
-		Lcp_106_TreeNode current = new Lcp_106_TreeNode(postorder[postIndex]);
+		TreeNode current = new TreeNode(postorder[postIndex]);
 		postIndex--;
 		
 		current.right = build(inorder, postorder, current.val);

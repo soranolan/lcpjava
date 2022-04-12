@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import com.example.lcpjava.common.Lcp_144_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	
@@ -16,7 +16,7 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	 * traversal(root, result)
 	 * return result
 	 * */
-	public List<Integer> preorderTraversal_1(Lcp_144_TreeNode root) {
+	public List<Integer> preorderTraversal_1(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		traversal(root, result);
 		return result;
@@ -31,7 +31,7 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	 * traversal(current left, result)
 	 * traversal(current right, result)
 	 * */
-	public void traversal(Lcp_144_TreeNode current, List<Integer> result) {
+	public void traversal(TreeNode current, List<Integer> result) {
 		if (current == null) { return; }
 		result.add(current.val);																					// T : O(1)
 		traversal(current.left, result);
@@ -65,12 +65,12 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> preorderTraversal_2(Lcp_144_TreeNode root) {
+	public List<Integer> preorderTraversal_2(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		if (root == null) { return result; }
-		Stack<Lcp_144_TreeNode> stack = new Stack<>();																// S : O(n)
+		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
 		
-		Lcp_144_TreeNode current = root;
+		TreeNode current = root;
 		stack.push(current);																						// T : O(1)
 		
 		while (!stack.isEmpty()) {																					// T : O(n)
@@ -103,10 +103,10 @@ public class Lcp_144_Binary_Tree_Preorder_Traversal {
 	 * 
 	 * return result
 	 * */
-	public List<Integer> preorderTraversal(Lcp_144_TreeNode root) {
+	public List<Integer> preorderTraversal(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
-		Stack<Lcp_144_TreeNode> stack = new Stack<>();																// S : O(node right)
-		Lcp_144_TreeNode current = root;
+		Stack<TreeNode> stack = new Stack<>();																		// S : O(node right)
+		TreeNode current = root;
 		
 		while (current != null || !stack.isEmpty()) {																// T : O(n)
 			if (current != null) {

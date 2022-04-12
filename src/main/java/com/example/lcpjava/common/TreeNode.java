@@ -2,21 +2,21 @@ package com.example.lcpjava.common;
 
 import java.util.Objects;
 
-public class Lcp_105_TreeNode {
+public class TreeNode {
 	
 	public int val;
 	
-	public Lcp_105_TreeNode left;
+	public TreeNode left;
 	
-	public Lcp_105_TreeNode right;
+	public TreeNode right;
 	
-	public Lcp_105_TreeNode() {  }
+	public TreeNode() {  }
 	
-	public Lcp_105_TreeNode(int val) {
+	public TreeNode(int val) {
 		this.val = val;
 	}
 	
-	public Lcp_105_TreeNode(int val, Lcp_105_TreeNode left, Lcp_105_TreeNode right) {
+	public TreeNode(int val, TreeNode left, TreeNode right) {
 		this.val = val;
 		this.left = left;
 		this.right = right;
@@ -24,7 +24,7 @@ public class Lcp_105_TreeNode {
 	
 	@Override
 	public String toString() {
-		return "Lcp_105_TreeNode [val=" + val + ", left=" + left + ", right=" + right + "]";
+		return "TreeNode [val=" + val + ", left=" + left + ", right=" + right + "]";
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class Lcp_105_TreeNode {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Lcp_105_TreeNode other = (Lcp_105_TreeNode) obj;
+		TreeNode other = (TreeNode) obj;
 		return Objects.equals(left, other.left) && Objects.equals(right, other.right) && val == other.val;
 	}
 	

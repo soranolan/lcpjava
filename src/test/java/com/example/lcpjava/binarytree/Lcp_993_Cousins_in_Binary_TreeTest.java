@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.lcpjava.common.Lcp_993_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 class Lcp_993_Cousins_in_Binary_TreeTest {
 	
@@ -12,10 +12,10 @@ class Lcp_993_Cousins_in_Binary_TreeTest {
 	void test_case_1() {
 		Lcp_993_Cousins_in_Binary_Tree lcp = new Lcp_993_Cousins_in_Binary_Tree();
 		
-		Lcp_993_TreeNode root = new Lcp_993_TreeNode(1);
-		Lcp_993_TreeNode l1 = new Lcp_993_TreeNode(2);
-		Lcp_993_TreeNode l1l1 = new Lcp_993_TreeNode(4);
-		Lcp_993_TreeNode r1 = new Lcp_993_TreeNode(3);
+		TreeNode root = new TreeNode(1);
+		TreeNode l1 = new TreeNode(2);
+		TreeNode l1l1 = new TreeNode(4);
+		TreeNode r1 = new TreeNode(3);
 		
 		root.left = l1;
 		l1.left = l1l1;
@@ -33,11 +33,11 @@ class Lcp_993_Cousins_in_Binary_TreeTest {
 	void test_case_2() {
 		Lcp_993_Cousins_in_Binary_Tree lcp = new Lcp_993_Cousins_in_Binary_Tree();
 		
-		Lcp_993_TreeNode root = new Lcp_993_TreeNode(1);
-		Lcp_993_TreeNode l1 = new Lcp_993_TreeNode(2);
-		Lcp_993_TreeNode l1r1 = new Lcp_993_TreeNode(4);
-		Lcp_993_TreeNode r1 = new Lcp_993_TreeNode(3);
-		Lcp_993_TreeNode r1r1 = new Lcp_993_TreeNode(5);
+		TreeNode root = new TreeNode(1);
+		TreeNode l1 = new TreeNode(2);
+		TreeNode l1r1 = new TreeNode(4);
+		TreeNode r1 = new TreeNode(3);
+		TreeNode r1r1 = new TreeNode(5);
 		
 		root.left = l1;
 		l1.right = l1r1;
@@ -56,10 +56,10 @@ class Lcp_993_Cousins_in_Binary_TreeTest {
 	void test_case_3() {
 		Lcp_993_Cousins_in_Binary_Tree lcp = new Lcp_993_Cousins_in_Binary_Tree();
 		
-		Lcp_993_TreeNode root = new Lcp_993_TreeNode(1);
-		Lcp_993_TreeNode l1 = new Lcp_993_TreeNode(2);
-		Lcp_993_TreeNode r1 = new Lcp_993_TreeNode(3);
-		Lcp_993_TreeNode l1r1 = new Lcp_993_TreeNode(4);
+		TreeNode root = new TreeNode(1);
+		TreeNode l1 = new TreeNode(2);
+		TreeNode r1 = new TreeNode(3);
+		TreeNode l1r1 = new TreeNode(4);
 		
 		root.left = l1;
 		l1.right = l1r1;

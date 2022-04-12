@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.example.lcpjava.common.Lcp_104_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	
@@ -44,18 +44,18 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * 
 	 * return max
 	 * */
-	public int maxDepth_1(Lcp_104_TreeNode root) {
+	public int maxDepth_1(TreeNode root) {
 		int max = 0;
 		if (root == null) { return max; }
 		
-		Stack<Lcp_104_TreeNode> treeStack = new Stack<>();															// S : O(n)
+		Stack<TreeNode> treeStack = new Stack<>();																	// S : O(n)
 		Stack<Integer> depthStack = new Stack<>();																	// S : O(n)
 		
 		treeStack.push(root);																						// T : O(1)
 		depthStack.push(1);																							// T : O(1)
 		
 		while (!treeStack.isEmpty()) {																				// T : O(n)
-			Lcp_104_TreeNode current = treeStack.pop();																// T : O(1)
+			TreeNode current = treeStack.pop();																		// T : O(1)
 			int depth = depthStack.pop();																			// T : O(1)
 			
 			if (current.left == null && current.right == null) { max = Math.max(depth, max); }
@@ -105,18 +105,18 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * 
 	 * return depth
 	 * */
-	public int maxDepth_2(Lcp_104_TreeNode root) {
+	public int maxDepth_2(TreeNode root) {
 		int depth = 0;
 		if (root == null) { return depth; }
 		
-		Queue<Lcp_104_TreeNode> queue = new LinkedList<>();															// S : O(n)
+		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
 		queue.offer(root);																							// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
 			depth++;
 			int size = queue.size();																				// T : O(1)
 			while (size > 0) {
-				Lcp_104_TreeNode current = queue.poll();															// T : O(1)
+				TreeNode current = queue.poll();																	// T : O(1)
 				if (current.left != null) { queue.offer(current.left); }											// T : O(1)
 				if (current.right != null) { queue.offer(current.right); }											// T : O(1)
 				size--;
@@ -137,7 +137,7 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * return top_down_max
 	 * */
 	int top_down_max = 0;
-	public int maxDepth_3(Lcp_104_TreeNode root) {
+	public int maxDepth_3(TreeNode root) {
 		top_down(root, 1);
 		return top_down_max;
 	}
@@ -154,7 +154,7 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * top_down(current left, depth plus one)
 	 * top_down(current right, depth plus one)
 	 * */
-	public void top_down(Lcp_104_TreeNode current, int depth) {
+	public void top_down(TreeNode current, int depth) {
 		if (current == null) { return; }
 		if (current.left == null && current.right == null) { top_down_max = Math.max(depth, top_down_max); }
 		top_down(current.left, depth + 1);
@@ -167,7 +167,7 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * 
 	 * return bottom_up(root, 1)
 	 * */
-	public int maxDepth(Lcp_104_TreeNode root) {
+	public int maxDepth(TreeNode root) {
 		return bottom_up(root, 1);
 	}
 	
@@ -180,7 +180,7 @@ public class Lcp_104_Maximum_Depth_of_Binary_Tree {
 	 * int right <- bottom_up(current right, depth plus one)
 	 * return Math max(left, right) plus one
 	 * */
-	public int bottom_up(Lcp_104_TreeNode current, int depth) {
+	public int bottom_up(TreeNode current, int depth) {
 		if (current == null) { return 0; }
 		int left = bottom_up(current.left, depth + 1);
 		int right = bottom_up(current.right, depth + 1);

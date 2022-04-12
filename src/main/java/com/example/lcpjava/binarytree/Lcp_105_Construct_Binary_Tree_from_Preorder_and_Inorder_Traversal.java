@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-import com.example.lcpjava.common.Lcp_105_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	
@@ -47,22 +47,22 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * 
 	 * return root
 	 * */
-	public Lcp_105_TreeNode buildTree_1(int[] preorder, int[] inorder) {
+	public TreeNode buildTree_1(int[] preorder, int[] inorder) {
 		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
 		
 		int preIndex = 0;
 		int inIndex = 0;
 		
-		Lcp_105_TreeNode root = new Lcp_105_TreeNode(preorder[preIndex]);
+		TreeNode root = new TreeNode(preorder[preIndex]);
 		preIndex++;
 		
-		Stack<Lcp_105_TreeNode> stack = new Stack<>();																// S : O(n)
+		Stack<TreeNode> stack = new Stack<>();																		// S : O(n)
 		stack.push(root);																							// T : O(1)
 		
 		while (preIndex < preorder.length) {																		// T : O(n)
-			Lcp_105_TreeNode current = stack.peek();																// T : O(1)
+			TreeNode current = stack.peek();																		// T : O(1)
 			if (current.val != inorder[inIndex]) {
-				Lcp_105_TreeNode left = new Lcp_105_TreeNode(preorder[preIndex]);
+				TreeNode left = new TreeNode(preorder[preIndex]);
 				current.left = left;
 				stack.push(left);																					// T : O(1)
 				preIndex++;
@@ -72,7 +72,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 					inIndex++;
 				}
 				
-				Lcp_105_TreeNode right = new Lcp_105_TreeNode(preorder[preIndex]);
+				TreeNode right = new TreeNode(preorder[preIndex]);
 				current.right = right;
 				stack.push(right);																					// T : O(1)
 				preIndex++;
@@ -98,7 +98,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * 
 	 * return build(preorder, 0, inorder length minus one, memo)
 	 * */
-	public Lcp_105_TreeNode buildTree_2(int[] preorder, int[] inorder) {
+	public TreeNode buildTree_2(int[] preorder, int[] inorder) {
 		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
 		
 		preIndex = 0;
@@ -123,10 +123,10 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * 
 	 * return current
 	 * */
-	public Lcp_105_TreeNode build_1(int[] preorder, int inStart, int inEnd, Map<Integer, Integer> memo) {
+	public TreeNode build_1(int[] preorder, int inStart, int inEnd, Map<Integer, Integer> memo) {
 		if (inStart > inEnd) { return null; }
 		
-		Lcp_105_TreeNode current = new Lcp_105_TreeNode(preorder[preIndex]);
+		TreeNode current = new TreeNode(preorder[preIndex]);
 		preIndex++;
 		
 		int rootIndex = memo.get(current.val);
@@ -152,7 +152,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * */
 	int preIndex;
 	int inIndex;
-	public Lcp_105_TreeNode buildTree(int[] preorder, int[] inorder) {
+	public TreeNode buildTree(int[] preorder, int[] inorder) {
 		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
 		
 		preIndex = 0;
@@ -179,7 +179,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * 
 	 * return current
 	 * */
-	public Lcp_105_TreeNode build(int[] preorder, int[] inorder, int rootValue) {
+	public TreeNode build(int[] preorder, int[] inorder, int rootValue) {
 		if (preIndex >= preorder.length) { return null; }
 		
 		if (inorder[inIndex] == rootValue) {
@@ -187,7 +187,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 			return null;
 		}
 		
-		Lcp_105_TreeNode current = new Lcp_105_TreeNode(preorder[preIndex]);
+		TreeNode current = new TreeNode(preorder[preIndex]);
 		preIndex++;
 		
 		current.left = build(preorder, inorder, current.val);

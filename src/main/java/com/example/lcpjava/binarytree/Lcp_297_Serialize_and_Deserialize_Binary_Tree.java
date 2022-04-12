@@ -3,7 +3,7 @@ package com.example.lcpjava.binarytree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.example.lcpjava.common.Lcp_297_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	
@@ -33,15 +33,15 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return sb to string
 	 * */
-	public String serialize_1(Lcp_297_TreeNode root) {
+	public String serialize_1(TreeNode root) {
 		if (root == null) { return null; }
 		
 		StringBuilder sb = new StringBuilder();																		// S : O(n)
-		Queue<Lcp_297_TreeNode> queue = new LinkedList<>();															// S : O(n)
+		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
 		queue.offer(root);																							// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
-			Lcp_297_TreeNode current = queue.poll();																// T : O(1)
+			TreeNode current = queue.poll();																		// T : O(1)
 			if (current == null) {
 				sb.append("N,");																					// T : O(1)
 				continue;
@@ -69,7 +69,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return sb to string
 	 * */
-	public String serialize(Lcp_297_TreeNode root) {
+	public String serialize(TreeNode root) {
 		if (root == null) { return null; }
 		StringBuilder sb = new StringBuilder();																		// S : O(n)
 		preorder(root, sb);
@@ -86,7 +86,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * preorder(current left, sb)
 	 * preorder(current right, sb)
 	 * */
-	public void preorder(Lcp_297_TreeNode current, StringBuilder sb) {
+	public void preorder(TreeNode current, StringBuilder sb) {
 		if (current == null) {
 			sb.append("N,");																						// T : O(1)
 			return;
@@ -130,25 +130,25 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return root
 	 * */
-	public Lcp_297_TreeNode deserialize_1(String data) {
+	public TreeNode deserialize_1(String data) {
 		if (data == null) { return null; }
 		
 		String[] values = data.split(",");																			// T : O(n)
-		Lcp_297_TreeNode root = new Lcp_297_TreeNode(Integer.valueOf(values[0]));
+		TreeNode root = new TreeNode(Integer.valueOf(values[0]));
 		
-		Queue<Lcp_297_TreeNode> queue = new LinkedList<>();															// S : O(n)
+		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(n)
 		queue.offer(root);																							// T : O(1)
 		
 		for (int i = 1; i < values.length; i++) {																	// T : O(n)
-			Lcp_297_TreeNode parent = queue.poll();																	// T : O(1)
+			TreeNode parent = queue.poll();																			// T : O(1)
 			if (!"N".equals(values[i])) {
-				Lcp_297_TreeNode left = new Lcp_297_TreeNode(Integer.valueOf(values[i]));
+				TreeNode left = new TreeNode(Integer.valueOf(values[i]));
 				parent.left = left;
 				queue.offer(left);																					// T : O(1)
 			}
 			i++;
 			if (!"N".equals(values[i])) {
-				Lcp_297_TreeNode right = new Lcp_297_TreeNode(Integer.valueOf(values[i]));
+				TreeNode right = new TreeNode(Integer.valueOf(values[i]));
 				parent.right = right;
 				queue.offer(right);																					// T : O(1)
 			}
@@ -174,7 +174,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return rebuild(queue)
 	 * */
-	public Lcp_297_TreeNode deserialize_2(String data) {
+	public TreeNode deserialize_2(String data) {
 		if (data == null) { return null; }
 		Queue<String> queue = new LinkedList<>();																	// S : O(n)
 		String[] values = data.split(",");																			// T : O(n)
@@ -198,12 +198,12 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return current
 	 * */
-	public Lcp_297_TreeNode rebuild_1(Queue<String> queue) {
+	public TreeNode rebuild_1(Queue<String> queue) {
 		if (queue.isEmpty()) { return null; }																		// T : O(1)
 		String value = queue.poll();																				// T : O(1)
 		if ("N".equals(value)) { return null; }
 		
-		Lcp_297_TreeNode current = new Lcp_297_TreeNode(Integer.valueOf(value));
+		TreeNode current = new TreeNode(Integer.valueOf(value));
 		current.left = rebuild_1(queue);
 		current.right = rebuild_1(queue);
 		
@@ -225,7 +225,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * return rebuild(values length, values)
 	 * */
 	int index;
-	public Lcp_297_TreeNode deserialize_3(String data) {
+	public TreeNode deserialize_3(String data) {
 		if (data == null) { return null; }
 		index = 0;
 		String[] values = data.split(",");																			// T : O(n)
@@ -252,12 +252,12 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return current
 	 * */
-	public Lcp_297_TreeNode rebuild_2(int size, String[] values) {
+	public TreeNode rebuild_2(int size, String[] values) {
 		if (index == size) { return null; }
 		String value = values[index];
 		if ("N".equals(value)) { return null; }
 		
-		Lcp_297_TreeNode current = new Lcp_297_TreeNode(Integer.valueOf(value));
+		TreeNode current = new TreeNode(Integer.valueOf(value));
 		
 		index++;
 		current.left = rebuild_2(size, values);
@@ -280,7 +280,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return rebuild(data)
 	 * */
-	public Lcp_297_TreeNode deserialize(String data) {
+	public TreeNode deserialize(String data) {
 		if (data == null) { return null; }
 		index = 0;
 		return rebuild(data);
@@ -315,7 +315,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 	 * 
 	 * return current
 	 * */
-	public Lcp_297_TreeNode rebuild(String data) {
+	public TreeNode rebuild(String data) {
 		if (data.charAt(index) == 'N') {																			// T : O(1)
 			index += 2;
 			return null;
@@ -336,7 +336,7 @@ public class Lcp_297_Serialize_and_Deserialize_Binary_Tree {
 		
 		if (isMinus) { number = -number; }
 		
-		Lcp_297_TreeNode current = new Lcp_297_TreeNode(number);
+		TreeNode current = new TreeNode(number);
 		current.left = rebuild(data);
 		current.right = rebuild(data);
 		

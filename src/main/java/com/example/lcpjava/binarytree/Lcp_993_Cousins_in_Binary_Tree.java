@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
-import com.example.lcpjava.common.Lcp_993_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_993_Cousins_in_Binary_Tree {
 	
@@ -63,8 +63,8 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 	 * 
 	 * return false
 	 * */
-	public boolean isCousins_1(Lcp_993_TreeNode root, int x, int y) {
-		Queue<Lcp_993_TreeNode> queue = new LinkedList<>();															// S : O(2 ^ depth)
+	public boolean isCousins_1(TreeNode root, int x, int y) {
+		Queue<TreeNode> queue = new LinkedList<>();																	// S : O(2 ^ depth)
 		queue.offer(root);																							// T : O(1)
 		
 		while (!queue.isEmpty()) {																					// T : O(n)
@@ -73,7 +73,7 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 			boolean isY = false;
 			
 			for (int i = 0; i < size; i++) {																		// T : O(2 ^ depth)
-				Lcp_993_TreeNode current = queue.poll();															// T : O(1)
+				TreeNode current = queue.poll();																	// T : O(1)
 				
 				if (current.val == x) { isX = true; }
 				if (current.val == y) { isY = true; }
@@ -117,7 +117,7 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 	 * 
 	 * return true
 	 * */
-	public boolean isCousins_2(Lcp_993_TreeNode root, int x, int y) {
+	public boolean isCousins_2(TreeNode root, int x, int y) {
 		Map<Integer, Integer> parentMap = new HashMap<>();															// S : O(n)
 		Map<Integer, Integer> depthMap = new HashMap<>();															// S : O(n)
 		
@@ -144,7 +144,7 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 	 * DFS(current left, current, depth plus one, parentMap, depthMap)
 	 * DFS(current right, current, depth plus one, parentMap, depthMap)
 	 * */
-	public void DFS_1(Lcp_993_TreeNode current, Lcp_993_TreeNode parent, int depth, Map<Integer, Integer> parentMap, Map<Integer, Integer> depthMap) {
+	public void DFS_1(TreeNode current, TreeNode parent, int depth, Map<Integer, Integer> parentMap, Map<Integer, Integer> depthMap) {
 		if (current == null) { return; }
 		
 		parentMap.put(current.val, parent.val);																		// T : O(1)
@@ -177,7 +177,7 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 	 * 
 	 * return true
 	 * */
-	public boolean isCousins(Lcp_993_TreeNode root, int x, int y) {
+	public boolean isCousins(TreeNode root, int x, int y) {
 		int[] parents = new int[100 + 1];																			// S : O(101)
 		int[] depths = new int[100 + 1];																			// S : O(101)
 		
@@ -204,7 +204,7 @@ public class Lcp_993_Cousins_in_Binary_Tree {
 	 * DFS(current left, current, depth plus one, parents, depths)
 	 * DFS(current right, current, depth plus one, parents, depths)
 	 * */
-	public void DFS(Lcp_993_TreeNode current, Lcp_993_TreeNode parent, int depth, int[] parents, int[] depths) {
+	public void DFS(TreeNode current, TreeNode parent, int depth, int[] parents, int[] depths) {
 		if (current == null) { return; }
 		
 		parents[current.val] = parent.val;

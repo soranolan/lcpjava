@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.lcpjava.common.Lcp_104_TreeNode;
+import com.example.lcpjava.common.TreeNode;
 
 class Lcp_104_Maximum_Depth_of_Binary_TreeTest {
 	
@@ -14,11 +14,11 @@ class Lcp_104_Maximum_Depth_of_Binary_TreeTest {
 		
 		int expected = 3;
 		
-		Lcp_104_TreeNode root = new Lcp_104_TreeNode(3);
-		Lcp_104_TreeNode l1 = new Lcp_104_TreeNode(9);
-		Lcp_104_TreeNode r1 = new Lcp_104_TreeNode(20);
-		Lcp_104_TreeNode r1l1 = new Lcp_104_TreeNode(15);
-		Lcp_104_TreeNode r1r1 = new Lcp_104_TreeNode(7);
+		TreeNode root = new TreeNode(3);
+		TreeNode l1 = new TreeNode(9);
+		TreeNode r1 = new TreeNode(20);
+		TreeNode r1l1 = new TreeNode(15);
+		TreeNode r1r1 = new TreeNode(7);
 		
 		root.left = l1;
 		root.right = r1;
@@ -36,8 +36,8 @@ class Lcp_104_Maximum_Depth_of_Binary_TreeTest {
 		
 		int expected = 2;
 		
-		Lcp_104_TreeNode root = new Lcp_104_TreeNode(1);
-		Lcp_104_TreeNode r1 = new Lcp_104_TreeNode(2);
+		TreeNode root = new TreeNode(1);
+		TreeNode r1 = new TreeNode(2);
 		
 		root.right = r1;
 		
@@ -63,7 +63,7 @@ class Lcp_104_Maximum_Depth_of_Binary_TreeTest {
 		
 		int expected = 1;
 		
-		Lcp_104_TreeNode root = new Lcp_104_TreeNode(0);
+		TreeNode root = new TreeNode(0);
 		
 		int test = lcp.maxDepth(root);
 		
