@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Helper {
+public class MyHashSet_4_Helper {
 	
 	public static List<Node> treeToList(Node current) {
 		List<Node> list = new LinkedList<>();

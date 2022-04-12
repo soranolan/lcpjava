@@ -26,7 +26,7 @@ public class MyHashSet_4 {
 		if (oldNode == null) {
 			bucket[index] = newNode;
 		} else {
-			Helper.addNode(oldNode, newNode);
+			MyHashSet_4_Helper.addNode(oldNode, newNode);
 		}
 		size++;
 		if (size > (int) (LOAD_FACTOR * bucket.length)) { rehash(); }
@@ -36,7 +36,7 @@ public class MyHashSet_4 {
 		int index = hash(key);
 		Node current = bucket[index];
 		if (current == null) { return; }
-		bucket[index] = Helper.removeNode(current, key);
+		bucket[index] = MyHashSet_4_Helper.removeNode(current, key);
 		size--;
 	}
 	
@@ -44,7 +44,7 @@ public class MyHashSet_4 {
 		int index = hash(key);
 		Node current = bucket[index];
 		if (current == null) { return false; }
-		return Helper.containNode(current, key);
+		return MyHashSet_4_Helper.containNode(current, key);
 	}
 	
 	public int hash(int key) {
@@ -58,7 +58,7 @@ public class MyHashSet_4 {
 		bucket = newBucket;
 		for (Node oldNode : oldBucket) {
 			if (oldNode == null) { continue; }
-			List<Node> list = Helper.treeToList(oldNode);
+			List<Node> list = MyHashSet_4_Helper.treeToList(oldNode);
 			Iterator<Node> it = list.iterator();
 			while (it.hasNext()) { add(it.next().val); }
 		}

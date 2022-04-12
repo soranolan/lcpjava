@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class TreeHelper {
+public class MyHashMap_5_Helper {
 	
 	public static List<TreeNode> treeToList(TreeNode current) {
 		List<TreeNode> list = new LinkedList<>();

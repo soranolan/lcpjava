@@ -23,11 +23,11 @@ public class MyHashMap_5 {
 		if (root == null) {
 			bucket[index] = newNode;
 		} else {
-			TreeNode node = TreeHelper.getNode(root, key);
+			TreeNode node = MyHashMap_5_Helper.getNode(root, key);
 			if (node != null) {
 				node.val = value;
 			} else {
-				TreeHelper.addNode(root, newNode);
+				MyHashMap_5_Helper.addNode(root, newNode);
 			}
 		}
 		size++;
@@ -39,7 +39,7 @@ public class MyHashMap_5 {
 		TreeNode root = bucket[index];
 		if (root == null) { return -1; }
 		
-		TreeNode node = TreeHelper.getNode(root, key);
+		TreeNode node = MyHashMap_5_Helper.getNode(root, key);
 		return node != null ? node.val : -1;
 	}
 	
@@ -48,7 +48,7 @@ public class MyHashMap_5 {
 		TreeNode root = bucket[index];
 		if (root == null) { return; }
 		
-		bucket[index] = TreeHelper.removeNode(root, key);
+		bucket[index] = MyHashMap_5_Helper.removeNode(root, key);
 		size--;
 	}
 	
@@ -64,7 +64,7 @@ public class MyHashMap_5 {
 		for (TreeNode oldNode : oldBucket) {
 			if (oldNode == null) { continue; }
 			
-			List<TreeNode> list = TreeHelper.treeToList(oldNode);
+			List<TreeNode> list = MyHashMap_5_Helper.treeToList(oldNode);
 			Iterator<TreeNode> it = list.iterator();
 			
 			while (it.hasNext()) {
