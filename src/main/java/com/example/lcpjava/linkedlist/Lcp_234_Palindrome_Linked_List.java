@@ -3,6 +3,8 @@ package com.example.lcpjava.linkedlist;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.lcpjava.common.ListNode;
+
 public class Lcp_234_Palindrome_Linked_List {
 	
 	/**

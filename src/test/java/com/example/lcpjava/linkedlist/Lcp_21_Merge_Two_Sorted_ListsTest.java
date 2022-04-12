@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.ListNode;
+
 class Lcp_21_Merge_Two_Sorted_ListsTest {
 	
 	@Test

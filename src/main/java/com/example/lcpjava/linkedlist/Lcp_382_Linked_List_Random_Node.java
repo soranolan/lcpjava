@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.example.lcpjava.common.ListNode;
+
 public class Lcp_382_Linked_List_Random_Node {
 	
 	/**

@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.ListNode;
+
 class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	
 	@Test

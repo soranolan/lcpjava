@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.ListNode;
+
 class Lcp_1721_Swapping_Nodes_in_a_Linked_ListTest {
 	
 	@Test

@@ -1,5 +1,7 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.ListNode;
+
 public class Lcp_2_Add_Two_Numbers {
 	
 	/**

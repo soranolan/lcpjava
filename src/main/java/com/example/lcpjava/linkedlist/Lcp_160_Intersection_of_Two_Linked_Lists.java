@@ -1,5 +1,7 @@
 package com.example.lcpjava.linkedlist;
 
+import com.example.lcpjava.common.ListNode;
+
 public class Lcp_160_Intersection_of_Two_Linked_Lists {
 	
 	/**

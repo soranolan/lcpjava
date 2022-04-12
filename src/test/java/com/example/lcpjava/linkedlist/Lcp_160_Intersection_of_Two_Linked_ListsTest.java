@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.lcpjava.common.ListNode;
+
 class Lcp_160_Intersection_of_Two_Linked_ListsTest {
 	
 	@Test

@@ -3,6 +3,8 @@ package com.example.lcpjava.linkedlist;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.lcpjava.common.ListNode;
+
 public class Lcp_1721_Swapping_Nodes_in_a_Linked_List {
 	
 	/**
