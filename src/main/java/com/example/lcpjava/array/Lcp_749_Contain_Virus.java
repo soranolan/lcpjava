@@ -8,6 +8,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 
+import com.example.lcpjava.common.Region;
+
 public class Lcp_749_Contain_Virus {
 	
 	/**

@@ -1,4 +1,4 @@
-package com.example.lcpjava.array;
+package com.example.lcpjava.common;
 
 import java.util.HashSet;
 import java.util.Set;
