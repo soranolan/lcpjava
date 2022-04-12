@@ -1,17 +1,19 @@
 package com.example.lcpjava.hashtable;
 
+import com.example.lcpjava.common.Lcp_706_ListNode;
+
 public class MyHashMap_3 {
 	
 	public static final int INITIAL_SIZE = 16;
 	
 	public static final double LOAD_FACTOR = 0.75D;
 	
-	public ListNode[] bucket;
+	public Lcp_706_ListNode[] bucket;
 	
 	public int size;
 	
 	public MyHashMap_3() {
-		bucket = new ListNode[INITIAL_SIZE];
+		bucket = new Lcp_706_ListNode[INITIAL_SIZE];
 		size = 0;
 	}
 	
@@ -23,8 +25,8 @@ public class MyHashMap_3 {
 	public void putNode(int key, int value) {
 		size++;
 		int index = hash(key);
-		ListNode newNode = new ListNode(key, value);
-		ListNode root = bucket[index];
+		Lcp_706_ListNode newNode = new Lcp_706_ListNode(key, value);
+		Lcp_706_ListNode root = bucket[index];
 		if (root == null) {
 			bucket[index] = newNode;
 			return;
@@ -33,7 +35,7 @@ public class MyHashMap_3 {
 			root.val = value;
 			return;
 		}
-		ListNode current = root;
+		Lcp_706_ListNode current = root;
 		while (current.next != null) {
 			if (current.next.key == key) {
 				current.next.val = value;
@@ -46,8 +48,8 @@ public class MyHashMap_3 {
 	
 	public int get(int key) {
 		int index = hash(key);
-		ListNode root = bucket[index];
-		ListNode current = root;
+		Lcp_706_ListNode root = bucket[index];
+		Lcp_706_ListNode current = root;
 		while (current != null && current.key != key) { current = current.next; }
 		if (current == null || current.key != key) { return -1; }
 		return current.val;
@@ -55,14 +57,14 @@ public class MyHashMap_3 {
 	
 	public void remove(int key) {
 		int index = hash(key);
-		ListNode root = bucket[index];
+		Lcp_706_ListNode root = bucket[index];
 		if (root == null) { return; }
 		if (root.key == key) {
 			bucket[index] = root.next;
 			size--;
 			return;
 		}
-		ListNode current = root;
+		Lcp_706_ListNode current = root;
 		while (current.next != null) {
 			if (current.next.key == key) {
 				current.next = current.next.next;
@@ -79,9 +81,9 @@ public class MyHashMap_3 {
 	
 	public void rehash() {
 		size = 0;
-		ListNode[] oldBucket = bucket;
-		bucket = new ListNode[oldBucket.length * 2];
-		for (ListNode oldNode : oldBucket) {
+		Lcp_706_ListNode[] oldBucket = bucket;
+		bucket = new Lcp_706_ListNode[oldBucket.length * 2];
+		for (Lcp_706_ListNode oldNode : oldBucket) {
 			while (oldNode != null) {
 				putNode(oldNode.key, oldNode.val);
 				oldNode = oldNode.next;
