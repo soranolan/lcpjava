@@ -98,7 +98,7 @@ public class Lcp_2185_Counting_Words_With_a_Given_Prefix {
 	 * 		pIndex++
 	 * end while
 	 * 
-	 * return if pIndex is equal to pLength
+	 * return true
 	 * */
 	public boolean isPrefix(String word, String pref, int pLength) {
 		if (word.length() < pLength) { return false; }
@@ -107,13 +107,10 @@ public class Lcp_2185_Counting_Words_With_a_Given_Prefix {
 		int wIndex = 0;
 		
 		while (pIndex < pLength) {																					// T : O(prefix)
-			if (word.charAt(wIndex) != pref.charAt(pIndex)) { return false; }
-			
-			wIndex++;
-			pIndex++;
+			if (word.charAt(wIndex++) != pref.charAt(pIndex++)) { return false; }
 		}
 		
-		return pIndex == pLength;
+		return true;
 	}
 	
 	/**
