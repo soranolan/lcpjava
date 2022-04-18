@@ -55,6 +55,7 @@ public class Lcp_2185_Counting_Words_With_a_Given_Prefix {
 		return count;
 	}
 	
+	// TODO need some further knowledge of operating system, computer architecture or computer organization to differentiate these methods execution time
 	/**
 	 * time  : O(n * prefix)
 	 * space : O(1)
