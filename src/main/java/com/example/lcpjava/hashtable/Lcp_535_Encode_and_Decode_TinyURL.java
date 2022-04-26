@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * https://leetcode.com/discuss/interview-question/124658/Design-a-URL-Shortener-(-TinyURL-)-System/
  * https://leetcode.com/problems/encode-and-decode-tinyurl/discuss/100268/Two-solutions-and-thoughts
  * https://leetcode.com/problems/encode-and-decode-tinyurl/discuss/1110674/Encode-and-Decode-TinyURL-or-Short-and-Easy-w-explanation
  * */
