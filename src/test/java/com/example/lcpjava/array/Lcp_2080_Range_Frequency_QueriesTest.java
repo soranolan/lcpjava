@@ -12,7 +12,7 @@ class Lcp_2080_Range_Frequency_QueriesTest {
 		int test = -1;
 		
 		int[] arr = { 12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56 };
-		RangeFreqQuery_3 rangeFreqQuery = new RangeFreqQuery_3(arr);
+		RangeFreqQuery rangeFreqQuery = new RangeFreqQuery(arr);
 		
 		expected = 1;
 		test = rangeFreqQuery.query(1, 2, 4);
