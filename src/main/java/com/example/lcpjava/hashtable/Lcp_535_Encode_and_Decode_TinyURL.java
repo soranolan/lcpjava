@@ -21,18 +21,16 @@ public class Lcp_535_Encode_and_Decode_TinyURL {
 	public String encode(String longUrl) {
 		if (long2Short.containsKey(longUrl)) { return long2Short.get(longUrl); }
 		
-		String url = "";
+		String shortUrl = "";
 		
-		while (short2Long.containsKey(url)) {
-			StringBuilder sb = new StringBuilder();
+		while (short2Long.containsKey(shortUrl)) {
+			StringBuilder sb = new StringBuilder(BASE_URL);
 			for (int i = 0; i < 6; i++) {
 				int random = (int) (Math.random() * 62);
 				sb.append(SEED.charAt(random));
 			}
-			url = sb.toString();
+			shortUrl = sb.toString();
 		}
-		
-		String shortUrl = new StringBuilder(BASE_URL).append(url).toString();
 		
 		short2Long.put(shortUrl, longUrl);
 		long2Short.put(longUrl, shortUrl);
