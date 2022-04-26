@@ -10,23 +10,31 @@ import java.util.Map;
  * */
 public class RangeFreqQuery_3 {
 	
-	public Map<Integer, List<Integer>> memo;
+	public Map<Integer, List<Integer>> memo;																		// S : O(n)
 	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * */
 	public RangeFreqQuery_3(int[] arr) {
 		memo = new HashMap<>();
 		
-		for (int i = 0; i < arr.length; i++) {
-			if (!memo.containsKey(arr[i])) { memo.put(arr[i], new ArrayList<>()); }
-			memo.get(arr[i]).add(i);
+		for (int i = 0; i < arr.length; i++) {																		// T : O(n)
+			if (!memo.containsKey(arr[i])) { memo.put(arr[i], new ArrayList<>()); }									// T : O(1)
+			memo.get(arr[i]).add(i);																				// T : O(1)
 		}
 	}
 	
+	/**
+	 * time  : O(log m)
+	 * space : O(1)
+	 * */
 	public int query(int left, int right, int value) {
-		List<Integer> indices = memo.get(value);
+		List<Integer> indices = memo.get(value);																	// T : O(1)
 		if (indices == null || left > indices.get(indices.size() - 1) || right < indices.get(0)) { return 0; }
 		
-		int lowerIndex = lowerBoundBinarySearch(indices, left);
-		int upperIndex = upperBoundBinarySearch(indices, right);
+		int lowerIndex = lowerBoundBinarySearch(indices, left);														// T : O(log m)
+		int upperIndex = upperBoundBinarySearch(indices, right);													// T : O(log m)
 		
 		return upperIndex - lowerIndex - 1;
 	}
