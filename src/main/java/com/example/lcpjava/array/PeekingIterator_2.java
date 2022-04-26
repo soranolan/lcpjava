@@ -3,19 +3,26 @@ package com.example.lcpjava.array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import com.example.lcpjava.common.ListNode;
+
 public class PeekingIterator_2 implements Iterator<Integer> {
 	
-	Integer nextValue;
-	
-	Iterator<Integer> it;
+	ListNode head;
 	
 	/**
-	 * time  : O(1)
+	 * time  : O(n)
 	 * space : O(1)
 	 * */
 	public PeekingIterator_2(Iterator<Integer> iterator) {
-		it = iterator;
-		nextValue = it.hasNext() ? it.next() : null;
+		head = new ListNode(-1);
+		ListNode tail = head;
+		
+		while (iterator.hasNext()) {																				// T : O(n)
+			tail.next = new ListNode(iterator.next());
+			tail = tail.next;
+		}
+		
+		head = head.next;
 	}
 	
 	/**
@@ -24,7 +31,7 @@ public class PeekingIterator_2 implements Iterator<Integer> {
 	 * */
 	public Integer peek() {
 		if (!hasNext()) { throw new NoSuchElementException(); }
-		return nextValue;
+		return head.val;
 	}
 	
 	/**
@@ -34,9 +41,8 @@ public class PeekingIterator_2 implements Iterator<Integer> {
 	@Override
 	public Integer next() {
 		if (!hasNext()) { throw new NoSuchElementException(); }
-		
-		int result = nextValue;
-		nextValue = it.hasNext() ? it.next() : null;
+		int result = head.val;
+		head = head.next;
 		return result;
 	}
 	
@@ -46,7 +52,7 @@ public class PeekingIterator_2 implements Iterator<Integer> {
 	 * */
 	@Override
 	public boolean hasNext() {
-		return nextValue != null;
+		return head != null;
 	}
 	
 }
