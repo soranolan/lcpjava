@@ -21,7 +21,7 @@ public class Lcp_535_Encode_and_Decode_TinyURL {
 	public String encode(String longUrl) {
 		if (long2Short.containsKey(longUrl)) { return long2Short.get(longUrl); }
 		
-		String shortUrl = "";
+		String shortUrl = null;
 		
 		while (short2Long.containsKey(shortUrl)) {
 			StringBuilder sb = new StringBuilder(BASE_URL);
