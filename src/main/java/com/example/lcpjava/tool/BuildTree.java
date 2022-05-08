@@ -8,6 +8,8 @@ import com.example.lcpjava.common.TreeNode;
 public class BuildTree {
 	
 	public TreeNode preorder(Integer[] nodes) {
+		if (nodes == null || nodes.length == 0) { return null; }
+		
 		TreeNode root = new TreeNode(nodes[0]);
 		
 		Queue<TreeNode> queue = new LinkedList<>();
