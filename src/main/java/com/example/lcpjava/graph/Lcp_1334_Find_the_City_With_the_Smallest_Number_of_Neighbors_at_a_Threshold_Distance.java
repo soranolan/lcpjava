@@ -303,7 +303,7 @@ public class Lcp_1334_Find_the_City_With_the_Smallest_Number_of_Neighbors_at_a_T
 	}
 	
 	private void dijkstra(int n, List<List<int[]>> graph, int[] distance, int source) {
-		PriorityQueue<int[]> minHeap = new PriorityQueue<>((offer, previous) -> (offer[1] - previous[1]));
+		Queue<int[]> minHeap = new PriorityQueue<>((offer, previous) -> (offer[1] - previous[1]));
 		minHeap.add(new int[] { source, 0 });
 		
 		while (!minHeap.isEmpty()) {
