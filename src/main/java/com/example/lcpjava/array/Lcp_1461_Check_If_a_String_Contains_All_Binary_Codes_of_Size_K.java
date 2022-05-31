@@ -65,6 +65,8 @@ public class Lcp_1461_Check_If_a_String_Contains_All_Binary_Codes_of_Size_K {
 	 * time  : O(n)
 	 * space : O(2 ^ k)
 	 * 
+	 * Rolling Hash
+	 * 
 	 * https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/discuss/1105885/Check-If-a-String-Contains-All-Binary-Codes-of-Size-K-or-Short-and-Easy-w-explanation
 	 * */
 	public boolean hasAllCodes(String s, int k) {
