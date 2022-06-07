@@ -1,5 +1,6 @@
 package com.example.lcpjava.tool;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,7 +9,13 @@ import com.example.lcpjava.common.TreeNode;
 public class BuildTree {
 	
 	public TreeNode preorder(Integer[] nodes) {
-		if (nodes == null || nodes.length == 0) { return null; }
+		int length = nodes.length;
+		if (nodes == null || length == 0) { return null; }
+		if (length % 2 == 0) {
+			System.out.println(Arrays.deepToString(nodes));
+			System.out.println("length is even");
+			return null;
+		}
 		
 		TreeNode root = new TreeNode(nodes[0]);
 		
@@ -17,7 +24,7 @@ public class BuildTree {
 		
 		int index = 1;
 		
-		while (!queue.isEmpty() && index < nodes.length) {
+		while (!queue.isEmpty() && index < length) {
 			TreeNode current = queue.poll();
 			if (current == null) { continue; }
 			

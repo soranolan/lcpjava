@@ -2,14 +2,20 @@ package com.example.lcpjava.array;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Lcp_88_Merge_Sorted_ArrayTest {
 	
+	private Lcp_88_Merge_Sorted_Array lcp;
+	
+	@BeforeEach
+	void beforeEach() {
+		lcp = new Lcp_88_Merge_Sorted_Array();
+	}
+	
 	@Test
 	void test_case_1() {
-		Lcp_88_Merge_Sorted_Array lcp = new Lcp_88_Merge_Sorted_Array();
-		
 		int[] expected = { 1, 2, 2, 3, 5, 6 };
 		int[] test = { 1, 2, 3, 0, 0, 0 };
 		int m = 3;
@@ -22,8 +28,6 @@ class Lcp_88_Merge_Sorted_ArrayTest {
 	
 	@Test
 	void test_case_2() {
-		Lcp_88_Merge_Sorted_Array lcp = new Lcp_88_Merge_Sorted_Array();
-		
 		int[] expected = { 1 };
 		int[] test = { 1 };
 		int m = 1;
@@ -36,8 +40,6 @@ class Lcp_88_Merge_Sorted_ArrayTest {
 	
 	@Test
 	void test_case_3() {
-		Lcp_88_Merge_Sorted_Array lcp = new Lcp_88_Merge_Sorted_Array();
-		
 		int[] expected = { 1 };
 		int[] test = { 0 };
 		int m = 0;
