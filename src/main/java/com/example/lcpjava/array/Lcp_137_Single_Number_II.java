@@ -31,6 +31,23 @@ public class Lcp_137_Single_Number_II {
 	 * space : O(1)
 	 * 
 	 * https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx
+	 * 
+	 * 
+	 * if ones does not contain number
+	 * 		if twos does not contain number
+	 * 			ones add number
+	 * 		end if
+	 * else
+	 * 		ones remove number
+	 * end if
+	 * 
+	 * if twos does not contain number
+	 * 		if ones does not contain number
+	 * 			twos add number
+	 * 		end if
+	 * else
+	 * 		twos remove number
+	 * end if
 	 * */
 	public int singleNumber(int[] nums) {
 		int ones = 0;
