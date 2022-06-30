@@ -51,6 +51,7 @@ public class Lcp_462_Minimum_Moves_to_Equal_Array_Elements_II {
 	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/1217473/C%2B%2BPythonJava-2-Solutions-(w-and-wo-Median)-Explained-with-Example-implementation
 	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/1217378/Short-and-Easy-Solution-or-Meet-at-the-Median
 	 * https://math.stackexchange.com/questions/113270/the-median-minimizes-the-sum-of-absolute-deviations-the-ell-1-norm
+	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/94932/Why-median-is-better-than-average
 	 * */
 	public int minMoves2_2(int[] nums) {
 		Arrays.sort(nums);																							// T : O(n log n)
