@@ -98,6 +98,8 @@ public class Lcp_462_Minimum_Moves_to_Equal_Array_Elements_II {
 	 * 
 	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/94917/Java-O(n)-Time-using-QuickSelect
 	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/94937/Java(just-like-meeting-point-problem)
+	 * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/discuss/2215782/Visual-Explanation-%2B-Interview-Tips-or-JAVA
+	 * https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/2180600/A-Guide-to-Quick-Select-or-JAVA
 	 * */
 	
 }
