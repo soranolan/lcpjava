@@ -12,43 +12,10 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * if inorder is equal to null || postorder is equal to null || inorder length is not equal to postorder length
-	 * 		return null
-	 * end if
-	 * 
-	 * int preIndex <- 0
-	 * int inIndex <- 0
-	 * 
-	 * TreeNode root <- new TreeNode(preorder[preIndex])
-	 * preIndex++
-	 * 
-	 * Stack<TreeNode> stack <- new Stack
-	 * stack push(root)
-	 * 
-	 * while preIndex is lower than preorder length
-	 * 		TreeNode current <- stack peek
-	 * 		if current val is not equal to inorder[inIndex]
-	 * 			TreeNode left <- new TreeNode(preorder[preIndex])
-	 * 			current left <- left
-	 * 			stack push(left)
-	 * 			preIndex++
-	 * 		else
-	 * 			while stack is not empty && stack peek val is equal to inorder[inIndex]
-	 * 				current <- stack pop
-	 * 				inIndex++
-	 * 			end while
-	 * 			
-	 * 			TreeNode right <- new TreeNode(preorder[preIndex])
-	 * 			current right <- right
-	 * 			stack push(right)
-	 * 			preIndx++
-	 * 		end if
-	 * end while
-	 * 
-	 * return root
+	 * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/34555/The-iterative-solution-is-easier-than-you-think!
 	 * */
 	public TreeNode buildTree_1(int[] preorder, int[] inorder) {
-		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
+		if (preorder.length != inorder.length) { return null; }
 		
 		int preIndex = 0;
 		int inIndex = 0;
@@ -61,6 +28,7 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 		
 		while (preIndex < preorder.length) {																		// T : O(n)
 			TreeNode current = stack.peek();																		// T : O(1)
+			
 			if (current.val != inorder[inIndex]) {
 				TreeNode left = new TreeNode(preorder[preIndex]);
 				current.left = left;
@@ -86,114 +54,94 @@ public class Lcp_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * if preorder is equal to null || inorder is equal to null || preorder length is not equal to inorder length
-	 * 		return null
-	 * end if
-	 * 
-	 * preIndex <- 0
-	 * Map<Integer, Integer> memo <- new HashMap
-	 * for int i <- 0; if i is lower than inorder length; i++
-	 * 		memo put(inorder[i], i)
-	 * end for
-	 * 
-	 * return build(preorder, 0, inorder length minus one, memo)
+	 * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/34538/My-Accepted-Java-Solution
 	 * */
 	public TreeNode buildTree_2(int[] preorder, int[] inorder) {
-		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
+		if (preorder.length != inorder.length) { return null; }
 		
-		preIndex = 0;
-		Map<Integer, Integer> memo = new HashMap<>();																// S : O(n)
-		for (int i = 0; i < inorder.length; i++) { memo.put(inorder[i], i); }										// T : O(n)
+		int[] preIndex = new int[1];
 		
-		return build_1(preorder, 0, inorder.length - 1, memo);
+		Map<Integer, Integer> value2Index = new HashMap<>();														// S : O(n)
+		for (int i = 0; i < inorder.length; i++) { value2Index.put(inorder[i], i); }								// T : O(n)
+		
+		return build_1(preIndex, preorder, 0, inorder.length - 1, value2Index);
 	}
 	
-	/**
-	 * if inStart is greater than inEnd
-	 * 		return null
-	 * end if
-	 * 
-	 * TreeNode current <- new TreeNode(preorder[preIndex])
-	 * preIndex++
-	 * 
-	 * int rootIndex <- memo get(current val)
-	 * 
-	 * current left <- build(preorder, inStart, rootIndex minus one, memo)
-	 * current right <- build(preorder, rootIndex plus one, inEnd, memo)
-	 * 
-	 * return current
-	 * */
-	public TreeNode build_1(int[] preorder, int inStart, int inEnd, Map<Integer, Integer> memo) {
+	private TreeNode build_1(int[] preIndex, int[] preorder, int inStart, int inEnd, Map<Integer, Integer> value2Index) {
 		if (inStart > inEnd) { return null; }
 		
-		TreeNode current = new TreeNode(preorder[preIndex]);
-		preIndex++;
+		TreeNode root = new TreeNode(preorder[preIndex[0]]);
+		preIndex[0]++;
 		
-		int rootIndex = memo.get(current.val);
+		int rootIndex = value2Index.get(root.val);
 		
-		current.left = build_1(preorder, inStart, rootIndex - 1, memo);
-		current.right = build_1(preorder, rootIndex + 1, inEnd, memo);
+		root.left = build_1(preIndex, preorder, inStart, rootIndex - 1, value2Index);
+		root.right = build_1(preIndex, preorder, rootIndex + 1, inEnd, value2Index);
 		
-		return current;
+		return root;
 	}
 	
 	/**
 	 * time  : O(n)
 	 * space : O(n)
-	 * 
-	 * if preorder is equal to null || inorder is equal to null || preorder length is not equal to inorder length
-	 * 		return null
-	 * end if
-	 * 
-	 * preIndex <- 0
-	 * inIndex <- 0
-	 * 
-	 * return build(preorder, inorder, -3001)
 	 * */
-	int preIndex;
-	int inIndex;
-	public TreeNode buildTree(int[] preorder, int[] inorder) {
-		if (preorder == null || inorder == null || preorder.length != inorder.length) { return null; }
+	public TreeNode buildTree_3(int[] preorder, int[] inorder) {
+		if (preorder.length != inorder.length) { return null; }
 		
-		preIndex = 0;
-		inIndex = 0;
+		int[] preIndex = new int[1];
+		int[] inIndex = new int[1];
 		
-		return build(preorder, inorder, -3001);
+		return build_2(preIndex, inIndex, preorder, inorder, -3001);
 	}
 	
-	/**
-	 * if preIndex is greater than or equal to preorder length
-	 * 		return null
-	 * end if
-	 * 
-	 * if inorder[inIndex] is equal to rootValue
-	 * 		inIndex++
-	 * 		return null
-	 * end if
-	 * 
-	 * TreeNode current <- new TreeNode(preorder[preIndex])
-	 * preIndex++
-	 * 
-	 * current left <- build(preorder, inorder, current val)
-	 * current right <- build(preorder, inorder, rootValue)
-	 * 
-	 * return current
-	 * */
-	public TreeNode build(int[] preorder, int[] inorder, int rootValue) {
-		if (preIndex >= preorder.length) { return null; }
+	private TreeNode build_2(int[] preIndex, int[] inIndex, int[] preorder, int[] inorder, int rootValue) {
+		if (preIndex[0] >= preorder.length) { return null; }
 		
-		if (inorder[inIndex] == rootValue) {
-			inIndex++;
+		if (inorder[inIndex[0]] == rootValue) {
+			inIndex[0]++;
 			return null;
 		}
 		
-		TreeNode current = new TreeNode(preorder[preIndex]);
-		preIndex++;
+		TreeNode root = new TreeNode(preorder[preIndex[0]]);
+		preIndex[0]++;
 		
-		current.left = build(preorder, inorder, current.val);
-		current.right = build(preorder, inorder, rootValue);
+		root.left = build_2(preIndex, inIndex, preorder, inorder, root.val);
+		root.right = build_2(preIndex, inIndex, preorder, inorder, rootValue);
 		
-		return current;
+		return root;
+	}
+	
+	/**
+	 * Accepted Solutions Runtime Distribution
+	 * */
+	public TreeNode buildTree(int[] preorder, int[] inorder) {
+		if (preorder.length != inorder.length) { return null; }
+		
+		int[] preIndex = new int[1];
+		
+		return build(preIndex, preorder, 0, inorder.length - 1, inorder);
+	}
+	
+	private TreeNode build(int[] preIndex, int[] preorder, int inStart, int inEnd, int[] inorder) {
+		if (inStart > inEnd) { return null; }
+		
+		TreeNode root = new TreeNode(preorder[preIndex[0]]);
+		preIndex[0]++;
+		
+		int rootIndex = findIndex(inStart, inEnd, root.val, inorder);
+		
+		root.left = build(preIndex, preorder, inStart, rootIndex - 1, inorder);
+		root.right = build(preIndex, preorder, rootIndex + 1, inEnd, inorder);
+		
+		return root;
+	}
+	
+	private int findIndex(int inStart, int inEnd, int target, int[] inorder) {
+		while (inStart < inEnd && inorder[inStart] != target && inorder[inEnd] != target) {
+			inStart++;
+			inEnd--;
+		}
+		return inorder[inStart] == target ? inStart : inEnd;
 	}
 	
 }
