@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class Lcp_5_Longest_Palindromic_SubstringTest {
+class Lcp_5_Longest_Palindromic_SubstringTest {
 	
 	private Lcp_5_Longest_Palindromic_Substring lcp;
 	
