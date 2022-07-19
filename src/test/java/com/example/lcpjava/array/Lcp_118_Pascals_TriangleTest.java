@@ -2,49 +2,29 @@ package com.example.lcpjava.array;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Lcp_118_Pascals_TriangleTest {
 	
+	private Lcp_118_Pascals_Triangle lcp;
+	
+	@BeforeEach
+	void beforeEach() {
+		lcp = new Lcp_118_Pascals_Triangle();
+	}
+	
 	@Test
 	void test_case_1() {
-		Lcp_118_Pascals_Triangle lcp = new Lcp_118_Pascals_Triangle();
-		
-		List<Integer> inner1 = new ArrayList<>();
-		inner1.add(1);
-		
-		List<Integer> inner2 = new ArrayList<>();
-		inner2.add(1);
-		inner2.add(1);
-		
-		List<Integer> inner3 = new ArrayList<>();
-		inner3.add(1);
-		inner3.add(2);
-		inner3.add(1);
-		
-		List<Integer> inner4 = new ArrayList<>();
-		inner4.add(1);
-		inner4.add(3);
-		inner4.add(3);
-		inner4.add(1);
-		
-		List<Integer> inner5 = new ArrayList<>();
-		inner5.add(1);
-		inner5.add(4);
-		inner5.add(6);
-		inner5.add(4);
-		inner5.add(1);
-		
-		List<List<Integer>> expected = new ArrayList<>();
-		expected.add(inner1);
-		expected.add(inner2);
-		expected.add(inner3);
-		expected.add(inner4);
-		expected.add(inner5);
-		
+		List<List<Integer>> expected = Arrays
+											.stream(new Integer[][] { { 1 }, { 1, 1 }, { 1, 2, 1 }, { 1, 3, 3, 1 }, { 1, 4, 6, 4, 1 } })
+											.map(Arrays::stream)
+											.map(value -> value.collect(Collectors.toList()))
+											.collect(Collectors.toList());
 		int input = 5;
 		List<List<Integer>> test = lcp.generate(input);
 		
@@ -53,12 +33,11 @@ class Lcp_118_Pascals_TriangleTest {
 	
 	@Test
 	void test_case_2() {
-		Lcp_118_Pascals_Triangle lcp = new Lcp_118_Pascals_Triangle();
-		
-		List<Integer> inner1 = new ArrayList<>();
-		inner1.add(1);
-		List<List<Integer>> expected = new ArrayList<>();
-		expected.add(inner1);
+		List<List<Integer>> expected = Arrays
+											.stream(new Integer[][] { { 1 } })
+											.map(Arrays::stream)
+											.map(value -> value.collect(Collectors.toList()))
+											.collect(Collectors.toList());
 		
 		int input = 1;
 		List<List<Integer>> test = lcp.generate(input);
