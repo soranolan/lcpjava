@@ -13,7 +13,7 @@ public class BuildTree {
 		if (nodes == null || length == 0) { return null; }
 		if (length % 2 == 0) {
 			System.out.println(Arrays.deepToString(nodes));
-			System.out.println("length is even");
+			System.out.println("length is even, should be odd");
 			return null;
 		}
 		
