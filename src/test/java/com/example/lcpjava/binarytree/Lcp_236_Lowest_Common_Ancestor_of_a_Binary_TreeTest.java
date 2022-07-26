@@ -2,80 +2,55 @@ package com.example.lcpjava.binarytree;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.lcpjava.common.TreeNode;
+import com.example.lcpjava.tool.BuildTree;
 
 class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_TreeTest {
 	
+	private Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree lcp;
+	
+	private BuildTree tool;
+	
+	@BeforeEach
+	void beforeEach() {
+		lcp = new Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree();
+		tool = new BuildTree();
+	}
+	
 	@Test
 	void test_case_1() {
-		Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree lcp = new Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree();
+		TreeNode root = tool.preorder(new Integer[] { 3, 5, 1, 6, 2, 0, 8, null, null, 7, 4 });
+		TreeNode p = root.left;
+		TreeNode q = root.right;
 		
-		TreeNode root = new TreeNode(3);
-		TreeNode l1 = new TreeNode(5);
-		TreeNode l1l1 = new TreeNode(6);
-		TreeNode l1r1 = new TreeNode(2);
-		TreeNode l1r1l1 = new TreeNode(7);
-		TreeNode l1r1r1 = new TreeNode(4);
-		TreeNode r1 = new TreeNode(1);
-		TreeNode r1l1 = new TreeNode(0);
-		TreeNode r1r1 = new TreeNode(8);
-		
-		root.left = l1;
-		l1.left = l1l1;
-		l1.right = l1r1;
-		l1r1.left = l1r1l1;
-		l1r1.right = l1r1r1;
-		root.right = r1;
-		r1.left = r1l1;
-		r1.right = r1r1;
-		
-		TreeNode test = lcp.lowestCommonAncestor(root, l1, r1);
+		TreeNode test = lcp.lowestCommonAncestor(root, p, q);
 		
 		assertThat(test).isEqualTo(root);
 	}
 	
 	@Test
 	void test_case_2() {
-		Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree lcp = new Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree();
+		TreeNode root = tool.preorder(new Integer[] { 3, 5, 1, 6, 2, 0, 8, null, null, 7, 4 });
+		TreeNode p = root.left;
+		TreeNode q = root.left.right.right;
 		
-		TreeNode root = new TreeNode(3);
-		TreeNode l1 = new TreeNode(5);
-		TreeNode l1l1 = new TreeNode(6);
-		TreeNode l1r1 = new TreeNode(2);
-		TreeNode l1r1l1 = new TreeNode(7);
-		TreeNode l1r1r1 = new TreeNode(4);
-		TreeNode r1 = new TreeNode(1);
-		TreeNode r1l1 = new TreeNode(0);
-		TreeNode r1r1 = new TreeNode(8);
+		TreeNode test = lcp.lowestCommonAncestor(root, p, q);
 		
-		root.left = l1;
-		l1.left = l1l1;
-		l1.right = l1r1;
-		l1r1.left = l1r1l1;
-		l1r1.right = l1r1r1;
-		root.right = r1;
-		r1.left = r1l1;
-		r1.right = r1r1;
-		
-		TreeNode test = lcp.lowestCommonAncestor(root, l1, l1r1r1);
-		
-		assertThat(test).isEqualTo(l1);
+		assertThat(test).isEqualTo(p);
 	}
 	
 	@Test
 	void test_case_3() {
-		Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree lcp = new Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree();
+		TreeNode root = tool.preorder(new Integer[] { 1, 2, null });
+		TreeNode p = root;
+		TreeNode q = root.left;
 		
-		TreeNode root = new TreeNode(1);
-		TreeNode l1 = new TreeNode(2);
+		TreeNode test = lcp.lowestCommonAncestor(root, p, q);
 		
-		root.left = l1;
-		
-		TreeNode test = lcp.lowestCommonAncestor(root, root, l1);
-		
-		assertThat(test).isEqualTo(root);
+		assertThat(test).isEqualTo(p);
 	}
 	
 }
