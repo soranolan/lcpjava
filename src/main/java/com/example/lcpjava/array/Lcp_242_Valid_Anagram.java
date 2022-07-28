@@ -60,9 +60,16 @@ public class Lcp_242_Valid_Anagram {
 	 * time  : O(t + s)
 	 * space : O(t + s)
 	 * 
-	 * TODO
+	 * TODO need to know more about Unicode
+	 * 
 	 * https://leetcode.com/problems/valid-anagram/discuss/66533/Java-solution-HashMap-Unicode-Follow-up
 	 * http://www.unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries
+	 * https://leetcode.com/problems/valid-anagram/discuss/66777/Unicode-and-supplementary-characters
+	 * https://cloud.tencent.com/developer/article/1642354
+	 * https://blog.cruciferslab.net/?p=477&referrer-analytics=1
+	 * https://zhuanlan.zhihu.com/p/53714077
+	 * https://en.wikipedia.org/wiki/Character_encoding
+	 * https://en.wikipedia.org/wiki/Code_point
 	 * */
 	public boolean isAnagram(String s, String t) {
 		if (s.length() != t.length()) { return false; }

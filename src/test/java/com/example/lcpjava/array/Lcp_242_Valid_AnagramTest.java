@@ -68,4 +68,22 @@ class Lcp_242_Valid_AnagramTest {
 		assertThat(test).isTrue();
 	}
 	
+	@Test
+	void test_case_7() {
+		String s = "\uD87E\uDC1A\uD87E\uDC28";
+		String t = "\uD87E\uDC28\uD87E\uDC1A";
+		boolean test = lcp.isAnagram(s, t);
+		
+		assertThat(test).isTrue();
+	}
+	
+	@Test
+	void test_case_8() {
+		String s = "\uD87E\uDC1A\uD87E\uDC28";
+		String t = "\uDC1A\uD87E\uD87E\uDC28";
+		boolean test = lcp.isAnagram(s, t);
+		
+		assertThat(test).isFalse();
+	}
+	
 }
