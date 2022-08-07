@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
-import com.example.lcpjava.common.Pair;
+import com.example.lcpjava.common.Lcp_236_Pair;
 import com.example.lcpjava.common.TreeNode;
 
 public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
@@ -65,15 +65,15 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 	public TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null) { return null; }
 		
-		Stack<Pair> stack = new Stack<Pair>();																		// S : O(n)
-		stack.push(new Pair(root, BOTH_PENDING));																	// T : O(1)
+		Stack<Lcp_236_Pair> stack = new Stack<Lcp_236_Pair>();														// S : O(n)
+		stack.push(new Lcp_236_Pair(root, BOTH_PENDING));															// T : O(1)
 		
 		boolean foundOne = false;
 		TreeNode lca = null;
 		TreeNode child = null;
 		
 		while (!stack.isEmpty()) {
-			Pair top = stack.pop();																					// T : O(1)
+			Lcp_236_Pair top = stack.pop();																			// T : O(1)
 			TreeNode current = top.getNode();
 			int state = top.getState();
 			
@@ -87,8 +87,8 @@ public class Lcp_236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 			if (state == LEFT_DONE) { child = current.right; }
 			
 			if (state == BOTH_PENDING || state == LEFT_DONE) {
-				stack.push(new Pair(current, state - 1));															// T : O(1)
-				if (child != null) { stack.push(new Pair(child, BOTH_PENDING)); }									// T : O(1)
+				stack.push(new Lcp_236_Pair(current, state - 1));													// T : O(1)
+				if (child != null) { stack.push(new Lcp_236_Pair(child, BOTH_PENDING)); }							// T : O(1)
 				continue;
 			}
 			

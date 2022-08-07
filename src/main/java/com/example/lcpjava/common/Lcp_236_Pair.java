@@ -1,14 +1,14 @@
 package com.example.lcpjava.common;
 
-public class Pair {
+public class Lcp_236_Pair {
 	
 	private TreeNode node;
 	
 	private Integer state;
 	
-	public Pair() {  }
+	public Lcp_236_Pair() {  }
 	
-	public Pair(TreeNode node, Integer state) {
+	public Lcp_236_Pair(TreeNode node, Integer state) {
 		this.node = node;
 		this.state = state;
 	}
