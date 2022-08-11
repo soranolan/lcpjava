@@ -36,4 +36,12 @@ class Lcp_98_Validate_Binary_Search_TreeTest {
 		assertThat(test).isFalse();
 	}
 	
+	@Test
+	void test_case_3() {
+		TreeNode root = tool.preorder(new Integer[] { 5, 4, 6, null, null, 3, 7 });
+		boolean test = lcp.isValidBST(root);
+		
+		assertThat(test).isFalse();
+	}
+	
 }
