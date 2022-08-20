@@ -23,7 +23,7 @@ public class Lcp_871_Minimum_Number_of_Refueling_Stops {
 		
 		for (int atStation = 1; atStation <= n; atStation++) {														// T : O(n)
 			for (int stopCount = 1; stopCount <= atStation; stopCount++) {											// T : O(n)
-				// if chose not adding fuel, then is the same with previous distance
+				// if choose not adding fuel, then is the same with previous distance
 				distance[atStation][stopCount] = distance[atStation - 1][stopCount];
 				
 				int position = stations[atStation - 1][0];
