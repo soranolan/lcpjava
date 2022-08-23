@@ -2,6 +2,7 @@ package com.example.lcpjava.linkedlist;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 import com.example.lcpjava.common.ListNode;
 
@@ -11,41 +12,75 @@ public class Lcp_234_Palindrome_Linked_List {
 	 * time  : O(n)
 	 * space : O(n)
 	 * 
-	 * List<Integer> container <- empty ArrayList
-	 * 
-	 * ListNode current <- head
-	 * while current is not equal to null
-	 * 		container add current val
-	 * 		current <- current next
-	 * end while
-	 * 
-	 * int left <- 0
-	 * int right <- container size
-	 * 
-	 * while left is lower than right
-	 * 		if container get(left) is not equal to container get(right minus one)
-	 * 			return false
-	 * 		end if
-	 * 		left++
-	 * 		right--
-	 * end while
-	 * 
-	 * return true
+	 * https://leetcode.com/problems/palindrome-linked-list/discuss/1137696/Short-and-Easy-w-Explanation-or-T-%3A-O(N)-S-%3A-O(1)-Solution-using-Fast-and-Slow
 	 * */
 	public boolean isPalindrome_1(ListNode head) {
-		List<Integer> container = new ArrayList<>();
+		Stack<Integer> stack = new Stack<>();																		// S : O(n)
 		
 		ListNode current = head;
 		while (current != null) {																					// T : O(n)
-			container.add(current.val);																				// T : O(1); S : O(n)
+			stack.push(current.val);
+			current = current.next;
+		}
+		
+		current = head;
+		while (!stack.isEmpty()) {																					// T : O(n)
+			if (stack.pop() != current.val) { return false; }
+			current = current.next;
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(n / 2)
+	 * 
+	 * https://leetcode.com/problems/palindrome-linked-list/discuss/148220/Javathe-clear-method-with-stack
+	 * */
+	public boolean isPalindrome_2(ListNode head) {
+		Stack<Integer> stack = new Stack<>();																		// S : O(n / 2)
+		
+		ListNode slow = head;
+		ListNode fast = head;
+		
+		while (fast != null && fast.next != null) {																	// T : O(n / 2)
+			stack.push(slow.val);
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		// if n is odd
+		if (fast != null) { slow = slow.next; }
+		
+		while (slow != null) {																						// T : O(n / 2)
+			if (!stack.isEmpty() && stack.pop() != slow.val) { return false; }
+			slow = slow.next;
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * 
+	 * https://leetcode.com/problems/palindrome-linked-list/discuss/1610149/C%2B%2B-or-Two-Approaches-with-explanation-or-O(N)-Solution-or-Easy-to-understand
+	 * */
+	public boolean isPalindrome_3(ListNode head) {
+		List<Integer> bucket = new ArrayList<>();																	// S : O(n)
+		
+		ListNode current = head;
+		while (current != null) {																					// T : O(n)
+			bucket.add(current.val);																				// T : O(1);
 			current = current.next;
 		}
 		
 		int left = 0;
-		int right = container.size();
+		int right = bucket.size();
 		
 		while (left < right) {																						// T : O(n)
-			if (container.get(left) != container.get(right - 1)) { return false; }									// T : O(1)
+			if (bucket.get(left) != bucket.get(right - 1)) { return false; }										// T : O(1)
 			left++;
 			right--;
 		}
@@ -57,63 +92,29 @@ public class Lcp_234_Palindrome_Linked_List {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
-	 * if head is equal to null || head next is equal to null
-	 * 		return true
-	 * end if
-	 * 
-	 * ListNode firstTail <- findFirstTail(head)
-	 * ListNode secondHead <- reverse(firstTail next)
-	 * 
-	 * ListNode first <- head
-	 * ListNode second <- secondHead
-	 * 
-	 * while second is not equal to null
-	 * 		if first val is not equal to second val
-	 * 			return false
-	 * 		end if
-	 * 		first <- first next
-	 * 		second <- second next
-	 * end while
-	 * 
-	 * return true
+	 * https://leetcode.com/problems/palindrome-linked-list/discuss/64501/Java-easy-to-understand
 	 * */
 	public boolean isPalindrome(ListNode head) {
-		if (head == null || head.next == null) { return true; }
+		ListNode rightPart = findRightPart(head);																	// T : O(n / 2)
 		
-		ListNode firstTail = findFirstTail(head);																	// T : O(n)
-		ListNode secondHead = reverse(firstTail.next);																// T : O(n)
+		ListNode right = reverse(rightPart);																		// T : O(n / 2)
 		
-		ListNode first = head;
-		ListNode second = secondHead;
+		ListNode left = head;
 		
-		while (second != null) {																					// T : O(n)
-			if (first.val != second.val) { return false; }
-			first = first.next;
-			second = second.next;
+		while (right != null) {																						// T : O(n / 2)
+			if (left.val != right.val) { return false; }
+			left = left.next;
+			right = right.next;
 		}
 		
 		return true;
 	}
 	
-	/**
-	 * time  : O(n)
-	 * space : O(1)
-	 * 
-	 * ListNode slow <- head
-	 * ListNode fast <- head
-	 * 
-	 * while fast next is not equal to null && fast next next is not equal to null
-	 * 		slow <- slow next
-	 * 		fast <- fast next next
-	 * end while
-	 * 
-	 * return slow
-	 * */
-	public ListNode findFirstTail(ListNode head) {
+	private ListNode findRightPart(ListNode head) {
 		ListNode slow = head;
 		ListNode fast = head;
 		
-		while (fast.next != null && fast.next.next != null) {														// T : O(n)
+		while (fast != null && fast.next != null) {																	// T : O(n / 2)
 			slow = slow.next;
 			fast = fast.next.next;
 		}
@@ -121,31 +122,16 @@ public class Lcp_234_Palindrome_Linked_List {
 		return slow;
 	}
 	
-	/**
-	 * time  : O(n)
-	 * space : O(1)
-	 * 
-	 * ListNode current <- head
-	 * ListNode newHead <- head
-	 * 
-	 * while current next is not equal to null
-	 * 		ListNode temp <- current next
-	 * 		current next <- current next next
-	 * 		temp next <- newHead
-	 * 		newHead <- temp
-	 * end while
-	 * 
-	 * return newHead
-	 * */
-	public ListNode reverse(ListNode head) {
-		ListNode current = head;
+	private ListNode reverse(ListNode head) {
 		ListNode newHead = head;
+		ListNode current = head;
 		
-		while (current.next != null) {																				// T : O(n)
-			ListNode temp = current.next;
+		while (current.next != null) {																				// T : O(n / 2)
+			ListNode nextNode = current.next;
 			current.next = current.next.next;
-			temp.next = newHead;
-			newHead = temp;
+			
+			nextNode.next = newHead;
+			newHead = nextNode;
 		}
 		
 		return newHead;
