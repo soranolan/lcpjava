@@ -92,6 +92,8 @@ public class Lcp_234_Palindrome_Linked_List {
 	 * time  : O(n)
 	 * space : O(1)
 	 * 
+	 * will change input
+	 * 
 	 * https://leetcode.com/problems/palindrome-linked-list/discuss/64501/Java-easy-to-understand
 	 * */
 	public boolean isPalindrome(ListNode head) {
