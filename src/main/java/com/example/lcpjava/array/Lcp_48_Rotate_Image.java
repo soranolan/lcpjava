@@ -8,32 +8,17 @@ public class Lcp_48_Rotate_Image {
 	 * 7 8 9				1 2 3			9 6 3
 	 * */
 	/**
-	 * time  : O(n * m)
+	 * time  : O(n ^ 2)
 	 * space : O(1)
 	 * 
-	 * reverse(matrix)
-	 * swap(matrix)
+	 * reverse and swap
 	 * */
 	public void rotate_1(int[][] matrix) {
 		reverse(matrix);
 		swap(matrix);
 	}
 	
-	/**
-	 * int length <- matrix length
-	 * int top <- 0
-	 * int down <- length minus one
-	 * 
-	 * while top is lower than down
-	 * 		int[] temp <- matrix[top]
-	 * 		matrix[top] <- matrix[down]
-	 * 		matrix[down] <- temp
-	 * 		
-	 * 		top++
-	 * 		down--
-	 * end while
-	 * */
-	public void reverse(int[][] matrix) {
+	private void reverse(int[][] matrix) {
 		int length = matrix.length;
 		int top = 0;
 		int down = length - 1;
@@ -48,22 +33,11 @@ public class Lcp_48_Rotate_Image {
 		}
 	}
 	
-	/**
-	 * int length <- matrix length
-	 * 
-	 * for int row <- 0; if row is lower than length; row++
-	 * 		for int col <- row plus one; if col is lower than length; col++
-	 * 			int temp <- matrix[row][col]
-	 * 			matrix[row][col] <- matrix[col][row]
-	 * 			matrix[col][row] <- temp
-	 * 		end for
-	 * end for
-	 * */
-	public void swap(int[][] matrix) {
-		int length = matrix.length;
+	private void swap(int[][] matrix) {
+		int length = matrix.length;																					// n
 		
 		for (int row = 0; row < length; row++) {																	// T : O(n)
-			for (int col = row + 1; col < length; col++) {															// T : O(m)
+			for (int col = row + 1; col < length; col++) {															// T : O(n)
 				int temp = matrix[row][col];
 				matrix[row][col] = matrix[col][row];
 				matrix[col][row] = temp;
@@ -72,23 +46,8 @@ public class Lcp_48_Rotate_Image {
 	}
 	
 	/**
-	 * time  : O(n * m)
+	 * time  : O(n ^ 2)
 	 * space : O(1)
-	 * 
-	 * int length <- matrix length
-	 * int index <- length minus one
-	 * int rows <- (length plus one) divided by two
-	 * int cols <- length divided by two
-	 * 
-	 * for int row <- 0; if row is lower than rows; row++
-	 * 		for int col <- row plus one; if col is lower than cols; col++
-	 * 			int temp <- matrix[index minus col][row]
-	 * 			matrix[index minus col][row] <- matrix[index minus row][index minus col]
-	 * 			matrix[index minus row][index minus col] <- matrix[col][index minus row]
-	 * 			matrix[col][index minus row] <- matrix[row][col]
-	 * 			matrix[row][col] <- temp
-	 * 		end for
-	 * end for
 	 * */
 	public void rotate(int[][] matrix) {
 		int length = matrix.length;
@@ -97,7 +56,7 @@ public class Lcp_48_Rotate_Image {
 		int cols = length / 2;
 		
 		for (int row = 0; row < rows; row++) {																		// T : O(n)
-			for (int col = 0; col < cols; col++) {																	// T : O(m)
+			for (int col = 0; col < cols; col++) {																	// T : O(n)
 				int temp = matrix[index - col][row];
 				matrix[index - col][row] = matrix[index - row][index - col];
 				matrix[index - row][index - col] = matrix[col][index - row];
