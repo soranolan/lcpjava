@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class Lcp_967_Numbers_With_Same_Consecutive_DifferencesTest {
+class Lcp_967_Numbers_With_Same_Consecutive_DifferencesTest {
 	
 	private Lcp_967_Numbers_With_Same_Consecutive_Differences lcp;
 	

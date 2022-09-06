@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import com.example.lcpjava.common.TreeNode;
 import com.example.lcpjava.tool.BuildTree;
 
-public class Lcp_1448_Count_Good_Nodes_in_Binary_TreeTest {
+class Lcp_1448_Count_Good_Nodes_in_Binary_TreeTest {
 	
 	private Lcp_1448_Count_Good_Nodes_in_Binary_Tree lcp;
 	
