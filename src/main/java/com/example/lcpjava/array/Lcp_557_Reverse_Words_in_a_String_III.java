@@ -1,40 +1,54 @@
 package com.example.lcpjava.array;
 
+import java.util.Stack;
+
 public class Lcp_557_Reverse_Words_in_a_String_III {
 	
 	/**
 	 * time  : O(n)
 	 * space : O(n)
+	 * */
+	public String reverseWords_1(String s) {
+		StringBuilder sb = new StringBuilder();																		// S : O(n)
+		Stack<Character> stack = new Stack<>();																		// S : O(n)
+		
+		for (char c : s.toCharArray()) {																			// T : O(n)
+			if (c != ' ') {
+				stack.push(c);																						// T : O(1)
+			} else {
+				while (!stack.isEmpty()) {																			// T : O(n - space)
+					sb.append(stack.pop());																			// T : O(1)
+				}
+				sb.append(" ");																						// T : O(1)
+			}
+		}
+		
+		while (!stack.isEmpty()) {
+			sb.append(stack.pop());
+		}
+		
+		return sb.toString();
+	}
+	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
 	 * 
-	 * char[] c <- s to char array
-	 * int length <- c length
-	 * int left <- 0
-	 * 
-	 * for int i <- 0; if i is lower than length; i++
-	 * 		if c[i] is not equal to space
-	 * 			continue
-	 * 		end if
-	 * 		
-	 * 		int right <- i minus one
-	 * 		reverse c from left to right
-	 * 		left <- i plus one
-	 * end for
-	 * 
-	 * reverse c from left to length minus one
-	 * 
-	 * return new String c
+	 * Solution Tab
 	 * */
 	public String reverseWords(String s) {
-		char[] c = s.toCharArray();
-		int length = c.length;
+		char[] c = s.toCharArray();																					// S : O(n)
+		int length = s.length();
 		int left = 0;
 		
-		for (int i = 0; i < length; i++) {																			// T : O(n)
-			if (c[i] != ' ') { continue; }
+		for (int current = 0; current < length; current++) {														// T : O(n)
+			if (c[current] != ' ') { continue; }
 			
-			int right = i - 1;
-			reverse(c, left, right);
-			left = i + 1;
+			int right = current - 1;
+			
+			reverse(c, left, right);																				// T : O(n / 2)
+			
+			left = current + 1;
 		}
 		
 		reverse(c, left, length - 1);
@@ -42,20 +56,12 @@ public class Lcp_557_Reverse_Words_in_a_String_III {
 		return new String(c);																						// S : O(n)
 	}
 	
-	/**
-	 * while left is lower than right
-	 * 		char temp <- c[left]
-	 * 		c[left] <- c[right]
-	 * 		c[right] <- temp
-	 * 		left++
-	 * 		right--
-	 * 	end while
-	 * */
-	public void reverse(char[] c, int left, int right) {
+	private void reverse(char[] c, int left, int right) {
 		while (left < right) {
 			char temp = c[left];
 			c[left] = c[right];
 			c[right] = temp;
+			
 			left++;
 			right--;
 		}
