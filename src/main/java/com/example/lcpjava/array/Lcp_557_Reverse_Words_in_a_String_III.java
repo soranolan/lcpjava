@@ -5,18 +5,18 @@ import java.util.Stack;
 public class Lcp_557_Reverse_Words_in_a_String_III {
 	
 	/**
-	 * time  : O(n)
-	 * space : O(n)
+	 * time  : O(n + m)
+	 * space : O(m)
 	 * */
 	public String reverseWords_1(String s) {
 		StringBuilder sb = new StringBuilder();																		// S : O(n)
-		Stack<Character> stack = new Stack<>();																		// S : O(n)
+		Stack<Character> stack = new Stack<>();																		// S : O(m)
 		
 		for (char c : s.toCharArray()) {																			// T : O(n)
 			if (c != ' ') {
 				stack.push(c);																						// T : O(1)
 			} else {
-				while (!stack.isEmpty()) {																			// T : O(n - space)
+				while (!stack.isEmpty()) {																			// T : O(m)
 					sb.append(stack.pop());																			// T : O(1)
 				}
 				sb.append(" ");																						// T : O(1)
@@ -31,7 +31,7 @@ public class Lcp_557_Reverse_Words_in_a_String_III {
 	}
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(n + m / 2)
 	 * space : O(n)
 	 * 
 	 * Solution Tab
@@ -46,7 +46,7 @@ public class Lcp_557_Reverse_Words_in_a_String_III {
 			
 			int right = current - 1;
 			
-			reverse(c, left, right);																				// T : O(n / 2)
+			reverse(c, left, right);																				// T : O(m / 2)
 			
 			left = current + 1;
 		}
