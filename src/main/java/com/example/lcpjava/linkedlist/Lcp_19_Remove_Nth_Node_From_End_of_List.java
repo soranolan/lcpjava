@@ -5,49 +5,29 @@ import com.example.lcpjava.common.ListNode;
 public class Lcp_19_Remove_Nth_Node_From_End_of_List {
 	
 	/**
-	 * time  : O(n)
+	 * time  : O(m)
 	 * space : O(1)
-	 * 
-	 * ListNode newHead <- new node
-	 * newHead next <- head
-	 * 
-	 * ListNode slow <- newHead
-	 * ListNode fast <- newHead
-	 * 
-	 * while n is greater than zero
-	 * 		fast <- fast next
-	 * 		n--
-	 * end while
-	 * 
-	 * while fast next is not equal to null
-	 * 		slow <- slow next
-	 * 		fast <- fast next
-	 * end while
-	 * 
-	 * slow next <- slow next next
-	 * 
-	 * return newHead next
 	 * */
 	public ListNode removeNthFromEnd(ListNode head, int n) {
-		ListNode newHead = new ListNode(0);
-		newHead.next = head;
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
 		
-		ListNode slow = newHead;
-		ListNode fast = newHead;
+		ListNode slow = dummy;
+		ListNode fast = dummy;
 		
 		while (n > 0) {																								// T : O(n)
 			fast = fast.next;
 			n--;
 		}
 		
-		while (fast.next != null) {																					// T : O(m - n)
-			slow = slow.next;
-			fast = fast.next;
+		while (fast.next != null) {
+			slow = slow.next;																						// T : O(m - n)
+			fast = fast.next;																						// T : O(m - n)
 		}
 		
 		slow.next = slow.next.next;
 		
-		return newHead.next;
+		return dummy.next;
 	}
 	
 }

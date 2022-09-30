@@ -2,79 +2,59 @@ package com.example.lcpjava.linkedlist;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.lcpjava.common.ListNode;
+import com.example.lcpjava.tool.BuildList;
 
 class Lcp_19_Remove_Nth_Node_From_End_of_ListTest {
 	
+	private Lcp_19_Remove_Nth_Node_From_End_of_List lcp;
+	
+	private BuildList tool;
+	
+	@BeforeEach
+	void beforeEach() {
+		lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
+		tool = new BuildList();
+	}
+	
 	@Test
 	void test_case_1() {
-		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
-		
-		ListNode expected = new ListNode(1);
-		ListNode node2 = new ListNode(2);
-		ListNode node3 = new ListNode(3);
-		ListNode node4 = new ListNode(4);
-		ListNode node5 = new ListNode(5);
-		
-		expected.next = node2;
-		node2.next = node3;
-		node3.next = node4;
-		node4.next = node5;
-		
+		ListNode expected = tool.singly(new int[] { 1, 2, 3, 5 });
+		ListNode head = tool.singly(new int[] { 1, 2, 3, 4, 5 });
 		int n = 2;
-		
-		ListNode test = lcp.removeNthFromEnd(expected, n);
-		
-		node3.next = node5;
+		ListNode test = lcp.removeNthFromEnd(head, n);
 		
 		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
-		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
-		
-		ListNode expected = new ListNode(1);
-		
+		ListNode head = tool.singly(new int[] { 1 });
 		int n = 1;
-		
-		ListNode test = lcp.removeNthFromEnd(expected, n);
+		ListNode test = lcp.removeNthFromEnd(head, n);
 		
 		assertThat(test).isNull();
 	}
 	
 	@Test
 	void test_case_3() {
-		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
-		
-		ListNode expected = new ListNode(1);
-		ListNode node2 = new ListNode(2);
-		
-		expected.next = node2;
-		
+		ListNode expected = tool.singly(new int[] { 1 });
+		ListNode head = tool.singly(new int[] { 1, 2 });
 		int n = 1;
-		
-		ListNode test = lcp.removeNthFromEnd(expected, n);
-		
-		expected.next = null;
+		ListNode test = lcp.removeNthFromEnd(head, n);
 		
 		assertThat(test).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_4() {
-		Lcp_19_Remove_Nth_Node_From_End_of_List lcp = new Lcp_19_Remove_Nth_Node_From_End_of_List();
-		
-		ListNode node1 = new ListNode(1);
-		ListNode expected = new ListNode(2);
-		
-		node1.next = expected;
-		
+		ListNode expected = tool.singly(new int[] { 2 });
+		ListNode head = tool.singly(new int[] { 1, 2 });
 		int n = 2;
-		
-		ListNode test = lcp.removeNthFromEnd(node1, n);
+		ListNode test = lcp.removeNthFromEnd(head, n);
 		
 		assertThat(test).isEqualTo(expected);
 	}
