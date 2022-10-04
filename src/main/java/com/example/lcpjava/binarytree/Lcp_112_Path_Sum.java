@@ -12,37 +12,6 @@ public class Lcp_112_Path_Sum {
 	/**
 	 * time  : O(n)
 	 * space : O(n)
-	 * 
-	 * if root is equal to null
-	 * 		return false
-	 * end if
-	 * 
-	 * Queue<TreeNode> queue <- new LinkedList
-	 * queue offer(root)
-	 * 
-	 * Map<TreeNode, Integer> memo <- new HashMap
-	 * memo put(root, 0)
-	 * 
-	 * while queue is not empty
-	 * 		TreeNode current <- queue poll
-	 * 		int sum <- memo get(current) plus current val
-	 * 		
-	 * 		if current left is equal to null && current right is equal to null && sum is equal to targetSum
-	 * 			return true
-	 * 		end if
-	 * 		
-	 * 		if current left is not equal to null
-	 * 			queue offer(current left)
-	 * 			memo put(current left, sum)
-	 * 		end if
-	 * 		
-	 * 		if current right is not equal to null
-	 * 			queue offer(current right)
-	 * 			memo put(current right, sum)
-	 * 		end if
-	 * end while
-	 * 
-	 * return false
 	 * */
 	public boolean hasPathSum_1(TreeNode root, int targetSum) {
 		if (root == null) { return false; }
@@ -74,33 +43,51 @@ public class Lcp_112_Path_Sum {
 	}
 	
 	/**
+	 * time  : Ω(log n) ~ O(n)
+	 * space : Ω(log n) ~ O(n)
+	 * 
+	 * try early return
+	 * */
+	public boolean hasPathSum_2(TreeNode root, int targetSum) {
+		boolean[] result = new boolean[1];
+		
+		traverse(root, 0, targetSum, result);
+		
+		return result[0];
+	}
+	
+	private void traverse(TreeNode current, int currentSum, int targetSum, boolean[] result) {
+		if (result[0] || current == null) { return; }
+		
+		currentSum += current.val;
+		
+		if (current.left == null && current.right == null && currentSum == targetSum) {
+			result[0] = true;
+			return;
+		}
+		
+		if (!result[0]) {																							// if not found, result[0] == false
+			traverse(current.left, currentSum, targetSum, result);
+			traverse(current.right, currentSum, targetSum, result);
+		}
+	}
+	
+	/**
 	 * time  : O(n)
 	 * space : O(n)
-	 * 
-	 * DFS(root, zero, targetSum)
 	 * */
 	public boolean hasPathSum(TreeNode root, int targetSum) {
 		return DFS(root, 0, targetSum);
 	}
 	
-	/**
-	 * if current is equal to null
-	 * 		return false
-	 * end if
-	 * 
-	 * sum <- sum plus current val
-	 * 
-	 * if current is leaf node
-	 * 		return if sum is equal to targetSum
-	 * end if
-	 * 
-	 * return DFS(current left, sum, targetSum) || DFS(current right, sum, targetSum)
-	 * */
-	public boolean DFS(TreeNode current, int sum, int targetSum) {
+	private boolean DFS(TreeNode current, int currentSum, int targetSum) {
 		if (current == null) { return false; }
-		sum = sum + current.val;
-		if (current.left == null && current.right == null) { return sum == targetSum; }
-		return DFS(current.left, sum, targetSum) || DFS(current.right, sum, targetSum);
+		
+		currentSum = currentSum + current.val;
+		
+		if (current.left == null && current.right == null) { return currentSum == targetSum; }
+		
+		return DFS(current.left, currentSum, targetSum) || DFS(current.right, currentSum, targetSum);
 	}
 	
 }
