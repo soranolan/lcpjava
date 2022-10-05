@@ -11,11 +11,7 @@ public class BuildTree {
 	public TreeNode preorder(Integer[] nodes) {
 		int length = nodes.length;
 		if (nodes == null || length == 0) { return null; }
-		if (length % 2 == 0) {
-			System.out.println(Arrays.deepToString(nodes));
-			System.out.println("length is even, should be odd");
-			return null;
-		}
+		if (length % 2 == 0) { throw new AssertionError(Arrays.deepToString(nodes) + " length is even, should be odd"); }
 		
 		TreeNode root = new TreeNode(nodes[0]);
 		
