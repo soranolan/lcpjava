@@ -98,6 +98,35 @@ public class Lcp_1079_Letter_Tile_Possibilities {
 		return DFS(chars, 0, visited);
 	}
 	
+	/**
+	 * i = 0
+	 * 			i = 0 continue
+	 * 			i = 1
+	 * 							i = 0 continue
+	 * 							i = 1 continue
+	 * 							i = 2
+	 * 			i = 2
+	 * 							i = 0 continue
+	 * 							i = 1
+	 * 							i = 2 continue
+	 * A
+	 * AA
+	 * AAB
+	 * AB
+	 * ABA
+	 * 
+	 * i = 1 continue
+	 * i = 2
+	 * 			i = 0
+	 * 							i = 0 continue
+	 * 							i = 1
+	 * 							i = 2 continue
+	 * 			i = 1 continue
+	 * 			i = 2 continue
+	 * B
+	 * BA
+	 * BAA
+	 */
 	private int DFS(char[] chars, int length, boolean[] visited) {
 		if (length == chars.length) { return 0; }
 		
