@@ -16,20 +16,28 @@ class Lcp_557_Reverse_Words_in_a_String_IIITest {
 	
 	@Test
 	void test_case_1() {
+		// Arrange
 		String expected = "s'teL ekat edoCteeL tsetnoc";
 		String input = "Let's take LeetCode contest";
-		String test = lcp.reverseWords(input);
 		
-		assertThat(test).isEqualTo(expected);
+		// Act
+		String actual = lcp.reverseWords(input);
+		
+		// Assert
+		assertThat(actual).isEqualTo(expected);
 	}
 	
 	@Test
 	void test_case_2() {
+		// Arrange
 		String expected = "doG gniD";
 		String input = "God Ding";
-		String test = lcp.reverseWords(input);
 		
-		assertThat(test).isEqualTo(expected);
+		// Act
+		String actual = lcp.reverseWords(input);
+		
+		// Assert
+		assertThat(actual).isEqualTo(expected);
 	}
 	
 }
