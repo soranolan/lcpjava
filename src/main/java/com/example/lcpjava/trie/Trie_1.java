@@ -10,6 +10,10 @@ public class Trie_1 {
 		root = new TrieNodeMap();
 	}
 	
+	/**
+	 * time  : O(n)
+	 * space : O(n)
+	 * */
 	public void insert(String word) {
 		TrieNodeMap current = root;
 		for (Character c : word.toCharArray()) {
@@ -21,6 +25,10 @@ public class Trie_1 {
 		current.isWord = true;
 	}
 	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * */
 	public boolean search(String word) {
 		TrieNodeMap current = root;
 		for (Character c : word.toCharArray()) {
@@ -32,6 +40,10 @@ public class Trie_1 {
 		return current.isWord;
 	}
 	
+	/**
+	 * time  : O(n)
+	 * space : O(1)
+	 * */
 	public boolean startsWith(String prefix) {
 		TrieNodeMap current = root;
 		for (Character c : prefix.toCharArray()) {
