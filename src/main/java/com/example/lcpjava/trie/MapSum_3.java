@@ -15,7 +15,7 @@ public class MapSum_3 {
 	 * n : key length
 	 * 
 	 * time  : O(n)
-	 * space : O(1)
+	 * space : O(n)
 	 * */
 	public void insert(String key, int val) {
 		Lcp_677_TrieNode_1 current = root;
@@ -31,7 +31,7 @@ public class MapSum_3 {
 		
 		if (current.isWord) {
 			current.isWord = false;
-			insert(key, current.value * -1);
+			insert(key, current.value * -1);																		// T : O(n)
 		}
 		
 		current.value = val;

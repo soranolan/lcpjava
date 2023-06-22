@@ -10,7 +10,7 @@ public class MapSum_2 {
 	
 	private Lcp_677_TrieNode root;
 	
-	private Map<String, Integer> memo = new HashMap<>();
+	private Map<String, Integer> memo = new HashMap<>();															// S : O(m)
 	
 	public MapSum_2() {
 		root = new Lcp_677_TrieNode();
@@ -20,7 +20,7 @@ public class MapSum_2 {
 	 * n : key length
 	 * 
 	 * time  : O(n)
-	 * space : O(n)
+	 * space : O(n + m)
 	 * */
 	public void insert(String key, int val) {
 		int diff = val - memo.getOrDefault(key, 0);
